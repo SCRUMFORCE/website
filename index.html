@@ -8,7 +8,6 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Tailwind config (only works with the CDN build)
     tailwind.config = {
       theme: {
         extend: {
@@ -17,24 +16,14 @@
             scrumGreen: '#34D399',
           },
           keyframes: {
-            wiggle: {
-              '0%, 100%': { transform: 'rotate(-2deg)' },
-              '50%': { transform: 'rotate(2deg)' },
-            },
-            float: {
-              '0%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-6px)' },
-              '100%': { transform: 'translateY(0)' },
-            },
-            spinSlow: {
-              '0%': { transform: 'rotate(0deg)' },
-              '100%': { transform: 'rotate(360deg)' },
-            }
+            wiggle: {'0%,100%':{transform:'rotate(-2deg)'},'50%':{transform:'rotate(2deg)'}},
+            float:  {'0%':{transform:'translateY(0)'},'50%':{transform:'translateY(-6px)'},'100%':{transform:'translateY(0)'}},
+            spinSlow:{'0%':{transform:'rotate(0deg)'},'100%':{transform:'rotate(360deg)'}},
           },
           animation: {
             wiggle: 'wiggle 0.5s ease-in-out',
-            float: 'float 4s ease-in-out infinite',
-            spinSlow: 'spinSlow 12s linear infinite',
+            float:  'float 4s ease-in-out infinite',
+            spinSlow:'spinSlow 12s linear infinite',
           }
         }
       }
@@ -43,10 +32,7 @@
 
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
-    /* simple gradient text helper */
-    .gradient-text {
-      @apply bg-gradient-to-r from-scrumBlue to-scrumGreen bg-clip-text text-transparent;
-    }
+    .gradient-text { @apply bg-gradient-to-r from-scrumBlue to-scrumGreen bg-clip-text text-transparent; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 scroll-smooth">
@@ -79,8 +65,6 @@
         Hire a Scrum Master
       </a>
     </div>
-
-    <!-- Fun mini-note -->
     <span class="mt-6 block text-sm text-gray-400 animate-float">Psst… we only live on LinkedIn 👀</span>
   </header>
 
@@ -118,37 +102,29 @@
       <div class="relative pl-6">
         <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
         <h3 class="text-xl font-semibold mb-2 text-gray-700">Elite SM Consultants</h3>
-        <p class="text-gray-600">
-          We’ve done agile in startups, scale-ups, enterprise, and everything between. We adapt to your tools, culture, and chaos—fast.
-        </p>
+        <p class="text-gray-600">We’ve done agile in startups, scale-ups, enterprise, and everything between. We adapt to your tools, culture, and chaos—fast.</p>
       </div>
       <div class="relative pl-6">
         <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
         <h3 class="text-xl font-semibold mb-2 text-gray-700">Optimized Cost</h3>
-        <p class="text-gray-600">
-          Stop paying for 8 hours when you only need 2. Fractional time = fractional cost. Simple.
-        </p>
+        <p class="text-gray-600">Stop paying for 8 hours when you only need 2. Fractional time = fractional cost. Simple.</p>
       </div>
       <div class="relative pl-6">
         <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
         <h3 class="text-xl font-semibold mb-2 text-gray-700">Fresh Eyes, Fresh Energy</h3>
-        <p class="text-gray-600">
-          Internal staff can get tired or tunnel-visioned. We bring new perspectives, proven frameworks, and momentum.
-        </p>
+        <p class="text-gray-600">Internal staff can get tired or tunnel-visioned. We bring new perspectives, proven frameworks, and momentum.</p>
       </div>
       <div class="relative pl-6">
         <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
         <h3 class="text-xl font-semibold mb-2 text-gray-700">Outcome-Obsessed</h3>
-        <p class="text-gray-600">
-          We don’t just “run ceremonies.” We make sure your team hits big goals without burning out.
-        </p>
+        <p class="text-gray-600">We don’t just “run ceremonies.” We make sure your team hits big goals without burning out.</p>
       </div>
     </div>
   </section>
 
   <!-- PRICING -->
   <section id="pricing" class="bg-gray-100 py-20 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue mb-10">Pricing</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue mb-10">Pricing (Per Week)</h2>
     <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
       <div class="bg-white rounded-xl shadow p-8 hover:shadow-lg transition-all">
         <h3 class="text-2xl font-bold mb-2 text-gray-700">Unfunded Startups</h3>
@@ -161,17 +137,21 @@
       </div>
       <div class="bg-white rounded-xl shadow p-8 hover:shadow-lg transition-all">
         <h3 class="text-2xl font-bold mb-2 text-gray-700">Funded / Growing Teams</h3>
-        <p class="text-4xl font-extrabold text-scrumBlue mb-4">From $1,500/mo</p>
-        <p class="text-gray-600">Fractional SM (1–2 hrs/day). Dedicated SM? Let’s talk.</p>
+        <p class="text-4xl font-extrabold text-scrumBlue mb-1">From $375<span class="text-xl font-bold">/week</span></p>
+        <p class="text-gray-600">Fractional SM (≈1–2 hrs/day). Dedicated SM? Let’s talk.</p>
         <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank"
            class="mt-6 inline-block px-6 py-3 border-2 border-scrumBlue text-scrumBlue rounded-lg font-semibold hover:bg-blue-50 hover:scale-105 transition-transform">
           Book via LinkedIn
         </a>
       </div>
     </div>
+    <!-- Optional add-ons row -->
+    <div class="max-w-4xl mx-auto mt-12 text-sm text-gray-500">
+      <p>Add-ons: additional ceremonies, stakeholder workshops, SM coaching for internal staff – priced case-by-case.</p>
+    </div>
   </section>
 
-  <!-- FAQ (Optional but fun) -->
+  <!-- FAQ -->
   <section id="faq" class="py-20 bg-white">
     <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue text-center mb-10">Quick FAQ</h2>
     <div class="max-w-3xl mx-auto space-y-8">
