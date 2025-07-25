@@ -12,24 +12,23 @@
       theme: {
         extend: {
           colors: {
-            scrumBlue: '#1E3A8A',
+            scrumBlue:  '#1E3A8A',
             scrumGreen: '#34D399',
           },
           keyframes: {
-            wiggle: {'0%,100%':{transform:'rotate(-2deg)'},'50%':{transform:'rotate(2deg)'}},
-            float:  {'0%':{transform:'translateY(0)'},'50%':{transform:'translateY(-6px)'},'100%':{transform:'translateY(0)'}},
-            spinSlow:{'0%':{transform:'rotate(0deg)'},'100%':{transform:'rotate(360deg)'}},
+            wiggle:   {'0%,100%':{transform:'rotate(-2deg)'},'50%':{transform:'rotate(2deg)'}},
+            float:    {'0%':{transform:'translateY(0)'},'50%':{transform:'translateY(-6px)'},'100%':{transform:'translateY(0)'}},
+            spinSlow: {'0%':{transform:'rotate(0deg)'},'100%':{transform:'rotate(360deg)'}},
           },
           animation: {
-            wiggle: 'wiggle 0.5s ease-in-out',
-            float:  'float 4s ease-in-out infinite',
-            spinSlow:'spinSlow 12s linear infinite',
+            wiggle:   'wiggle 0.5s ease-in-out',
+            float:    'float 4s ease-in-out infinite',
+            spinSlow: 'spinSlow 12s linear infinite',
           }
         }
       }
     }
   </script>
-
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
     .gradient-text { @apply bg-gradient-to-r from-scrumBlue to-scrumGreen bg-clip-text text-transparent; }
@@ -37,23 +36,20 @@
 </head>
 <body class="bg-gray-50 text-gray-800 scroll-smooth">
 
-  <!-- Decorative Animated Rings -->
+  <!-- Decorative animated rings (background flair) -->
   <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
     <div class="absolute top-[-10rem] left-[-10rem] w-[25rem] h-[25rem] rounded-full border-4 border-scrumGreen/20 animate-spinSlow"></div>
-    <div class="absolute bottom-[-12rem] right-[-8rem] w-[20rem] h-[20rem] rounded-full border-4 border-scrumBlue/10 animate-spinSlow" style="animation-duration:18s;"></div>
+    <div class="absolute bottom-[-12rem] right-[-8rem] w-[20rem] h-[20rem] rounded-full border-4 border-scrumBlue/10 animate-spinSlow"
+         style="animation-duration:18s;"></div>
   </div>
 
   <!-- HERO -->
   <header class="relative text-center py-24 bg-white">
-    <h1 class="text-5xl md:text-6xl font-extrabold gradient-text tracking-tight">
-      SCRUMFORCE
-    </h1>
-    <p class="mt-5 text-2xl font-semibold text-gray-700">
-      Elite Agile Leadership. Fraction of the Cost.
-    </p>
+    <h1 class="text-5xl md:text-6xl font-extrabold gradient-text tracking-tight">SCRUMFORCE</h1>
+    <p class="mt-5 text-2xl font-semibold text-gray-700">Elite Agile Leadership. Fraction of the Cost.</p>
     <p class="mt-4 max-w-3xl mx-auto text-gray-500">
-      We’re not just “meeting facilitators”. We’re battle-tested Agile consultants who adapt fast,
-      energize teams, and turn chaos into flow. Free for unfunded startups. Fractional for funded teams.
+      Battle-tested Agile consultants on tap. Free for unfunded startups. Fractional service for
+      funded teams—<strong>minimum 2-week sprints</strong>, 100 % online.
     </p>
     <div class="mt-8 flex justify-center gap-4 flex-wrap">
       <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank"
@@ -68,29 +64,54 @@
     <span class="mt-6 block text-sm text-gray-400 animate-float">Psst… we only live on LinkedIn 👀</span>
   </header>
 
-  <!-- WHY OUR MODEL WORKS -->
-  <section id="model" class="bg-gray-100 py-20 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue mb-6">Full-Time SM? Overkill. Here’s the Fix.</h2>
-    <p class="max-w-3xl mx-auto text-gray-600 mb-12">
-      Most Scrum Masters deliver real value for <span class="font-semibold text-scrumBlue">~2 hours a day</span>.  
-      Yet companies pay full salaries. We fractionalize the role: you get laser-focused impact, not idle time.
-    </p>
+  <!-- HOW IT WORKS -->
+  <section id="how" class="bg-gray-100 py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue mb-10">How It Works (All-Online, Min 2-Weeks)</h2>
 
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div class="bg-white rounded-lg p-8 shadow hover:shadow-md transition-all">
-        <span class="text-4xl font-extrabold text-scrumGreen">1</span>
-        <h3 class="mt-3 text-xl font-semibold text-gray-700">Apply (Unfunded? It’s Free)</h3>
-        <p class="mt-2 text-gray-500">We coach your team, run key ceremonies, and get you sprinting—without charging a cent until you raise.</p>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+      <!-- Step 1 -->
+      <div class="bg-white rounded-xl p-8 shadow hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-scrumGreen flex items-center gap-3">
+          <span class="text-3xl font-extrabold">1</span> Kick-off & Booking
+        </h3>
+        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+          <li>DM us on LinkedIn → quick intro call.</li>
+          <li>Select package (min 2-week block, billed weekly).</li>
+          <li>We send invoice & welcome kit within hours.</li>
+        </ul>
       </div>
-      <div class="bg-white rounded-lg p-8 shadow hover:shadow-md transition-all">
-        <span class="text-4xl font-extrabold text-scrumGreen">2</span>
-        <h3 class="mt-3 text-xl font-semibold text-gray-700">Book Fractional SM Time</h3>
-        <p class="mt-2 text-gray-500">1–2 hours/day is usually enough: backlog grooming, stand-ups, alignment, unblocking.</p>
+      <!-- Step 2 -->
+      <div class="bg-white rounded-xl p-8 shadow hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-scrumGreen flex items-center gap-3">
+          <span class="text-3xl font-extrabold">2</span> Onboarding Day 0
+        </h3>
+        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+          <li>SM joins your <strong>Slack / Teams / Discord</strong>.</li>
+          <li>Access to Kanban (<em>Jira, Trello, Linear, ClickUp…</em>).</li>
+          <li>Calendar invites for daily stand-up + key ceremonies.</li>
+        </ul>
       </div>
-      <div class="bg-white rounded-lg p-8 shadow hover:shadow-md transition-all">
-        <span class="text-4xl font-extrabold text-scrumGreen">3</span>
-        <h3 class="mt-3 text-xl font-semibold text-gray-700">Run Agile Like Pros</h3>
-        <p class="mt-2 text-gray-500">Velocity up. Waste down. Teams happy. Stakeholders calm. (Yes, really.)</p>
+      <!-- Step 3 -->
+      <div class="bg-white rounded-xl p-8 shadow hover:shadow-md transition">
+        <h3 class="text-xl font-bold text-scrumGreen flex items-center gap-3">
+          <span class="text-3xl font-extrabold">3</span> Sprint In-Flight
+        </h3>
+        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+          <li>~<strong>2 hrs/day</strong> live work: stand-up, blockers, backlog grooming, async coaching.</li>
+          <li>SM keeps Kanban tidy, nudges owners, unblocks devs.</li>
+          <li>End-of-week demo & retro → improvement actions.</li>
+        </ul>
+      </div>
+      <!-- Step 4 -->
+      <div class="bg-white rounded-xl p-8 shadow hover:shadow-md transition md:col-span-1">
+        <h3 class="text-xl font-bold text-scrumGreen flex items-center gap-3">
+          <span class="text-3xl font-extrabold">4</span> Review & Repeat
+        </h3>
+        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+          <li>Receive velocity & health report every Friday.</li>
+          <li>Decide: renew for next 2-week block or pause.</li>
+          <li>No lock-in beyond the current block.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -102,82 +123,108 @@
       <div class="relative pl-6">
         <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
         <h3 class="text-xl font-semibold mb-2 text-gray-700">Elite SM Consultants</h3>
-        <p class="text-gray-600">We’ve done agile in startups, scale-ups, enterprise, and everything between. We adapt to your tools, culture, and chaos—fast.</p>
+        <p class="text-gray-600">Startups, scale-ups, enterprises—we’ve boosted them all and adapt instantly.</p>
       </div>
       <div class="relative pl-6">
         <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
         <h3 class="text-xl font-semibold mb-2 text-gray-700">Optimized Cost</h3>
-        <p class="text-gray-600">Stop paying for 8 hours when you only need 2. Fractional time = fractional cost. Simple.</p>
+        <p class="text-gray-600">Stop paying for 8 hrs when you only need 2. Fractional time = fractional cost.</p>
       </div>
       <div class="relative pl-6">
         <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
         <h3 class="text-xl font-semibold mb-2 text-gray-700">Fresh Eyes, Fresh Energy</h3>
-        <p class="text-gray-600">Internal staff can get tired or tunnel-visioned. We bring new perspectives, proven frameworks, and momentum.</p>
+        <p class="text-gray-600">We spot waste fast, inject momentum, and coach your future in-house SM.</p>
       </div>
       <div class="relative pl-6">
         <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
         <h3 class="text-xl font-semibold mb-2 text-gray-700">Outcome-Obsessed</h3>
-        <p class="text-gray-600">We don’t just “run ceremonies.” We make sure your team hits big goals without burning out.</p>
+        <p class="text-gray-600">Ceremonies are a means, not the end. We focus on velocity, quality, morale.</p>
       </div>
     </div>
   </section>
 
   <!-- PRICING -->
   <section id="pricing" class="bg-gray-100 py-20 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue mb-10">Pricing (Per Week)</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue mb-10">Pricing (Per Week, Min 2 Weeks)</h2>
     <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-      <div class="bg-white rounded-xl shadow p-8 hover:shadow-lg transition-all">
+      <!-- Free tier -->
+      <div class="bg-white rounded-xl shadow p-8 hover:shadow-lg transition">
         <h3 class="text-2xl font-bold mb-2 text-gray-700">Unfunded Startups</h3>
         <p class="text-4xl font-extrabold text-scrumGreen mb-4">FREE</p>
-        <p class="text-gray-600">Mentorship mode: ceremonies, backlog help & guidance until you raise.</p>
+        <p class="text-gray-600">Mentorship mode until you raise. Ceremonies + backlog love, zero cost.</p>
         <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank"
-           class="mt-6 inline-block px-6 py-3 bg-scrumGreen text-white rounded-lg font-semibold hover:scale-105 transition-transform">
+           class="mt-6 inline-block px-6 py-3 bg-scrumGreen text-white rounded-lg font-semibold hover:scale-105 transition">
           Apply on LinkedIn
         </a>
       </div>
-      <div class="bg-white rounded-xl shadow p-8 hover:shadow-lg transition-all">
-        <h3 class="text-2xl font-bold mb-2 text-gray-700">Funded / Growing Teams</h3>
+      <!-- Paid tier -->
+      <div class="bg-white rounded-xl shadow p-8 hover:shadow-lg transition">
+        <h3 class="text-2xl font-bold mb-2 text-gray-700">Funded / Scaling Teams</h3>
         <p class="text-4xl font-extrabold text-scrumBlue mb-1">From $375<span class="text-xl font-bold">/week</span></p>
-        <p class="text-gray-600">Fractional SM (≈1–2 hrs/day). Dedicated SM? Let’s talk.</p>
+        <p class="text-gray-600">≈1–2 hrs/day. Dedicated SM or extra hours? Let’s talk.</p>
         <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank"
-           class="mt-6 inline-block px-6 py-3 border-2 border-scrumBlue text-scrumBlue rounded-lg font-semibold hover:bg-blue-50 hover:scale-105 transition-transform">
+           class="mt-6 inline-block px-6 py-3 border-2 border-scrumBlue text-scrumBlue rounded-lg font-semibold hover:bg-blue-50 hover:scale-105 transition">
           Book via LinkedIn
         </a>
       </div>
     </div>
-    <!-- Optional add-ons row -->
-    <div class="max-w-4xl mx-auto mt-12 text-sm text-gray-500">
-      <p>Add-ons: additional ceremonies, stakeholder workshops, SM coaching for internal staff – priced case-by-case.</p>
-    </div>
+    <p class="max-w-2xl mx-auto mt-12 text-sm text-gray-500">
+      Add-ons: stakeholder workshops, roadmap facilitation, SM coaching for internal hires—priced case-by-case.
+    </p>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-20 bg-white">
-    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue text-center mb-10">Quick FAQ</h2>
-    <div class="max-w-3xl mx-auto space-y-8">
-      <div>
-        <h3 class="font-semibold text-lg text-gray-700">Do you really do it for free?</h3>
-        <p class="text-gray-600 mt-2">If you’re unfunded and scrappy—yes. We want you to ship and grow. When money comes in, we’ll talk plans.</p>
+
+<!-- CONFIDENTIALITY & IP PROTECTION -->
+<section id="confidentiality" class="py-16 bg-white border-t border-gray-200">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue mb-4">
+      🔒 Confidentiality & IP Protection
+    </h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+      Every SCRUM Master signs a <strong>Mutual NDA</strong> before joining your workspace.  
+      No screenshots, no exports, no leaks—<em>ever</em>. All deliverables and ideas remain 100 % yours.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+      <!-- Non-Disclosure -->
+      <div class="p-6 bg-gray-100 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-scrumGreen mb-1">Iron-Clad NDA</h3>
+        <p class="text-gray-600 text-sm">
+          Consultants are legally barred from sharing or using any confidential
+          info outside the engagement. Obligations survive indefinitely.
+        </p>
       </div>
-      <div>
-        <h3 class="font-semibold text-lg text-gray-700">What tools do you use?</h3>
-        <p class="text-gray-600 mt-2">Whatever you already have (Jira, Linear, ClickUp, Notion). We adapt, we don’t impose.</p>
+      <!-- Secure Handling -->
+      <div class="p-6 bg-gray-100 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-scrumGreen mb-1">Secure Handling</h3>
+        <p class="text-gray-600 text-sm">
+          MFA on all accounts, no local copies, no recordings without written consent.
+          Access is limited to your approved tools (Jira, Slack, etc.).
+        </p>
       </div>
-      <div>
-        <h3 class="font-semibold text-lg text-gray-700">Time zones?</h3>
-        <p class="text-gray-600 mt-2">We’re remote and async-friendly. Stand-ups don’t have to be painful.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-lg text-gray-700">Can you train our internal SM?</h3>
-        <p class="text-gray-600 mt-2">Absolutely. We’ll groom your future SM while running things smoothly.</p>
+      <!-- Ownership -->
+      <div class="p-6 bg-gray-100 rounded-lg shadow-sm">
+        <h3 class="font-semibold text-scrumGreen mb-1">You Own Everything</h3>
+        <p class="text-gray-600 text-sm">
+          Roadmaps, code, docs, and insights created during the sprint
+          are your sole property. SCRUMFORCE retains zero rights.
+        </p>
       </div>
     </div>
-  </section>
+
+    <p class="mt-10 text-sm text-gray-500">
+      Need the full legal text? We’ll send our <strong>MNDA</strong> with your welcome kit.
+    </p>
+  </div>
+</section>
+
 
   <!-- FOOTER -->
   <footer class="py-8 text-center text-gray-500 text-sm bg-gray-50">
     <p>Connect with us on
-      <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" class="text-blue-600 hover:underline">
+        LinkedIn
+      </a>
     </p>
     <p class="mt-2 opacity-70">© 2025 SCRUMFORCE. All rights reserved.</p>
   </footer>
