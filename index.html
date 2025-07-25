@@ -3,88 +3,204 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCRUMFORCE – Elite Agile Consultants</title>
+  <title>SCRUMFORCE – Elite Agile, Fraction of the Cost</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config (only works with the CDN build)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            scrumBlue: '#1E3A8A',
+            scrumGreen: '#34D399',
+          },
+          keyframes: {
+            wiggle: {
+              '0%, 100%': { transform: 'rotate(-2deg)' },
+              '50%': { transform: 'rotate(2deg)' },
+            },
+            float: {
+              '0%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-6px)' },
+              '100%': { transform: 'translateY(0)' },
+            },
+            spinSlow: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' },
+            }
+          },
+          animation: {
+            wiggle: 'wiggle 0.5s ease-in-out',
+            float: 'float 4s ease-in-out infinite',
+            spinSlow: 'spinSlow 12s linear infinite',
+          }
+        }
+      }
+    }
+  </script>
+
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    /* simple gradient text helper */
+    .gradient-text {
+      @apply bg-gradient-to-r from-scrumBlue to-scrumGreen bg-clip-text text-transparent;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 scroll-smooth">
+
+  <!-- Decorative Animated Rings -->
+  <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute top-[-10rem] left-[-10rem] w-[25rem] h-[25rem] rounded-full border-4 border-scrumGreen/20 animate-spinSlow"></div>
+    <div class="absolute bottom-[-12rem] right-[-8rem] w-[20rem] h-[20rem] rounded-full border-4 border-scrumBlue/10 animate-spinSlow" style="animation-duration:18s;"></div>
+  </div>
 
   <!-- HERO -->
-  <header class="text-center py-20 bg-white">
-    <img src="logo.png" alt="SCRUMFORCE Logo" class="mx-auto w-24 mb-6">
-    <h1 class="text-4xl font-bold text-blue-900">SCRUMFORCE</h1>
-    <p class="mt-4 text-xl font-semibold text-gray-700">Elite Agile Leadership. Fraction of the Cost.</p>
-    <p class="mt-2 text-gray-500 max-w-2xl mx-auto">
-      We’re not just Scrum Masters. We’re battle-tested Agile consultants who adapt fast, energize teams, and turn chaos into flow.
-      Free for unfunded startups. Fractional or full SM for funded teams.
+  <header class="relative text-center py-24 bg-white">
+    <h1 class="text-5xl md:text-6xl font-extrabold gradient-text tracking-tight">
+      SCRUMFORCE
+    </h1>
+    <p class="mt-5 text-2xl font-semibold text-gray-700">
+      Elite Agile Leadership. Fraction of the Cost.
     </p>
-    <div class="mt-6 space-x-4">
+    <p class="mt-4 max-w-3xl mx-auto text-gray-500">
+      We’re not just “meeting facilitators”. We’re battle-tested Agile consultants who adapt fast,
+      energize teams, and turn chaos into flow. Free for unfunded startups. Fractional for funded teams.
+    </p>
+    <div class="mt-8 flex justify-center gap-4 flex-wrap">
       <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank"
-         class="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600">Get Free Help</a>
+         class="px-8 py-3 bg-scrumGreen text-white font-semibold rounded-lg shadow hover:shadow-lg hover:scale-[1.03] transition-all active:scale-95">
+        Get Free Help
+      </a>
       <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank"
-         class="px-6 py-3 border border-blue-900 text-blue-900 font-semibold rounded-lg hover:bg-blue-100">Hire a SM</a>
+         class="px-8 py-3 border-2 border-scrumBlue text-scrumBlue font-semibold rounded-lg hover:bg-blue-50 hover:scale-[1.03] transition-all active:scale-95">
+        Hire a Scrum Master
+      </a>
     </div>
+
+    <!-- Fun mini-note -->
+    <span class="mt-6 block text-sm text-gray-400 animate-float">Psst… we only live on LinkedIn 👀</span>
   </header>
 
   <!-- WHY OUR MODEL WORKS -->
-  <section class="bg-gray-100 py-16 text-center">
-    <h2 class="text-3xl font-bold text-blue-900 mb-4">Why Our Model Works</h2>
-    <p class="max-w-3xl mx-auto text-gray-600 mb-10">
-      Full-time Scrum Masters cost thousands each month but often only add real value for 1–2 hours a day.
-      We flip the model: expert SMs on-demand, for only the time you need.
+  <section id="model" class="bg-gray-100 py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue mb-6">Full-Time SM? Overkill. Here’s the Fix.</h2>
+    <p class="max-w-3xl mx-auto text-gray-600 mb-12">
+      Most Scrum Masters deliver real value for <span class="font-semibold text-scrumBlue">~2 hours a day</span>.  
+      Yet companies pay full salaries. We fractionalize the role: you get laser-focused impact, not idle time.
     </p>
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div><span class="text-green-500 text-4xl font-bold">1</span><p class="mt-2">Apply for free help (startups).</p></div>
-      <div><span class="text-green-500 text-4xl font-bold">2</span><p class="mt-2">Book a fractional SM.</p></div>
-      <div><span class="text-green-500 text-4xl font-bold">3</span><p class="mt-2">Run Agile like a pro.</p></div>
+
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="bg-white rounded-lg p-8 shadow hover:shadow-md transition-all">
+        <span class="text-4xl font-extrabold text-scrumGreen">1</span>
+        <h3 class="mt-3 text-xl font-semibold text-gray-700">Apply (Unfunded? It’s Free)</h3>
+        <p class="mt-2 text-gray-500">We coach your team, run key ceremonies, and get you sprinting—without charging a cent until you raise.</p>
+      </div>
+      <div class="bg-white rounded-lg p-8 shadow hover:shadow-md transition-all">
+        <span class="text-4xl font-extrabold text-scrumGreen">2</span>
+        <h3 class="mt-3 text-xl font-semibold text-gray-700">Book Fractional SM Time</h3>
+        <p class="mt-2 text-gray-500">1–2 hours/day is usually enough: backlog grooming, stand-ups, alignment, unblocking.</p>
+      </div>
+      <div class="bg-white rounded-lg p-8 shadow hover:shadow-md transition-all">
+        <span class="text-4xl font-extrabold text-scrumGreen">3</span>
+        <h3 class="mt-3 text-xl font-semibold text-gray-700">Run Agile Like Pros</h3>
+        <p class="mt-2 text-gray-500">Velocity up. Waste down. Teams happy. Stakeholders calm. (Yes, really.)</p>
+      </div>
     </div>
   </section>
 
   <!-- WHY SCRUMFORCE BEATS IN-HOUSE -->
-  <section class="py-16 text-center bg-white">
-    <h2 class="text-3xl font-bold text-blue-900 mb-6">Why SCRUMFORCE Beats Hiring In-House</h2>
-    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
-      <div>
-        <h3 class="text-xl font-semibold text-gray-700 mb-2">Elite SM Consultants</h3>
-        <p class="text-gray-600">Our team brings experience from startups, scale-ups, and enterprises. We adapt fast and know what works.</p>
+  <section id="whyus" class="py-20 bg-white">
+    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue text-center mb-10">Why SCRUMFORCE Beats In-House</h2>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="relative pl-6">
+        <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-700">Elite SM Consultants</h3>
+        <p class="text-gray-600">
+          We’ve done agile in startups, scale-ups, enterprise, and everything between. We adapt to your tools, culture, and chaos—fast.
+        </p>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold text-gray-700 mb-2">Optimized Cost</h3>
-        <p class="text-gray-600">Stop paying for idle time. Get high-impact leadership at a fraction of full-time costs.</p>
+      <div class="relative pl-6">
+        <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-700">Optimized Cost</h3>
+        <p class="text-gray-600">
+          Stop paying for 8 hours when you only need 2. Fractional time = fractional cost. Simple.
+        </p>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold text-gray-700 mb-2">Fresh Perspective</h3>
-        <p class="text-gray-600">Consultants bring energy, frameworks, and solutions internal staff often can’t see.</p>
+      <div class="relative pl-6">
+        <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-700">Fresh Eyes, Fresh Energy</h3>
+        <p class="text-gray-600">
+          Internal staff can get tired or tunnel-visioned. We bring new perspectives, proven frameworks, and momentum.
+        </p>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold text-gray-700 mb-2">Goal-Driven</h3>
-        <p class="text-gray-600">We don’t just facilitate meetings. We drive outcomes and align your team with bold objectives.</p>
+      <div class="relative pl-6">
+        <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
+        <h3 class="text-xl font-semibold mb-2 text-gray-700">Outcome-Obsessed</h3>
+        <p class="text-gray-600">
+          We don’t just “run ceremonies.” We make sure your team hits big goals without burning out.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- PRICING -->
-  <section class="bg-gray-100 py-16 text-center">
-    <h2 class="text-3xl font-bold text-blue-900 mb-8">Pricing</h2>
-    <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-xl font-bold mb-2">Startups (Unfunded)</h3>
-        <p class="text-green-500 font-semibold text-2xl mb-4">FREE</p>
-        <p class="text-gray-600">Basic SM guidance & ceremonies facilitation until you raise your first round.</p>
+  <section id="pricing" class="bg-gray-100 py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue mb-10">Pricing</h2>
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="bg-white rounded-xl shadow p-8 hover:shadow-lg transition-all">
+        <h3 class="text-2xl font-bold mb-2 text-gray-700">Unfunded Startups</h3>
+        <p class="text-4xl font-extrabold text-scrumGreen mb-4">FREE</p>
+        <p class="text-gray-600">Mentorship mode: ceremonies, backlog help & guidance until you raise.</p>
+        <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank"
+           class="mt-6 inline-block px-6 py-3 bg-scrumGreen text-white rounded-lg font-semibold hover:scale-105 transition-transform">
+          Apply on LinkedIn
+        </a>
       </div>
-      <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-xl font-bold mb-2">Funded Teams</h3>
-        <p class="text-blue-900 font-semibold text-2xl mb-4">From $1,500/month</p>
-        <p class="text-gray-600">Fractional SM (1–2 hrs/day). Dedicated SM available upon request.</p>
+      <div class="bg-white rounded-xl shadow p-8 hover:shadow-lg transition-all">
+        <h3 class="text-2xl font-bold mb-2 text-gray-700">Funded / Growing Teams</h3>
+        <p class="text-4xl font-extrabold text-scrumBlue mb-4">From $1,500/mo</p>
+        <p class="text-gray-600">Fractional SM (1–2 hrs/day). Dedicated SM? Let’s talk.</p>
+        <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank"
+           class="mt-6 inline-block px-6 py-3 border-2 border-scrumBlue text-scrumBlue rounded-lg font-semibold hover:bg-blue-50 hover:scale-105 transition-transform">
+          Book via LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (Optional but fun) -->
+  <section id="faq" class="py-20 bg-white">
+    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue text-center mb-10">Quick FAQ</h2>
+    <div class="max-w-3xl mx-auto space-y-8">
+      <div>
+        <h3 class="font-semibold text-lg text-gray-700">Do you really do it for free?</h3>
+        <p class="text-gray-600 mt-2">If you’re unfunded and scrappy—yes. We want you to ship and grow. When money comes in, we’ll talk plans.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg text-gray-700">What tools do you use?</h3>
+        <p class="text-gray-600 mt-2">Whatever you already have (Jira, Linear, ClickUp, Notion). We adapt, we don’t impose.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg text-gray-700">Time zones?</h3>
+        <p class="text-gray-600 mt-2">We’re remote and async-friendly. Stand-ups don’t have to be painful.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg text-gray-700">Can you train our internal SM?</h3>
+        <p class="text-gray-600 mt-2">Absolutely. We’ll groom your future SM while running things smoothly.</p>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-6 text-center text-gray-500 text-sm">
-    <p>Connect with us on <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a></p>
+  <footer class="py-8 text-center text-gray-500 text-sm bg-gray-50">
+    <p>Connect with us on
+      <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>
+    </p>
+    <p class="mt-2 opacity-70">© 2025 SCRUMFORCE. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
