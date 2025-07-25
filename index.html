@@ -36,6 +36,52 @@
 </head>
 <body class="bg-gray-50 text-gray-800 scroll-smooth">
 
+<!-- NAVBAR ------------------------------------------------------------- -->
+<nav class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
+    <!-- Brand -->
+    <a href="#" class="text-xl font-bold text-scrumBlue gradient-text">SCRUMFORCE</a>
+
+    <!-- Mobile burger -->
+    <button id="navToggle"
+            class="md:hidden text-scrumBlue hover:text-scrumGreen focus:outline-none">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Links -->
+    <ul id="navMenu"
+        class="hidden md:flex gap-8 items-center text-sm font-medium text-gray-700">
+      <li><a href="#how"             class="hover:text-scrumGreen">Process</a></li>
+      <li><a href="#whyus"           class="hover:text-scrumGreen">Why Us</a></li>
+      <li><a href="#pricing"         class="hover:text-scrumGreen">Pricing</a></li>
+      <li><a href="#confidentiality" class="hover:text-scrumGreen">Confidentiality</a></li>
+      <li>
+        <a href="https://www.linkedin.com/company/scrumforce-online"
+           target="_blank"
+           class="px-4 py-2 bg-scrumGreen text-white rounded-md hover:scale-105 transition">
+          Connect
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Mobile dropdown (hidden by default) -->
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navMenu   = document.getElementById('navMenu');
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+    navMenu.classList.toggle('flex');
+    navMenu.classList.toggle('flex-col');
+    navMenu.classList.toggle('mt-4');
+  });
+</script>
+
   <!-- Decorative animated rings (background flair) -->
   <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
     <div class="absolute top-[-10rem] left-[-10rem] w-[25rem] h-[25rem] rounded-full border-4 border-scrumGreen/20 animate-spinSlow"></div>
