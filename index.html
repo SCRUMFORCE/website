@@ -1,222 +1,599 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCRUMFORCE – Volunteer Agile Leadership for Startups</title>
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            scrumBlue:  '#1E3A8A',
-            scrumGreen: '#34D399',
-          },
-          keyframes: {
-            wiggle:   {'0%,100%':{transform:'rotate(-2deg)'},'50%':{transform:'rotate(2deg)'}},
-            float:    {'0%':{transform:'translateY(0)'},'50%':{transform:'translateY(-6px)'},'100%':{transform:'translateY(0)'}},
-            spinSlow: {'0%':{transform:'rotate(0deg)'},'100%':{transform:'rotate(360deg)'}},
-          },
-          animation: {
-            wiggle:   'wiggle 0.5s ease-in-out',
-            float:    'float 4s ease-in-out infinite',
-            spinSlow: 'spinSlow 12s linear infinite',
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrumForce - Volunteer Agile Leadership for Startups</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2e0f6c63c.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#0f172a', // dark navy background
+                        darktext: '#e2e8f0', // light text
+                        border: "hsl(214.3 31.8% 91.4%)",
+                        input: "hsl(214.3 31.8% 91.4%)",
+                        ring: "hsl(222.2 84% 4.9%)",
+                        background: "hsl(0 0% 100%)",
+                        foreground: "hsl(222.2 84% 4.9%)",
+                        primary: {
+                            DEFAULT: "hsl(222.2 47.4% 11.2%)",
+                            foreground: "hsl(210 40% 98%)",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(210 40% 96.1%)",
+                            foreground: "hsl(222.2 47.4% 11.2%)",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(0 84.2% 60.2%)",
+                            foreground: "hsl(210 40% 98%)",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(210 40% 96.1%)",
+                            foreground: "hsl(215.4 16.3% 46.9%)",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(210 40% 96.1%)",
+                            foreground: "hsl(222.2 47.4% 11.2%)",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(0 0% 100%)",
+                            foreground: "hsl(222.2 84% 4.9%)",
+                        },
+                        card: {
+                            DEFAULT: "hsl(0 0% 100%)",
+                            foreground: "hsl(222.2 84% 4.9%)",
+                        },
+                    },
+                    borderRadius: {
+                        lg: "0.5rem",
+                        md: "calc(0.5rem - 2px)",
+                        sm: "calc(0.5rem - 4px)",
+                    },
+                    keyframes: {
+                        "accordion-down": {
+                            from: { height: "0" },
+                            to: { height: "var(--radix-accordion-content-height)" },
+                        },
+                        "accordion-up": {
+                            from: { height: "var(--radix-accordion-content-height)" },
+                            to: { height: "0" },
+                        },
+                        float: {
+                            "0%, 100%": { transform: "translateY(0px)" },
+                            "50%": { transform: "translateY(-20px)" },
+                        },
+                        slideUp: {
+                            from: {
+                                opacity: "0",
+                                transform: "translateY(30px)",
+                            },
+                            to: {
+                                opacity: "1",
+                                transform: "translateY(0)",
+                            },
+                        },
+                    },
+                    animation: {
+                        "accordion-down": "accordion-down 0.2s ease-out",
+                        "accordion-up": "accordion-up 0.2s ease-out",
+                        float: "float 6s ease-in-out infinite",
+                        "slide-up": "slideUp 0.6s ease-out",
+                    },
+                }
+            }
         }
-      }
-    }
-  </script>
-  <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .gradient-text { @apply bg-gradient-to-r from-scrumBlue to-scrumGreen bg-clip-text text-transparent; }
-  </style>
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-800 scroll-smooth">
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass-effect border-b border-slate-200 dark:border-slate-700 dark:bg-slate-900/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold gradient-text">SCRUMFORCE</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#why-us" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">Why Us</a>
+                    <a href="#process" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">Process</a>
+                    <a href="#Confidentiality" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">Confidentiality</a>
+                    <a href="#testimonials" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">Success Stories</a>
 
-<!-- NAVBAR ------------------------------------------------------------- -->
-<nav class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
-  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
-    <!-- Brand -->
-    <a href="#" class="text-xl font-bold text-scrumBlue gradient-text">SCRUMFORCE</a>
+                    <a href="https://www.linkedin.com/company/scrumforce-online" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full transition duration-300">
+                      Connect
+                    </a>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <span id="darkModeToggle" class="cursor-pointer text-2xl transition duration-300 hover:scale-110">
+                      🌙
+                    </span>
+                    
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <!-- Dark Mode Toggle Mobile -->
+                    <button id="darkModeToggleMobile" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                        <i id="darkModeIconMobile" class="fas fa-moon text-slate-600 dark:text-slate-300"></i>
+                    </button>
+                    
+                    <button id="mobile-menu-btn" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-slate-200 dark:border-slate-700">
+                <div class="flex flex-col space-y-4">
+                    <a href="#process" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">Process</a>
+                    <a href="#why-us" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">why-us</a>
+                    <a href="#confidentiality" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">confidentiality</a>
+                    <a href="#testimonials" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">testimonials</a>
+                    <button class="btn-gradient text-white px-6 py-2 rounded-md font-medium text-left">
+                        Connect
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Mobile burger -->
-    <button id="navToggle"
-            class="md:hidden text-scrumBlue hover:text-scrumGreen focus:outline-none">
-      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
-           viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 dark:from-blue-600/20 dark:to-purple-600/20"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
+            <div id="hero-content" class="text-center transition-all duration-1000 opacity-0 translate-y-10">
+                <div class="inline-flex items-center rounded-full px-4 py-2 text-sm font-medium bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/50 dark:to-purple-900/50 text-blue-700 dark:text-blue-300 border-0 mb-6">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Trusted by 150+ Startups
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                    <span class="gradient-text">SCRUMFORCE</span>
+                </h1>
+                
+                <h2 class="text-2xl md:text-3xl font-semibold text-slate-700 dark:text-slate-300 mb-8">
+                    Volunteer Agile Leadership for Startups
+                </h2>
+                
+                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+                    A non-profit initiative connecting experienced Scrum Masters with early-stage startups to boost 
+                    agility, improve delivery, and mentor teams – all for free. Transform your startup's development 
+                    process with proven agile methodologies.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" rel="noopener noreferrer">
+                    <button class="btn-gradient text-white px-8 py-3 text-lg rounded-md font-medium flex items-center">
+                        Request Support
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </button>
+                </a>
+                
+                <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" rel="noopener noreferrer">
+                    <button class="btn-outline px-8 py-3 text-lg rounded-md font-medium">
+                        Become a Volunteer SM
+                    </button>
+                </a>
+                </div>
+                
+                <p class="mt-8 text-slate-500 dark:text-slate-400 flex items-center justify-center animate-float gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="m2 12c0-5.5 2.5-10 6-10s6 4.5 6 10-2.5 10-6 10-6-4.5-6-10z"></path>
+                    </svg>
+                    We only live on LinkedIn 
+                    <span class="text-blue-600">👀</span>
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Links -->
-    <ul id="navMenu"
-        class="hidden md:flex gap-8 items-center text-sm font-medium text-gray-700">
-      <li><a href="#how"             class="hover:text-scrumGreen">Process</a></li>
-      <li><a href="#whyus"           class="hover:text-scrumGreen">Why Us</a></li>
-      <li><a href="#confidentiality" class="hover:text-scrumGreen">Confidentiality</a></li>
-      <li>
-        <a href="https://www.linkedin.com/company/scrumforce-online"
-           target="_blank"
-           class="px-4 py-2 bg-scrumGreen text-white rounded-md hover:scale-105 transition">
-          Connect
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <!-- Stats Section -->
+    <section class="py-16 bg-white dark:bg-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">150+</div>
+                    <div class="text-slate-600 dark:text-slate-400 font-medium">Startups Helped</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">50+</div>
+                    <div class="text-slate-600 dark:text-slate-400 font-medium">Volunteer Scrum Masters</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">300%</div>
+                    <div class="text-slate-600 dark:text-slate-400 font-medium">Average Delivery Improvement</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">95%</div>
+                    <div class="text-slate-600 dark:text-slate-400 font-medium">Startup Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why-Us Section -->
+    <section id="why-us" class="py-20 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Why Choose ScrumForce?</h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                    We're more than just agile consultants - we're passionate volunteers committed to startup success.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <div class="mb-4">
+                      <h3 class="text-2xl font-bold text-slate-900 text-center">Complete Confidentiality</h3>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3"></h3>
+                    <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed">Every volunteer commits to strict confidentiality agreements. Your intellectual property, processes, and sensitive information remain 100% secure.</p>
+                </div>
+                
+                <div class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div class="mb-4">
+                      <h3 class="text-2xl font-bold text-slate-900 text-center">Expert Mentorship</h3>
+                    </div>
+                    <p class="text-slate-600 dark:text-white leading-relaxed">Our network includes certified Scrum Masters with years of real-world experience across various industries and organizational sizes.</p>
+                </div>
+                
+                <div class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="mb-4">
+                      <h3 class="text-2xl font-bold text-slate-900 text-center">Global Community</h3>
+                    </div>
+                    <p class="text-slate-600 dark:text-white leading-relaxed">Access talent from around the world, bringing diverse perspectives and proven methodologies to your agile transformation journey.</p>
+                </div>
+                
+                <div class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <div class="mb-4">
+                      <h3 class="text-2xl font-bold text-slate-900 text-center">Tailored Solutions</h3>
+                    </div>
+                    <p class="text-slate-600 dark:text-white leading-relaxed">No one-size-fits-all approaches. We customize our methodology to fit your organization's unique culture, challenges, and goals.</p>
+                </div>
+                
+                <div class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div class="mb-4">
+                      <h3 class="text-2xl font-bold text-slate-900 text-center">Knowledge Transfer</h3>
+                    </div>
+                    <p class="text-slate-600 dark:text-white leading-relaxed">Our volunteers don't just implement - they teach. Your team gains lasting skills and knowledge to continue improving independently.</p>
+                </div>
+                
+                <div class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="mb-4">
+                      <h3 class="text-2xl font-bold text-slate-900 text-center">Mutual Growth</h3>
+                    </div>
+                    <p class="text-slate-600 dark:text-white leading-relaxed">While you benefit from expert guidance, our volunteers stay sharp by solving real challenges and contributing to meaningful causes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Mobile dropdown (hidden by default) -->
-<script>
-  const navToggle = document.getElementById('navToggle');
-  const navMenu   = document.getElementById('navMenu');
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('hidden');
-    navMenu.classList.toggle('flex');
-    navMenu.classList.toggle('flex-col');
-    navMenu.classList.toggle('mt-4');
-  });
-</script>
+   
+    
+  <!-- How It Works Section -->
+    <section id="process" class="py-20 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">How It Works</h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                    A simple, structured process to get your startup on the agile fast track.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="relative">
+                    <div class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</span>
+                            <h3 class="text-2xl font-bold text-slate-900">Connect</h3>
+                        </div>
+                        <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed">Submit your startup's needs and get matched with experienced Scrum Masters who understand your industry and challenges.</p>
+                    </div>
+                    <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
+                        <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</span>
+                            <h3 class="text-2xl font-bold text-slate-900">Onboarding</h3>
+                        </div>
+                        <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed">Complete a structured onboarding process where our volunteers assess your current processes and create a tailored agile roadmap.</p>
+                    </div>
+                    <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
+                        <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</span>
+                            <h3 class="text-2xl font-bold text-slate-900">Collaboration</h3>
+                        </div>
+                        <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed">Work closely with your dedicated Scrum Master to implement agile practices, conduct ceremonies, and mentor your team.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Decorative animated rings -->
-<div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-  <div class="absolute top-[-10rem] left-[-10rem] w-[25rem] h-[25rem] rounded-full border-4 border-scrumGreen/20 animate-spinSlow"></div>
-  <div class="absolute bottom-[-12rem] right-[-8rem] w-[20rem] h-[20rem] rounded-full border-4 border-scrumBlue/10 animate-spinSlow"
-       style="animation-duration:18s;"></div>
-</div>
-
-<!-- HERO -->
-<header class="relative text-center py-24 bg-white">
-  <h1 class="text-5xl md:text-6xl font-extrabold gradient-text tracking-tight">SCRUMFORCE</h1>
-  <p class="mt-5 text-2xl font-semibold text-gray-700">Volunteer Agile Leadership for Startups</p>
-  <p class="mt-4 max-w-3xl mx-auto text-gray-500">
-    A non-profit initiative connecting experienced Scrum Masters with early-stage startups to boost agility,
-    improve delivery, and mentor teams – all for free.
-  </p>
-  <div class="mt-8 flex justify-center gap-4 flex-wrap">
-    <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank"
-       class="px-8 py-3 bg-scrumGreen text-white font-semibold rounded-lg shadow hover:shadow-lg hover:scale-[1.03] transition-all active:scale-95">
-      Request Support
-    </a>
-    <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank"
-       class="px-8 py-3 border-2 border-scrumBlue text-scrumBlue font-semibold rounded-lg hover:bg-blue-50 hover:scale-[1.03] transition-all active:scale-95">
-      Become a Volunteer SM
-    </a>
-  </div>
-  <span class="mt-6 block text-sm text-gray-400 animate-float">We only live on LinkedIn 👀</span>
-</header>
-
-<!-- HOW IT WORKS -->
-<section id="how" class="bg-gray-100 py-20 text-center">
-  <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue mb-10">How It Works</h2>
-
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
-    <!-- Step 1 -->
-    <div class="bg-white rounded-xl p-8 shadow hover:shadow-md transition">
-      <h3 class="text-xl font-bold text-scrumGreen flex items-center gap-3">
-        <span class="text-3xl font-extrabold">1</span> Connect
-      </h3>
-      <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
-        <li>Startups and volunteer Scrum Masters connect via LinkedIn.</li>
-        <li>Quick intro call to understand goals and challenges.</li>
-      </ul>
-    </div>
-    <!-- Step 2 -->
-    <div class="bg-white rounded-xl p-8 shadow hover:shadow-md transition">
-      <h3 class="text-xl font-bold text-scrumGreen flex items-center gap-3">
-        <span class="text-3xl font-extrabold">2</span> Onboarding
-      </h3>
-      <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
-        <li>SM joins your collaboration tools (Slack / Teams / Discord).</li>
-        <li>Access to Kanban board (Jira, Trello, etc.).</li>
-      </ul>
-    </div>
-    <!-- Step 3 -->
-    <div class="bg-white rounded-xl p-8 shadow hover:shadow-md transition">
-      <h3 class="text-xl font-bold text-scrumGreen flex items-center gap-3">
-        <span class="text-3xl font-extrabold">3</span> Collaboration
-      </h3>
-      <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
-        <li>SM supports your ceremonies, backlog refinement, and team coaching.</li>
-        <li>Mentorship-driven, outcome-focused approach.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- WHY SCRUMFORCE -->
-<section id="whyus" class="py-20 bg-white">
-  <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue text-center mb-10">Why We Exist</h2>
-  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-    <div class="relative pl-6">
-      <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-700">Supporting Startups</h3>
-      <p class="text-gray-600">Early-stage teams often lack experienced Scrum Masters – we fill that gap.</p>
-    </div>
-    <div class="relative pl-6">
-      <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-700">Volunteer Spirit</h3>
-      <p class="text-gray-600">Our contributors give their time and expertise freely to help startups thrive.</p>
-    </div>
-    <div class="relative pl-6">
-      <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-700">Community-Driven</h3>
-      <p class="text-gray-600">We believe in building a collaborative ecosystem where everyone wins.</p>
-    </div>
-    <div class="relative pl-6">
-      <div class="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-scrumGreen animate-pulse"></div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-700">Focus on Learning</h3>
-      <p class="text-gray-600">Startups learn best practices, and volunteers stay sharp by helping real teams.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONFIDENTIALITY -->
-<section id="confidentiality" class="py-16 bg-white border-t border-gray-200">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-scrumBlue mb-4">
-      🔒 Confidentiality & IP Protection
-    </h2>
-    <p class="text-gray-600 max-w-2xl mx-auto mb-8">
-      Every volunteer Scrum Master commits to confidentiality.  
-      No leaks, no misuse of information – all deliverables and ideas remain yours.
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-      <div class="p-6 bg-gray-100 rounded-lg shadow-sm">
-        <h3 class="font-semibold text-scrumGreen mb-1">Mutual Trust</h3>
-        <p class="text-gray-600 text-sm">
-          Volunteers respect your IP and processes, ensuring a safe collaboration.
-        </p>
+    <!-- Confidentiality & IP Protection Section -->
+    <section id="Confidentiality" class="py-20 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+              <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Confidentiality & IP Protection</h2>
+              <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                Your innovation is safe with us. We’re committed to protecting your intellectual property and startup secrets.
+              </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+              <div class="relative">
+                  <div class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full">
+                      <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                          <!-- Shield icon for Non-Disclosure -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white align-content-center" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2l7 4v6c0 5-3.58 9.74-7 11-3.42-1.26-7-6-7-11V6l7-4z" />
+                          </svg>
+                      </div>
+                      <div class="mb-4">
+                          <h3 class="text-2xl font-bold text-slate-900 text-center">Non-Disclosure</h3>
+                      </div>
+                      <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed text">All volunteers sign NDAs before engagement begins to legally protect your confidential business information.</p>
+                  </div>
+                  <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
+                      <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      </svg>
+                  </div>
+              </div>
+              
+              <div class="relative">
+                  <div class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full">
+                      <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                          <!-- Lock icon for Secure Communication -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <rect x="6" y="11" width="12" height="9" rx="2" ry="2" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 11V7a3 3 0 016 0v4" />
+                          </svg>
+                      </div>
+                      <div class="mb-4">
+                          <h3 class="text-2xl font-bold text-slate-900 text-center">Secure Communication</h3>
+                      </div>
+                      <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed text">All discussions and documentation are handled via secure, encrypted channels and stored with access controls.</p>
+                  </div>
+                  <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
+                      <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      </svg>
+                  </div>
+              </div>
+              
+              <div class="relative">
+                  <div class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full">
+                      <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                          <!-- Document with checkmark icon for IP Rights Protection -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2V4a2 2 0 012-2h4z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 14h8v6H8v-6z" />
+                          </svg>
+                      </div>
+                      <div class="mb-4">
+                          <h3 class="text-2xl font-bold text-slate-900 text-center">IP Rights Protection</h3>
+                      </div>
+                      <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed text">You retain full ownership of your ideas, code, and materials. We simply provide guidance with no claim on IP.</p>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="p-6 bg-gray-100 rounded-lg shadow-sm">
-        <h3 class="font-semibold text-scrumGreen mb-1">Secure Access</h3>
-        <p class="text-gray-600 text-sm">
-          No local storage, limited tool access, and strict adherence to your security protocols.
-        </p>
-      </div>
-      <div class="p-6 bg-gray-100 rounded-lg shadow-sm">
-        <h3 class="font-semibold text-scrumGreen mb-1">Ownership</h3>
-        <p class="text-gray-600 text-sm">
-          Everything created during the engagement is your property, 100%.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FOOTER -->
-<footer class="py-8 text-center text-gray-500 text-sm bg-gray-50">
-  <p>Connect with us on
-    <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" class="text-blue-600 hover:underline">
-      LinkedIn
-    </a>
-  </p>
-  <p class="mt-2 opacity-70">© 2025 SCRUMFORCE. A Non-Profit Community Initiative.</p>
-</footer>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Success Stories</h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                    Hear from startup leaders who've transformed their teams with ScrumForce.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700">
+                    <svg class="w-8 h-8 text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    <blockquote class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed">
+                        "ScrumForce helped us establish proper agile practices that scaled with our growth from 5 to 50 employees."
+                    </blockquote>
+                    <div>
+                        <div class="font-semibold text-slate-900 dark:text-white">Sarah Chen</div>
+                        <div class="text-slate-600 dark:text-slate-400">CTO, TechStart Inc.</div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700">
+                    <svg class="w-8 h-8 text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    <blockquote class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed">
+                        "The volunteer Scrum Master we worked with was incredible - professional guidance without the consulting fees."
+                    </blockquote>
+                    <div>
+                        <div class="font-semibold text-slate-900 dark:text-white">Marcus Johnson</div>
+                        <div class="text-slate-600 dark:text-slate-400">Founder, InnovateLab</div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700">
+                    <svg class="w-8 h-8 text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    <blockquote class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed">
+                        "Our delivery speed improved 3x after implementing their recommended agile framework."
+                    </blockquote>
+                    <div>
+                        <div class="font-semibold text-slate-900 dark:text-white">Emma Rodriguez</div>
+                        <div class="text-slate-600 dark:text-slate-400">Product Manager, StartupXYZ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Startup?
+            </h2>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                Join 150+ startups that have accelerated their agile journey with ScrumForce. 
+                Get matched with an experienced Scrum Master today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <!-- Request Support Button -->
+              <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" rel="noopener noreferrer">
+                  <button class="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg font-semibold rounded-md transition-all duration-300 flex items-center justify-center">
+                      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                          <line x1="16" y1="2" x2="16" y2="6"></line>
+                          <line x1="8" y1="2" x2="8" y2="6"></line>
+                          <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      Request Support
+                  </button>
+              </a>
+              
+              <!-- Learn More Button -->
+              <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" rel="noopener noreferrer">
+                  <button class="border-2 border-white text-white hover:bg-white/10 px-8 py-3 text-lg rounded-md transition-all duration-300">
+                      Learn More About Our Process
+                  </button>
+              </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 dark:bg-slate-950 text-white py-12 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold">SCRUMFORCE</span>
+                    </div>
+                    <p class="text-slate-400 max-w-md mb-4">
+                        Connecting experienced Scrum Masters with startups to build better products faster. 
+                        A non-profit initiative powered by passionate volunteers.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">For Startups</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Request Support</a></li>
+                        <li><a href="#process" class="hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition-colors">Success Stories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">For Volunteers</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Become a Volunteer</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Volunteer Guide</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
+                <p>&copy; 2024 ScrumForce. A non-profit initiative for startup success.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
