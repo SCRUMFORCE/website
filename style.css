@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Base theme colors for dark mode */
+.dark {
+    color-scheme: dark;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(90deg, #0f172a, #5b21b6, #22c55e);
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #0f172a, #5b21b6, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Dark mode gradient text adjustment */
+.dark .gradient-text {
+    background: linear-gradient(90deg, #60a5fa, #a855f7, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Dark mode glass effect */
+.dark .glass-effect {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(71, 85, 105, 0.3);
+}
+
+.animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.bg-gradient-light-blue {
+    background: linear-gradient(135deg, #e0f2fe, #bae6fd); /* light blue */
+    color: #1e3a8a; /* dark blue text */
+  }
+  .bg-gradient-light-green {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0); /* light green */
+    color: #166534; /* dark green text */
+  }
+  .bg-gradient-light-purple {
+    background: linear-gradient(135deg, #ede9fe, #ddd6fe); /* light purple */
+    color: #5b21b6; /* dark purple text */
+  }
+  
+  /* Dark mode overrides */
+  .dark .bg-gradient-light-blue {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb); /* darker blue */
+    color: white; /* light text */
+  }
+  .dark .bg-gradient-light-green {
+    background: linear-gradient(135deg, #166534, #22c55e); /* darker green */
+    color: white; /* light text */
+  }
+  .dark .bg-gradient-light-purple {
+    background: linear-gradient(135deg, #5b21b6, #8b5cf6); /* darker purple */
+    color: white; /* light text */
+  }
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Dark mode card hover */
+.dark .card-hover:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.btn-gradient {
+    background: linear-gradient(to right, #22c55e, #10b981);
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(to right, #16a34a, #059669);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #eff6ff;
+}
+
+/* Dark mode button outline */
+.dark .btn-outline {
+    border: 2px solid #60a5fa;
+    color: #60a5fa;
+}
+
+.dark .btn-outline:hover {
+    background-color: rgba(96, 165, 250, 0.1);
+}
+
+/* Dark mode toggle button styles */
+#darkModeToggle, #darkModeToggleMobile {
+    transition: all 0.3s ease;
+}
+
+#darkModeToggle:hover, #darkModeToggleMobile:hover {
+    transform: scale(1.1);
+}
+
+/* Smooth transitions for all elements */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom scrollbar for dark mode */
+.dark ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* Feature section animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Stagger animation delays for feature cards */
+.fade-in:nth-child(1) { animation-delay: 0.1s; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; }
+.fade-in:nth-child(3) { animation-delay: 0.3s; }
+.fade-in:nth-child(4) { animation-delay: 0.4s; }
+.fade-in:nth-child(5) { animation-delay: 0.5s; }
+.fade-in:nth-child(6) { animation-delay: 0.6s; }
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+    .gradient-text {
+        font-size: 2.5rem;
+    }
+    
+    .card-hover {
+        transform: none;
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-2px);
+    }
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+.dark button:focus,
+.dark a:focus {
+    outline-color: #60a5fa;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
