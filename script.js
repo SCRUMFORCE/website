@@ -19,36 +19,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Dark Mode Toggle Functionality
-    const toggleIcon = document.getElementById('darkModeToggle');
-    const htmlElement = document.documentElement;
+    const html = document.documentElement;
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const toggleBtnMobile = document.getElementById('darkModeToggleMobile');
+    const iconMobile = document.getElementById('darkModeIconMobile');
 
-    toggleIcon.addEventListener('click', () => {
-        htmlElement.classList.toggle('dark');
+    // Unified toggle function
+    function toggleDarkMode() {
+    html.classList.toggle('dark');
+    const isDark = html.classList.contains('dark');
 
-        // Toggle icon
-        toggleIcon.textContent = htmlElement.classList.contains('dark') ? '☀️' : '🌙';
-    });
+    renderScrumChart();
 
-    // Set correct icon on page load
-    window.addEventListener('DOMContentLoaded', () => {
-        toggleIcon.textContent = htmlElement.classList.contains('dark') ? '☀️' : '🌙';
-  });
-
-    // Function to update both icons
-    function updateIcons(isDark) {
-        const icons = [icon, iconMobile];
-        icons.forEach(iconElement => {
-            if (iconElement) {
-                if (isDark) {
-                    iconElement.classList.remove('fa-moon');
-                    iconElement.classList.add('fa-sun');
-                } else {
-                    iconElement.classList.remove('fa-sun');
-                    iconElement.classList.add('fa-moon');
-                }
-            }
-        });
+    function toggleDarkMode() {
+    document.documentElement.classList.toggle('dark');
+    renderScrumChart(); // re-render chart with updated colors
     }
+
+
+    // Update icons
+    if (toggleBtn) toggleBtn.textContent = isDark ? '☀️' : '🌙';
+    if (iconMobile) {
+        iconMobile.classList.toggle('fa-moon', !isDark);
+        iconMobile.classList.toggle('fa-sun', isDark);
+    }
+
+    // Save preference
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    // Add listeners
+    if (toggleBtn) toggleBtn.addEventListener('click', toggleDarkMode);
+    if (toggleBtnMobile) toggleBtnMobile.addEventListener('click', toggleDarkMode);
 
     // Function to toggle dark mode
     function toggleDarkMode() {
@@ -292,3 +294,176 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('ScrumForce website loaded successfully! 🚀');
 });
+
+tailwind.config = {
+    darkMode: 'class',
+    theme: {
+        extend: {
+            colors: {
+                darkbg: '#0f172a', // dark navy background
+                darktext: '#e2e8f0', // light text
+                border: "hsl(214.3 31.8% 91.4%)",
+                input: "hsl(214.3 31.8% 91.4%)",
+                ring: "hsl(222.2 84% 4.9%)",
+                background: "hsl(0 0% 100%)",
+                foreground: "hsl(222.2 84% 4.9%)",
+                primary: {
+                    DEFAULT: "hsl(222.2 47.4% 11.2%)",
+                    foreground: "hsl(210 40% 98%)",
+                },
+                secondary: {
+                    DEFAULT: "hsl(210 40% 96.1%)",
+                    foreground: "hsl(222.2 47.4% 11.2%)",
+                },
+                destructive: {
+                    DEFAULT: "hsl(0 84.2% 60.2%)",
+                    foreground: "hsl(210 40% 98%)",
+                },
+                muted: {
+                    DEFAULT: "hsl(210 40% 96.1%)",
+                    foreground: "hsl(215.4 16.3% 46.9%)",
+                },
+                accent: {
+                    DEFAULT: "hsl(210 40% 96.1%)",
+                    foreground: "hsl(222.2 47.4% 11.2%)",
+                },
+                popover: {
+                    DEFAULT: "hsl(0 0% 100%)",
+                    foreground: "hsl(222.2 84% 4.9%)",
+                },
+                card: {
+                    DEFAULT: "hsl(0 0% 100%)",
+                    foreground: "hsl(222.2 84% 4.9%)",
+                },
+            },
+            borderRadius: {
+                lg: "0.5rem",
+                md: "calc(0.5rem - 2px)",
+                sm: "calc(0.5rem - 4px)",
+            },
+            keyframes: {
+                "accordion-down": {
+                    from: { height: "0" },
+                    to: { height: "var(--radix-accordion-content-height)" },
+                },
+                "accordion-up": {
+                    from: { height: "var(--radix-accordion-content-height)" },
+                    to: { height: "0" },
+                },
+                float: {
+                    "0%, 100%": { transform: "translateY(0px)" },
+                    "50%": { transform: "translateY(-20px)" },
+                },
+                slideUp: {
+                    from: {
+                        opacity: "0",
+                        transform: "translateY(30px)",
+                    },
+                    to: {
+                        opacity: "1",
+                        transform: "translateY(0)",
+                    },
+                },
+            },
+            animation: {
+                "accordion-down": "accordion-down 0.2s ease-out",
+                "accordion-up": "accordion-up 0.2s ease-out",
+                float: "float 6s ease-in-out infinite",
+                "slide-up": "slideUp 0.6s ease-out",
+            },
+        }
+    }
+}
+
+  document.querySelectorAll('.toggle-list').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const ul = toggle.parentElement.nextElementSibling; // ul is next sibling after paragraph
+      if (!ul) return;
+  
+      if (ul.classList.contains('hidden')) {
+        ul.classList.remove('hidden');
+        toggle.textContent = 'show less..';
+      } else {
+        ul.classList.add('hidden');
+        toggle.textContent = 'show more..';
+      }
+    });
+  });
+
+        const ctx = document.getElementById('scrumChart').getContext('2d');
+        const scrumChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ['Planning', 'Design', 'Development', 'Testing', 'Deployment'],
+            datasets: [
+              {
+                label: 'Scrum Master Involvement',
+                data: [100, 80,60, 40, 20],
+                borderColor: 'rgba(59, 130, 246, 1)',
+                backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                tension: 0.4,
+                pointRadius:4,
+                fill: true,
+                pointBackgroundColor: '#6366F1'
+              },
+              {
+                label: 'Team Involvement',
+                data: [20, 40, 60, 80, 100],
+                borderColor: 'rgba(20, 184, 166, 1)', // teal-500
+                backgroundColor: 'rgba(20, 184, 166, 0.2)',
+                tension: 0.4,
+                fill: true,
+                pointRadius:4,
+                pointBackgroundColor: '#10B981'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                labels: {
+                  color: getComputedStyle(document.documentElement).getPropertyValue('color') || '#000',
+                  font: {
+                    size: 12
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                ticks: {
+                  color: getComputedStyle(document.documentElement).getPropertyValue('color') || '#000'
+                },
+                grid: {
+                  color: 'rgba(100, 100, 100, 0.1)'
+                }
+              },
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  color: getComputedStyle(document.documentElement).getPropertyValue('color') || '#000'
+                },
+                grid: {
+                  color: 'rgba(100, 100, 100, 0.1)'
+                }
+              }
+            }
+          }
+        });
+      
+        // Optional: Update chart colors on dark mode toggle
+        const updateChartColors = () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        const textColor = isDark ? '#fff' : '#000';
+
+        scrumChart.options.plugins.legend.labels.color = textColor;
+        scrumChart.options.scales.x.ticks.color = textColor;
+        scrumChart.options.scales.y.ticks.color = textColor;
+        scrumChart.update();
+    };
+        // Listen for dark mode toggle
+        const observer = new MutationObserver(updateChartColors);
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+  
