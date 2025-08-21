@@ -65,6 +65,19 @@ html {
     background: linear-gradient(135deg, #ede9fe, #ddd6fe); /* light purple */
     color: #5b21b6; /* dark purple text */
   }
+  .bg-gradient-light-mint {
+    background: linear-gradient(135deg, #d1fae5, #a5f3fc); /* mint to aqua */
+    color: #0e7490; /* deep aqua text */
+  }
+    .bg-gradient-light-teal {
+    background: linear-gradient(135deg, #ccfbf1, #99f6e4);
+    color: #0f766e;
+  }
+  .bg-gradient-light-pink {
+    background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+    color: #be185d;
+  }
+  
   
   /* Dark mode overrides */
   .dark .bg-gradient-light-blue {
@@ -79,7 +92,19 @@ html {
     background: linear-gradient(135deg, #5b21b6, #8b5cf6); /* darker purple */
     color: white; /* light text */
   }
-
+  .dark .bg-gradient-light-mint {
+    background: linear-gradient(135deg, #0e7490, #06b6d4); /* darker aqua */
+    color: white;
+  }
+    .dark .bg-gradient-light-teal {
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: white;
+  }
+  .dark .bg-gradient-light-pink {
+    background: linear-gradient(135deg, #be185d, #ec4899);
+    color: white;
+  }
+  
 .card-hover:hover {
     transform: translateY(-4px);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
@@ -238,3 +263,15 @@ a:focus {
   .dark .btn-unified:hover {
     background: linear-gradient(90deg, #60a5fa, #a855f7, #34d399);
   }
+
+  /* Chart */
+
+  #scrumChart {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #6366f1;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
+  }
+  

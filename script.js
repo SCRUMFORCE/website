@@ -375,95 +375,124 @@ tailwind.config = {
     }
 }
 
-  document.querySelectorAll('.toggle-list').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const ul = toggle.parentElement.nextElementSibling; // ul is next sibling after paragraph
-      if (!ul) return;
-  
-      if (ul.classList.contains('hidden')) {
-        ul.classList.remove('hidden');
-        toggle.textContent = 'show less..';
-      } else {
-        ul.classList.add('hidden');
-        toggle.textContent = 'show more..';
-      }
-    });
-  });
 
-        const ctx = document.getElementById('scrumChart').getContext('2d');
-        const scrumChart = new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: ['Planning', 'Design', 'Development', 'Testing', 'Deployment'],
-            datasets: [
-              {
-                label: 'Scrum Master Involvement',
-                data: [100, 80,60, 40, 20],
-                borderColor: 'rgba(59, 130, 246, 1)',
-                backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                tension: 0.4,
-                pointRadius:4,
-                fill: true,
-                pointBackgroundColor: '#6366F1'
-              },
-              {
-                label: 'Team Involvement',
-                data: [20, 40, 60, 80, 100],
-                borderColor: 'rgba(20, 184, 166, 1)', // teal-500
-                backgroundColor: 'rgba(20, 184, 166, 0.2)',
-                tension: 0.4,
-                fill: true,
-                pointRadius:4,
-                pointBackgroundColor: '#10B981'
-              }
-            ]
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: {
-                labels: {
-                  color: getComputedStyle(document.documentElement).getPropertyValue('color') || '#000',
-                  font: {
-                    size: 12
-                  }
-                }
-              }
-            },
-            scales: {
-              x: {
-                ticks: {
-                  color: getComputedStyle(document.documentElement).getPropertyValue('color') || '#000'
-                },
-                grid: {
-                  color: 'rgba(100, 100, 100, 0.1)'
-                }
-              },
-              y: {
-                beginAtZero: true,
-                ticks: {
-                  color: getComputedStyle(document.documentElement).getPropertyValue('color') || '#000'
-                },
-                grid: {
-                  color: 'rgba(100, 100, 100, 0.1)'
-                }
-              }
+// Chart 
+
+const ctx = document.getElementById('scrumChart').getContext('2d');
+
+// Gradient for Scrum Master
+const createGradients = (ctx, isDark) => {
+const scrumGradient = ctx.createLinearGradient(0, 0, 600, 0);
+scrumGradient.addColorStop(0, isDark ? '#818cf8' : '#6366f1');
+scrumGradient.addColorStop(1, isDark ? '#4f46e5' : '#4338ca');
+
+// Gradient for Team
+const teamGradient = ctx.createLinearGradient(0, 0, 600, 0);
+teamGradient.addColorStop(0, isDark ? '#6ee7b7' : '#34d399');
+teamGradient.addColorStop(1, isDark ? '#2dd4bf' : '#10b981');
+return { scrumGradient, teamGradient };
+}
+// Initial theme check
+let isDark = document.documentElement.classList.contains('dark');
+let { scrumGradient, teamGradient } = createGradients(ctx, isDark);
+
+// Create chart instance
+const scrumChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: [
+      'Onboarding (1-2 weeks)',
+      'Coaching (1-2 months)',
+      'Autonomy (2+ months)'
+    ],
+    datasets: [
+      {
+        label: 'Scrum Master',
+        data: [0.1, 0.6, 0.5, 0.4, 0.1],              // high → cross → low
+        borderColor: scrumGradient,
+        backgroundColor: 'rgba(99,102,241,0.1)',
+        fill: true,
+        borderWidth: 4,
+        pointRadius: 0,
+        cubicInterpolationMode: 'monotone', // smooth middle
+        tension: 0.4
+      },
+      {
+        label: 'Team',
+        data: [0.1, 0.5, 0.8, 0.9, 1],              // low → cross → high
+        borderColor: teamGradient,
+        backgroundColor: 'rgba(16,185,129,0.1)',
+        fill: true,
+        borderWidth: 4,
+        pointRadius: 0,
+        cubicInterpolationMode: 'monotone',
+        tension: 0.4
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        labels: {
+          color: '#1e293b',
+          font: { size: 14, weight: 'bold' }
+        }
+      },
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            if (context.dataset.label === 'Scrum Master') {
+              return 'Guiding the team toward independence';
+            } else {
+              return 'Team growing in confidence and ownership';
             }
           }
-        });
-      
-        // Optional: Update chart colors on dark mode toggle
-        const updateChartColors = () => {
-        const isDark = document.documentElement.classList.contains('dark');
-        const textColor = isDark ? '#fff' : '#000';
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        ticks: {
+          color: '#64748b',
+          font: { size: 12, weight: 'bold' }
+        }
+      },
+      y: { display: false }
+    },
+    elements: {
+      line: {
+        tension: 0.4  // smooth curve but keeps ends straight
+      }
+    }
+  }
+});
 
-        scrumChart.options.plugins.legend.labels.color = textColor;
-        scrumChart.options.scales.x.ticks.color = textColor;
-        scrumChart.options.scales.y.ticks.color = textColor;
-        scrumChart.update();
-    };
-        // Listen for dark mode toggle
-        const observer = new MutationObserver(updateChartColors);
-        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-
+// Dark mode update logic
+const updateChartColors = () => {
+    const isDark = document.documentElement.classList.contains('dark');
+    const textColor = isDark ? '#ffffff' : '#1e293b'; // white in dark, slate in light
   
+    // Update legend and axis tick colors
+    scrumChart.options.plugins.legend.labels.color = textColor;
+    scrumChart.options.scales.x.ticks.color = textColor;
+  
+    // Optional: update tooltip title and body colors
+    scrumChart.options.plugins.tooltip.titleColor = textColor;
+    scrumChart.options.plugins.tooltip.bodyColor = textColor;
+  
+    scrumChart.update();
+  };
+  
+  new MutationObserver(updateChartColors).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['class']
+  });
+  
+
+const observer = new MutationObserver(updateChartColors);
+observer.observe(document.documentElement, {
+  attributes: true,
+  attributeFilter: ['class']
+});
