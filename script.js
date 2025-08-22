@@ -401,32 +401,32 @@ const scrumChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: [
-      'Onboarding (1-2 weeks)',
-      'Coaching (1-2 months)',
-      'Autonomy (2+ months)'
+      '','', 'Onboarding (1-2 weeks)', '',
+      'Coaching (1-2 months)', '',
+      'Autonomy (2+ months)',
     ],
     datasets: [
       {
         label: 'Scrum Master',
-        data: [0.1, 0.6, 0.5, 0.4, 0.1],              // high → cross → low
+        data: [0.95, 0.9, 0.7, 0.5, 0.3, 0.1, 0.05], // high → cross → low
         borderColor: scrumGradient,
         backgroundColor: 'rgba(99,102,241,0.1)',
         fill: true,
         borderWidth: 4,
         pointRadius: 0,
         cubicInterpolationMode: 'monotone', // smooth middle
-        tension: 0.4
+        tension: 0.5
       },
       {
         label: 'Team',
-        data: [0.1, 0.5, 0.8, 0.9, 1],              // low → cross → high
+        data: [0.05, 0.1, 0.3, 0.5, 0.7, 0.9, 0.95],              // low → cross → high
         borderColor: teamGradient,
         backgroundColor: 'rgba(16,185,129,0.1)',
         fill: true,
         borderWidth: 4,
         pointRadius: 0,
         cubicInterpolationMode: 'monotone',
-        tension: 0.4
+        tension: 0.5
       }
     ]
   },
