@@ -109,11 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Optional: Hide/show nav on scroll
-            if (currentScrollY > lastScrollY && currentScrollY > 500) {
-                nav.style.transform = 'translateY(-100%)';
-            } else {
-                nav.style.transform = 'translateY(0)';
-            }
+            // if (currentScrollY > lastScrollY && currentScrollY > 500) {
+            //     nav.style.transform = 'translateY(-100%)';
+            // } else {
+            //     nav.style.transform = 'translateY(0)';
+            // }
         }
         
         lastScrollY = currentScrollY;
@@ -149,29 +149,6 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transform = 'translateY(30px)';
         section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(section);
-    });
-
-    // Add click handlers to CTA buttons
-    document.querySelectorAll('button').forEach(button => {
-        button.addEventListener('click', function(e) {
-            // Skip if it's the dark mode toggle button
-            if (this.id === 'darkModeToggle' || this.id === 'darkModeToggleMobile' || this.id === 'mobile-menu-btn') {
-                return;
-            }
-            
-            const buttonText = this.textContent.trim();
-            
-            if (buttonText.includes('Request Support') || buttonText.includes('Connect')) {
-                showNotification('Thank you for your interest! This would normally open a contact form or redirect to a contact page.', 'success');
-            } else if (buttonText.includes('Volunteer')) {
-                showNotification('Thank you for wanting to volunteer! This would normally open a volunteer registration form.', 'info');
-            } else if (buttonText.includes('Learn More')) {
-                const processSection = document.getElementById('process');
-                if (processSection) {
-                    processSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
     });
 
     // Custom notification system
@@ -469,7 +446,7 @@ const scrumChart = new Chart(ctx, {
   }
 });
 
-// Dark mode update logic
+// Dark mode chart update logic
 const updateChartColors = () => {
     const isDark = document.documentElement.classList.contains('dark');
     const textColor = isDark ? '#ffffff' : '#1e293b'; // white in dark, slate in light
