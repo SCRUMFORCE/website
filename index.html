@@ -11,6 +11,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD3C2BDZMQ"></script>
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -81,8 +83,60 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section -->    
     <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-100 via-sky-100 to-yellow-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
+          <div id="hero-content" class="text-center transition-all duration-1000 opacity-0 translate-y-10">
+              
+              <!-- Main Heading -->
+              <h1 class="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight gradient-text">
+                  SCRUMFORCE
+              </h1>
+              
+              <!-- Subheading -->
+              <h2 class="text-2xl md:text-3xl font-semibold text-slate-700 dark:text-slate-300 mb-6">
+                  Agile Leadership for Startups
+              </h2>
+              
+              <!-- Description -->
+              <p class="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+                  We connect experienced Scrum Masters with early-stage startups to boost agility, improve delivery, and mentor teams. 
+                  Volunteer support is reserved for startups that truly need it, while paid services provide advanced guidance for others.
+              </p>
+              
+              <!-- Buttons for Both Volunteer and Paid Services -->
+              <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <!-- Volunteer Support Button -->
+                  <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" rel="noopener noreferrer">
+                      <button class="btn-unified px-8 py-3 text-lg rounded-md font-medium flex items-center">
+                          Request Volunteer Support
+                      </button>
+                  </a>
+  
+                  <!-- Paid Services Button -->
+                  <a href="#paid-services">
+                      <button class="btn-outline px-8 py-3 text-lg rounded-md font-medium flex items-center">
+                          Explore Paid Services
+                      </button>
+                  </a>
+              </div>
+              
+              <!-- Footer Note -->
+              <p class="mt-8 text-slate-500 dark:text-slate-400 flex items-center justify-center animate-float gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="m2 12c0-5.5 2.5-10 6-10s6 4.5 6 10-2.5 10-6 10-6-4.5-6-10z"></path>
+                  </svg>
+                  We only live on LinkedIn <span class="text-blue-600">👀</span>
+              </p>
+          </div>
+      </div>
+    </section>
+  
+
+    <!-- <section class="relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 dark:from-blue-600/20 dark:to-purple-600/20"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
             <div id="hero-content" class="text-center transition-all duration-1000 opacity-0 translate-y-10">
@@ -125,14 +179,14 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Status Section -->
     <section class="py-16 bg-white dark:bg-slate-800 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="text-center">
-                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">5+</div>
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">15+</div>
                     <div class="text-slate-600 dark:text-slate-400 font-medium">Startups Helped</div>
                 </div>
                 <div class="text-center">
@@ -150,7 +204,87 @@
             </div>
         </div>
     </section>
+
+    <!-- Paid Services Section with Pricing -->
+    <section id="paid-services" class="py-16 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">Paid Services</h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                    For startups seeking advanced agile guidance, our experienced Scrum Masters provide paid consulting tailored to your organization's needs.
+                </p>
+            </div>
     
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="text-center mb-4">
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Advanced Coaching</h3>
+                        <p class="text-lg font-semibold text-blue-600 dark:text-blue-400">$200 / hour</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
+                        One-on-one or team coaching sessions to refine agile practices and implement advanced Scrum techniques effectively.
+                    </p>
+                </div>
+    
+                <!-- Service 2 -->
+                <div class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="text-center mb-4">
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Agile Workshops</h3>
+                        <p class="text-lg font-semibold text-green-600 dark:text-green-400">$1,000 / session</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
+                        Hands-on workshops for teams to master Scrum, Kanban, and scaling practices, tailored to your startup environment.
+                    </p>
+                </div>
+    
+                <!-- Service 3 -->
+                <div class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="text-center mb-4">
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Process Audits</h3>
+                        <p class="text-lg font-semibold text-purple-600 dark:text-purple-400">$500 / audit</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
+                        Comprehensive evaluation of your development process, identifying bottlenecks and opportunities for efficiency and quality improvement.
+                    </p>
+                </div>
+    
+                <!-- Service 4 -->
+                <div class="bg-gradient-light-mint rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="text-center mb-4">
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Tailored Roadmaps</h3>
+                        <p class="text-lg font-semibold text-orange-600 dark:text-orange-400">$750 / roadmap</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
+                        Custom agile transformation plans designed to meet your startup’s specific goals, challenges, and growth stage.
+                    </p>
+                </div>
+    
+                <!-- Service 5 -->
+                <div class="bg-gradient-light-pink rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="text-center mb-4">
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Remote Consulting</h3>
+                        <p class="text-lg font-semibold text-teal-600 dark:text-teal-400">$150 / hour</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
+                        Fully remote engagements for startups worldwide. Gain access to top Scrum Masters without geographical limitations.
+                    </p>
+                </div>
+    
+                <!-- Service 6 -->
+                <div class="bg-gradient-light-teal rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
+                    <div class="text-center mb-4">
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Continuous Support</h3>
+                        <p class="text-lg font-semibold text-indigo-600 dark:text-indigo-400">$300 / month</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
+                        Ongoing agile support and coaching to help your team adapt and continuously improve after the initial engagement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+                    
     <!-- Why-Us (why choose ScrumForce) Section -->
     <section id="why-us" class="py-10 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -237,6 +371,7 @@
             </div>
         </div>
     </section>
+
     <!-- Process Section (How it Works) -->
     <section id="process" class="py-10 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -594,49 +729,201 @@
         </div>
     
         <div class="grid md:grid-cols-3 gap-12">
-          <!-- Claudio Rispler -->
+    
+          <!-- Claudio -->
           <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-purple-100 via-sky-100 to-yellow-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="absolute inset-0 pointer-events-none bg-gradient-radial from-white/40 via-transparent to-transparent dark:from-slate-300/10"></div>
             <div class="relative text-center">
-              <img src="/images/Claudio_Rispler.png" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Claudio Rispler</h3>
+              <img src="/images/Claudio_Rispler.png" alt="Claudio Rispler" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Claudio Rispler</h3>
+                <a href="https://www.linkedin.com/in/claudio-rispler/" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                   aria-label="Claudio Rispler on LinkedIn">
+                  <!-- LinkedIn SVG (fill uses currentColor) -->
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+                  </svg>
+                </a>
+              </div>
               <p class="text-purple-500 font-semibold mb-4">Co-founder, Lead SCRUM Coach</p>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                Experienced Project Manager and Scrum Master with a passion for guiding teams through complex challenges. Combining technical expertise with a people-first approach, he is committed to driving positive outcomes and lasting improvements. Claudio values collaboration, integrity, and continuous learning in both professional and personal life.
+                Experienced Project Manager and Scrum Master with a passion for guiding teams through complex challenges. Combining technical expertise with a people-first approach.
               </p>
             </div>
           </div>
     
-          <!-- Serge Ivo -->
+          <!-- Serge -->
           <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-pink-100 via-purple-100 to-sky-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="absolute inset-0 pointer-events-none bg-gradient-radial from-white/40 via-transparent to-transparent dark:from-slate-300/10"></div>
             <div class="relative text-center">
               <img src="images/Serge_Ivo.png" alt="Serge Ivo" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Serge Ivo</h3>
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Serge Ivo</h3>
+                <a href="https://www.linkedin.com/in/sergeivo/" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                   aria-label="Serge Ivo on LinkedIn">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+                  </svg>
+                </a>
+              </div>
               <p class="text-purple-500 font-semibold mb-4">Co-founder, Lead SCRUM Coach</p>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                Serial entrepreneur, start-up and Agile coach. Serge builds teams and loves seeing them grow and perform to their top potential. He likes to imagine a better future and starts working on it right away. His hands-on coaching style helps teams unlock their creativity and achieve measurable results.
+                Serial entrepreneur, start-up and Agile coach. Serge builds teams and loves seeing them grow and perform.
               </p>
             </div>
           </div>
     
-          <!-- Stefanie Meier -->
+          <!-- Stefanie -->
           <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-yellow-100 via-sky-100 to-purple-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="absolute inset-0 pointer-events-none bg-gradient-radial from-white/40 via-transparent to-transparent dark:from-slate-300/10"></div>
             <div class="relative text-center">
               <img src="images/Stefanie_Meier.png" alt="Stefanie Meier" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Stefanie Meier</h3>
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Stefanie Meier</h3>
+                <a href="https://www.linkedin.com/in/stefanie-meier-5b523561/" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                   aria-label="Stefanie Meier on LinkedIn">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+                  </svg>
+                </a>
+              </div>
               <p class="text-purple-500 font-semibold mb-4">Digital Project & Product Manager</p>
               <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                Stefanie is a Digital Delivery Pro with over 5 years of experience leading agile teams across start-ups, SaaS, and enterprise projects. Passionate about empowering teams, shipping products, and creating impact, she thrives on turning complex challenges into clear strategies and meaningful results. Now based in Melbourne, Stefanie brings international experience, a collaborative mindset, and a drive to help teams succeed.
+                5 years of experience leading agile teams across start-ups, SaaS, and enterprise projects.Digital Delivery lead with international experience, passionate about empowering teams and shipping products.
               </p>
             </div>
           </div>
+    
+          <!-- Nikita -->
+          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-sky-100 via-purple-100 to-pink-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
+            <div class="relative text-center">
+              <img src="images/nikita-sakhare.jpeg" alt="Nikita Sakhare" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Nikita Sakhare</h3>
+                <a href="https://www.linkedin.com/in/nikita-sakhare-747034105" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                   aria-label="Nikita Sakhare on LinkedIn">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
+                Based in Adelaide; transitioned from software development to Scrum Master since 2020.
+              </p>
+            </div>
+          </div>
+    
+          <!-- Nandini -->
+          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-purple-100 via-sky-100 to-yellow-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
+            <div class="relative text-center">
+              <img src="images/Nandini_Gopalakrishnan.jpeg" alt="Nandini Gopalakrishnan" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Nandini Gopalakrishnan</h3>
+                <a href="https://www.linkedin.com/in/nandini-gopalakrishnan" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                   aria-label="Nandini Gopalakrishnan on LinkedIn">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
+                Based in Sydney with 8 years experience in embedded systems and delivery leadership.
+              </p>
+            </div>
+          </div>
+    
+          <!-- Emma -->
+          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-pink-100 via-yellow-100 to-sky-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
+            <div class="relative text-center">
+              <img src="images/Emma_S.jpeg" alt="Emma Sung" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Emma Sung</h3>
+                <a href="https://www.linkedin.com/in/emma-s-9aa199aa/" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                   aria-label="Emma Sung on LinkedIn">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
+                Sydney-based strategist blending agile uplift with creativity, storytelling and compassion.
+              </p>
+            </div>
+          </div>
+    
+          <!-- Danyella -->
+          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-yellow-100 via-sky-100 to-pink-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
+            <div class="relative text-center">
+              <img src="images/Danyella_Moreira.jpeg" alt="Danyella Moreira" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Danyella Moreira</h3>
+                <a href="https://www.linkedin.com/in/danyellamoreira" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                   aria-label="Danyella Moreira on LinkedIn">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
+                Originally from Brazil, 7 years experience leading projects and 4 years focused on Agile/coaching.
+              </p>
+            </div>
+          </div>
+    
+          <!-- Ria -->
+          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-sky-100 via-yellow-100 to-purple-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
+            <div class="relative text-center">
+              <img src="images/Ria_James.jpeg" alt="Ria James" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Ria James</h3>
+                <a href="https://www.linkedin.com/in/ria-james-19175691/" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                   aria-label="Ria James on LinkedIn">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
+                PMP-certified with experience in digital transformation and agile consulting. Recently relocated to Brisbane.
+              </p>
+            </div>
+          </div>
+    
+          <!-- Kshitija -->
+          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-pink-100 via-sky-100 to-yellow-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
+            <div class="relative text-center">
+              <img src="images/Kshitija_Sonawane.jpeg" alt="Kshitija S" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Kshitija S (KJ)</h3>
+                <a href="https://www.linkedin.com/in/kshitija-sonawane" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                   aria-label="Kshitija Sonawane on LinkedIn">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
+                6+ years’ experience as BA/PO in BFSI & HR domains. Recently relocated to Perth.
+              </p>
+            </div>
+          </div>
+    
         </div>
       </div>
     </section>
-    
-    
+        
     <!-- Confidentiality & IP Protection Section -->
     <section id="Confidentiality" class="py-20 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -752,7 +1039,7 @@
                     </blockquote>
                     <div>
                         <div class="font-semibold text-slate-900 dark:text-white">Emma Rodriguez</div>
-                        <div class="text-slate-600 dark:text-slate-400">Product Manager, StartupXYZ</div>
+                        <div class="text-slate-600 dark:text-slate-400">Product Manager, Startup ArtOut</div>
                     </div>
                 </div>
             </div>
@@ -783,50 +1070,77 @@
 
     <!-- Footer -->
     <footer class="bg-slate-900 dark:bg-slate-950 text-white py-12 transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="md:col-span-2">
-                    <div class="flex items-center space-x-2 mb-4">
-                      <div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center">
-                        <img src="/images/logo.png" alt="SCRUMFORCE Logo" class="w-12 h-12 object-contain" />
-                      </div>
-                      
-                      
-                        <span class="text-xl font-bold">SCRUMFORCE</span>
-                    </div>
-                    <p class="text-slate-400 max-w-md mb-4">
-                        Connecting experienced Scrum Masters with startups to build better products faster. 
-                        A non-profit initiative powered by passionate volunteers.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors">LinkedIn</a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">For Startups</h4>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Request Support</a></li>
-                        <li><a href="#process" class="hover:text-white transition-colors">How It Works</a></li>
-                        <li><a href="#testimonials" class="hover:text-white transition-colors">Success Stories</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">For Volunteers</h4>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Become a Volunteer</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Volunteer Guide</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Community</a></li>
-                    </ul>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          
+          <!-- Logo + About -->
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-2 mb-4">
+              <div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center">
+                <img src="/images/logo.png" alt="SCRUMFORCE Logo" class="w-12 h-12 object-contain" />
+              </div>
+              <span class="text-xl font-bold">SCRUMFORCE</span>
             </div>
+            <p class="text-slate-400 max-w-md mb-4">
+              Connecting experienced Scrum Masters with startups to build better products faster. 
+              A non-profit initiative powered by passionate volunteers.
+            </p>
             
-            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
-                <p>&copy; 2024 ScrumForce. A non-profit initiative for startup success.</p>
+            <!-- Social Icons -->
+            <div class="flex space-x-4">
+              <a href="https://www.linkedin.com/company/scrumforce" 
+                 class="transition-transform transform hover:scale-110" 
+                 aria-label="LinkedIn">
+                <!-- LinkedIn Official Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                     width="32" height="32" 
+                     viewBox="0 0 24 24" 
+                     fill="#0A66C2" 
+                     class="w-8 h-8 rounded-full bg-white p-1 shadow-md">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.027-3.037-1.849-3.037-1.851 0-2.136 1.445-2.136 
+                           2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 
+                           1.637-1.849 3.37-1.849 3.601 0 
+                           4.268 2.368 4.268 5.452v6.288zM5.337 
+                           7.433a2.062 2.062 0 1 1 0-4.125 
+                           2.062 2.062 0 0 1 0 4.125zM6.814 
+                           20.452H3.861V9h2.953v11.452zM22.225 
+                           0H1.771C.792 0 0 .774 0 1.729v20.542C0 
+                           23.227.792 24 1.771 24h20.451C23.2 
+                           24 24 23.227 24 22.271V1.729C24 
+                           .774 23.2 0 22.225 0z"/>
+                </svg>
+              </a>
             </div>
+          </div>
+    
+          <!-- For Startups -->
+          <div>
+            <h4 class="font-semibold mb-4">For Startups</h4>
+            <ul class="space-y-2 text-slate-400">
+              <li><a href="#" class="hover:text-white transition-colors">Request Support</a></li>
+              <li><a href="#process" class="hover:text-white transition-colors">How It Works</a></li>
+              <li><a href="#testimonials" class="hover:text-white transition-colors">Success Stories</a></li>
+            </ul>
+          </div>
+    
+          <!-- For Volunteers -->
+          <div>
+            <h4 class="font-semibold mb-4">For Volunteers</h4>
+            <ul class="space-y-2 text-slate-400">
+              <li><a href="#" class="hover:text-white transition-colors">Become a Volunteer</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Volunteer Guide</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Community</a></li>
+            </ul>
+          </div>
         </div>
+    
+        <!-- Bottom Bar -->
+        <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
+          <p>&copy; 2025 ScrumForce. A non-profit initiative for startup success.</p>
+        </div>
+      </div>
     </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>    <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -905,7 +1219,7 @@
         // Listen for dark mode toggle
         const observer = new MutationObserver(updateChartColors);
         observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-        </script>      
+    </script>      
     <script>AOS.init();</script>
 </body>
 </html>
