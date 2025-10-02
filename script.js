@@ -357,23 +357,20 @@ tailwind.config = {
 
 const ctx = document.getElementById('scrumChart').getContext('2d');
 
-// Gradient for Scrum Master
 const createGradients = (ctx, isDark) => {
 const scrumGradient = ctx.createLinearGradient(0, 0, 600, 0);
 scrumGradient.addColorStop(0, isDark ? '#818cf8' : '#6366f1');
 scrumGradient.addColorStop(1, isDark ? '#4f46e5' : '#4338ca');
 
-// Gradient for Team
 const teamGradient = ctx.createLinearGradient(0, 0, 600, 0);
 teamGradient.addColorStop(0, isDark ? '#6ee7b7' : '#34d399');
 teamGradient.addColorStop(1, isDark ? '#2dd4bf' : '#10b981');
 return { scrumGradient, teamGradient };
 }
-// Initial theme check
+
 let isDark = document.documentElement.classList.contains('dark');
 let { scrumGradient, teamGradient } = createGradients(ctx, isDark);
 
-// Create chart instance
 const scrumChart = new Chart(ctx, {
   type: 'line',
   data: {
@@ -385,18 +382,18 @@ const scrumChart = new Chart(ctx, {
     datasets: [
       {
         label: 'Scrum Master',
-        data: [0.95, 0.9, 0.7, 0.5, 0.3, 0.1, 0.05], // high → cross → low
+        data: [0.95, 0.9, 0.7, 0.5, 0.3, 0.1, 0.05],
         borderColor: scrumGradient,
         backgroundColor: 'rgba(99,102,241,0.1)',
         fill: true,
         borderWidth: 4,
         pointRadius: 0,
-        cubicInterpolationMode: 'monotone', // smooth middle
+        cubicInterpolationMode: 'monotone',
         tension: 0.5
       },
       {
         label: 'Team',
-        data: [0.05, 0.1, 0.3, 0.5, 0.7, 0.9, 0.95],              // low → cross → high
+        data: [0.05, 0.1, 0.3, 0.5, 0.7, 0.9, 0.95],
         borderColor: teamGradient,
         backgroundColor: 'rgba(16,185,129,0.1)',
         fill: true,
@@ -440,7 +437,7 @@ const scrumChart = new Chart(ctx, {
     },
     elements: {
       line: {
-        tension: 0.4  // smooth curve but keeps ends straight
+        tension: 0.4
       }
     }
   }
@@ -449,13 +446,12 @@ const scrumChart = new Chart(ctx, {
 // Dark mode chart update logic
 const updateChartColors = () => {
     const isDark = document.documentElement.classList.contains('dark');
-    const textColor = isDark ? '#ffffff' : '#1e293b'; // white in dark, slate in light
+    const textColor = isDark ? '#ffffff' : '#1e293b';
   
-    // Update legend and axis tick colors
+
     scrumChart.options.plugins.legend.labels.color = textColor;
     scrumChart.options.scales.x.ticks.color = textColor;
   
-    // Optional: update tooltip title and body colors
     scrumChart.options.plugins.tooltip.titleColor = textColor;
     scrumChart.options.plugins.tooltip.bodyColor = textColor;
   
