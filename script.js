@@ -8,15 +8,23 @@ document.addEventListener('DOMContentLoaded', function() {
         heroContent.classList.add('opacity-100', 'translate-y-0');
     }, 300);
 
-    // Mobile menu toggle
+    // Mobile menu toggle with accessibility
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', function () {
+            const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+
+            // Toggle menu visibility
             mobileMenu.classList.toggle('hidden');
+
+            // Update accessibility attributes
+            mobileMenuBtn.setAttribute('aria-expanded', String(!expanded));
+            mobileMenuBtn.setAttribute('aria-label', expanded ? 'Open main menu' : 'Close main menu');
         });
     }
+
 
     // Dark Mode Toggle Functionality
     const html = document.documentElement;
