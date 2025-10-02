@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollY = currentScrollY;
     });
 
+    
     // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
