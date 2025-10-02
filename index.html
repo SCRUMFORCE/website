@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- Title & Description -->
     <title>ScrumForce - Volunteer Agile Leadership for Startups</title>
+    <meta name="description" content="ScrumForce connects agile leaders with startups to accelerate growth through volunteer agile coaching.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://scrumforce.online/">
+  
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scrumforce.online/">
+    <meta property="og:title" content="ScrumForce - Volunteer Agile Leadership for Startups">
+    <meta property="og:description" content="ScrumForce connects agile leaders with startups to accelerate growth through volunteer agile coaching.">
+    <meta property="og:image" content="https://scrumforce.online/images/scrumforce-og.png">
+    <meta property="og:site_name" content="ScrumForce">
+  
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://scrumforce.online/">
+    <meta name="twitter:title" content="ScrumForce - Volunteer Agile Leadership for Startups">
+    <meta name="twitter:description" content="ScrumForce connects agile leaders with startups to accelerate growth through volunteer agile coaching.">
+    <meta name="twitter:image" content="https://scrumforce.online/images/scrumforce-og.png">
+    <meta name="twitter:site" content="@YourTwitterHandle"><!-- replace with your Twitter -->
+  
+    <!-- Favicon -->
+    <link rel="icon" href="https://scrumforce.online/images/favicon.png" type="image/png">
+  
+    <!-- CSS & Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a2e0f6c63c.js" crossorigin="anonymous"></script>
     <link href="style.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD3C2BDZMQ"></script>
-    <!-- Font Awesome CDN -->
-    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-BD3C2BDZMQ');
     </script>
-</head>
+  </head>
+  
 <body class="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 glass-effect border-b border-slate-200 dark:border-slate-700 dark:bg-slate-900/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-2">
-                  <div class="w-[100px] h-[100px] rounded-lg overflow-hidden flex items-center justify-center">
-                    <img src="/images/logo2.png" alt="Logo" class="w-[150px] h-[150px] object-contain" />
+                  <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg overflow-hidden flex items-center justify-center">
+                    <img src="/images/logo2.png" alt="ScrumForce Logo" class="w-full h-full object-contain" />
                   </div>
-                
-                    <!-- <span class="text-xl sm-text-2xl md:text-3xl tracking-tight font-bold gradient-text">SCRUMFORCE</span> -->
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
@@ -133,51 +156,6 @@
       </div>
     </section>
   
-    <!-- <section class="relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 dark:from-blue-600/20 dark:to-purple-600/20"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
-            <div id="hero-content" class="text-center transition-all duration-1000 opacity-0 translate-y-10">
-                <h1 class="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight gradient-text">
-                    <span class="">SCRUMFORCE</span>
-                </h1>
-                
-                <h2 class="text-2xl md:text-3xl font-semibold text-slate-700 dark:text-slate-300 mb-8">
-                    Volunteer Agile Leadership for Startups
-                </h2>
-                
-                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-                    A non-profit initiative connecting experienced Scrum Masters with early-stage startups to boost 
-                    agility, improve delivery, and mentor teams – all for free. Transform your startup's development 
-                    process with proven agile methodologies.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" rel="noopener noreferrer">
-                    <button class="btn-unified px-8 py-3 text-lg rounded-md font-medium flex items-center">
-                        Request Support
-                    </button>
-                </a>
-                
-                <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" rel="noopener noreferrer">
-                    <button class="btn-outline px-8 py-3 text-lg rounded-md font-medium">
-                        Become a Volunteer SM
-                    </button>
-                </a>
-                </div>
-                
-                <p class="mt-8 text-slate-500 dark:text-slate-400 flex items-center justify-center animate-float gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="m2 12c0-5.5 2.5-10 6-10s6 4.5 6 10-2.5 10-6 10-6-4.5-6-10z"></path>
-                    </svg>
-                    We only live on LinkedIn 
-                    <span class="text-blue-600">👀</span>
-                </p>
-            </div>
-        </div>
-    </section> -->
-
     <!-- Status Section -->
     <section class="py-16 bg-white dark:bg-slate-800 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1073,12 +1051,12 @@
           
           <!-- Logo + About -->
           <div class="md:col-span-2">
-            <div class="flex items-center space-x-2">
-              <div class="w-[100px] h-[100px] rounded-lg overflow-hidden flex items-center justify-center">
-                <img src="/images/logo2.png" alt="Logo"/>
+            <div class="flex items-center space-x-2 mb-4">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden flex items-center justify-center">
+                <img src="/images/logo2.png" alt="ScrumForce Logo" class="w-full h-full object-contain"/>
               </div>
             </div>
-            <p class="text-slate-400 max-w-md mb-4">
+            <p class="text-slate-400 max-w-md">
               Connecting experienced Scrum Masters with startups to build better products faster. 
               A non-profit initiative powered by passionate volunteers.
             </p>
@@ -1106,9 +1084,9 @@
         </div>
     
         <!-- Bottom Bar -->
-        <div class="border-t border-slate-800 mt-4 pt-4 flex flex-col md:flex-row items-center justify-between">
+        <div class="border-t border-slate-800 mt-8 pt-4 flex flex-col md:flex-row items-center justify-between">
           <!-- Left: Copyright -->
-          <p class="text-slate-400 text-center md:text-left">
+          <p class="text-slate-400 text-center md:text-left text-sm md:text-base">
             &copy; 2025 ScrumForce. A non-profit initiative for startup success.
           </p>
     
@@ -1119,35 +1097,23 @@
                class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all"
                aria-label="LinkedIn">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 
-                         2.5 1 4.98 2.12 4.98 3.5zM.25 8h4.5V24h-4.5V8zM8 8h4.31v2.18h.06
-                         c.6-1.14 2.08-2.34 4.29-2.34 4.59 0 5.44 3.02 5.44 
-                         6.95V24h-4.5v-7.87c0-1.88-.03-4.3-2.63-4.3-2.64 
-                         0-3.04 2.06-3.04 4.18V24H8V8z"/>
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.25 8h4.5V24h-4.5V8zM8 8h4.31v2.18h.06 c.6-1.14 2.08-2.34 4.29-2.34 4.59 0 5.44 3.02 5.44 6.95V24h-4.5v-7.87c0-1.88-.03-4.3-2.63-4.3-2.64 0-3.04 2.06-3.04 4.18V24H8V8z"/>
               </svg>
             </a>
-          
+    
             <!-- Facebook -->
             <a href="https://www.facebook.com/profile.php?id=61581415867502"
                class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all"
                aria-label="Facebook">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path d="M22.675 0H1.325C.593 0 0 .593 0 
-                         1.325v21.351C0 23.407.593 24 
-                         1.325 24h11.494v-9.294H9.691V11.03h3.128V8.413
-                         c0-3.1 1.894-4.788 4.659-4.788 1.325 
-                         0 2.464.099 2.797.143v3.24h-1.918c-1.507 
-                         0-1.8.717-1.8 1.767v2.315h3.599l-.468 
-                         3.676h-3.131V24h6.137C23.407 24 24 
-                         23.407 24 22.676V1.325C24 .593 23.407 
-                         0 22.675 0z"/>
+                <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.494v-9.294H9.691V11.03h3.128V8.413 c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.797.143v3.24h-1.918c-1.507 0-1.8.717-1.8 1.767v2.315h3.599l-.468 3.676h-3.131V24h6.137C23.407 24 24 23.407 24 22.676V1.325C24 .593 23.407 0 22.675 0z"/>
               </svg>
             </a>
           </div>
-                   
         </div>
       </div>
     </footer>
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>    <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
