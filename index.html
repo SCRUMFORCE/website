@@ -1,523 +1,1051 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Title & Description -->
     <title>ScrumForce - Volunteer Agile Leadership for Startups</title>
-    <meta name="description" content="ScrumForce connects agile leaders with startups to accelerate growth through volunteer agile coaching.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://scrumforce.online/">
-  
-    <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://scrumforce.online/">
-    <meta property="og:title" content="ScrumForce - Volunteer Agile Leadership for Startups">
-    <meta property="og:description" content="ScrumForce connects agile leaders with startups to accelerate growth through volunteer agile coaching.">
-    <meta property="og:image" content="https://scrumforce.online/images/scrumforce-og.png">
-    <meta property="og:site_name" content="ScrumForce">
-  
-    <meta name="author" content="ScrumForce Team">
-    <meta name="keywords" content="Agile Coaching, Startups, Volunteer Agile Leaders, Scrum, ScrumForce">      
+    <meta
+      name="title"
+      content="ScrumForce - Volunteer Agile Leadership for Startups"
+    />
+    <meta
+      name="description"
+      content="ScrumForce connects agile leaders with startups to accelerate growth through volunteer agile coaching."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://scrumforce.online/" />
 
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://scrumforce.online/" />
+    <meta
+      property="og:title"
+      content="ScrumForce - Volunteer Agile Leadership for Startups"
+    />
+    <meta
+      property="og:description"
+      content="ScrumForce connects agile leaders with startups to accelerate growth through volunteer agile coaching."
+    />
+    <meta
+      property="og:image"
+      content="https://scrumforce.online/images/scrumforce-og.png"
+    />
+    <meta property="og:site_name" content="ScrumForce" />
+
+    <meta name="author" content="ScrumForce Team" />
+    <meta
+      name="keywords"
+      content="Agile Coaching, Startups, Volunteer Agile Leaders, Scrum, ScrumForce"
+    />
 
     <!-- Favicon -->
-    <link rel="icon" href="/images/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/images/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
-    
-  
+    <link
+      rel="icon"
+      href="/images/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/images/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/images/apple-touch-icon.png"
+      sizes="180x180"
+    />
+
     <!-- CSS & Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="style.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-    
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD3C2BDZMQ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BD3C2BDZMQ"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BD3C2BDZMQ');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-BD3C2BDZMQ");
     </script>
   </head>
-  
-<body class="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 glass-effect border-b border-slate-200 dark:border-slate-700 dark:bg-slate-900/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-2">
-                  <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg overflow-hidden flex items-center justify-center">
-                    <img src="/images/logo2.webp" alt="ScrumForce Logo" width="112" height="36" fetchpriority="high">
 
-                  </div>
-                </div>
-                
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#hero-content" class="nav-link">Home</a>
-                    <a href="#why-us" class="nav-link">Why Us</a>
-                    <a href="#process" class="nav-link">Process</a>
-                    <a href="#scrum-stages" class="nav-link">Scrum Stages</a>
-                    <a href="#agile-changed" class="nav-link">Agile Changed</a>
-                    <a href="#team" class="nav-link">Team</a>
-                    <a href="#testimonials" class="nav-link">Testimonials</a>
-                    <a href="https://www.linkedin.com/company/scrumforce-online" class="btn-unified px-4 py-2 rounded-full">Connect</a>
-                    <span id="darkModeToggle" class="cursor-pointer text-2xl">
-                      <span class="block dark:hidden">🌙</span> <!-- Light mode icon -->
-                      <span class="hidden dark:block">☀️</span> <!-- Dark mode icon -->
-                    </span>
-                  </div>
-                  
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center space-x-2">
-                    <!-- Dark Mode Toggle Mobile -->
-                    <span id="darkModeToggleMobile" class="cursor-pointer text-2xl transition duration-300 hover:scale-110">
-                      <span class="block dark:hidden">🌙</span>
-                      <span class="hidden dark:block">☀️</span>
-                    </span>
-                                        
-                    <button id="mobile-menu-btn" aria-label="Open main menu" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+  <body
+    class="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 transition-colors duration-300"
+  >
+    <!-- Navigation -->
+    <nav
+      class="sticky top-0 z-50 glass-effect border-b border-slate-200 dark:border-slate-700 dark:bg-slate-900/80"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center space-x-2">
+            <div
+              class="w-12 h-1 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg overflow-hidden flex items-center justify-center"
+            >
+              <img
+                src="/images/logo3.webp"
+                alt="ScrumForce Logo"
+                width="80"
+                height="20"
+                fetchpriority="high"
+              />
             </div>
-            
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
-                <div class="flex flex-col space-y-4">
-                  <a href="#hero-content" class="nav-link">Home</a>
-                  <a href="#why-us" class="nav-link">Why Us</a>
-                  <a href="#process" class="nav-link">Process</a>
-                  <a href="#scrum-stages" class="nav-link">Scrum Stages</a>
-                  <a href="#agile-changed" class="nav-link">Agile Changed</a>
-                  <a href="#testimonials" class="nav-link">Testimonials</a>
-                  <a href="https://www.linkedin.com/company/scrumforce-online" class="btn-unified">Connect</a>
-                </div>
-              </div>
-              
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#hero-content" class="nav-link">Home</a>
+            <a href="#why-us" class="nav-link">Why Us</a>
+            <a href="#process" class="nav-link">Process</a>
+            <a href="#scrum-stages" class="nav-link">Scrum Stages</a>
+            <a href="#agile-changed" class="nav-link">Agile Changed</a>
+            <a href="#team" class="nav-link">Team</a>
+            <a href="#testimonials" class="nav-link">Testimonials</a>
+            <a
+              href="https://www.linkedin.com/company/scrumforce-online"
+              class="btn-unified px-4 py-2 rounded-full"
+              >Connect</a
+            >
+            <span id="darkModeToggle" class="cursor-pointer text-2xl">
+              <span class="block dark:hidden">🌙</span>
+              <!-- Light mode icon -->
+              <span class="hidden dark:block">☀️</span>
+              <!-- Dark mode icon -->
+            </span>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center space-x-2">
+            <!-- Dark Mode Toggle Mobile -->
+            <span
+              id="darkModeToggleMobile"
+              class="cursor-pointer text-2xl transition duration-300 hover:scale-110"
+            >
+              <span class="block dark:hidden">🌙</span>
+              <span class="hidden dark:block">☀️</span>
+            </span>
+
+            <button
+              id="mobile-menu-btn"
+              aria-label="Open main menu"
+              class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden py-4 border-t">
+          <div class="flex flex-col space-y-4">
+            <a href="#hero-content" class="nav-link">Home</a>
+            <a href="#why-us" class="nav-link">Why Us</a>
+            <a href="#process" class="nav-link">Process</a>
+            <a href="#scrum-stages" class="nav-link">Scrum Stages</a>
+            <a href="#agile-changed" class="nav-link">Agile Changed</a>
+            <a href="#testimonials" class="nav-link">Testimonials</a>
+            <a
+              href="https://www.linkedin.com/company/scrumforce-online"
+              class="btn-unified text-sm font-semibold px-3 py-1.5 rounded-full self-start"
+            >
+              Connect
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
 
-    <!-- Hero Section -->    
-    <section class="relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-purple-100 via-sky-100 to-yellow-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600"></div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
-          <div id="hero-content" class="text-center transition-all duration-1000 opacity-0 translate-y-10">
-              
-              <!-- Main Heading -->
-              <h1 class="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight gradient-text">
-                  SCRUMFORCE
-              </h1>
-              
-              <!-- Subheading -->
-              <h2 class="text-2xl md:text-3xl font-semibold text-slate-700 dark:text-slate-300 mb-6">
-                  Agile Leadership for Startups
-              </h2>
-              
-              <!-- Description -->
-              <p class="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-                  We connect experienced Scrum Masters with early-stage startups to boost agility, improve delivery and mentor teams. Volunteer support is reserved for startups that truly need it, while our services provide advanced guidance for others.
-              </p>
-              
-              <!-- Buttons for Both Volunteer and Services -->
-              <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <!-- Volunteer Support Button -->
-                  <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" rel="noopener noreferrer">
-                      <button class="btn-unified px-8 py-3 text-lg rounded-md font-medium flex items-center">
-                          Request Volunteer Support
-                      </button>
-                  </a>
-  
-                  <!-- Paid Services Button -->
-                  <a href="#paid-services">
-                      <button class="btn-outline px-8 py-3 text-lg rounded-md font-medium flex items-center">
-                          Explore Services
-                      </button>
-                  </a>
-              </div>
-              
-              <!-- Footer Note -->
-              <p class="mt-8 text-slate-500 dark:text-slate-400 flex items-center justify-center animate-float gap-2">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="2" y1="12" x2="22" y2="12"></line>
-                      <path d="m2 12c0-5.5 2.5-10 6-10s6 4.5 6 10-2.5 10-6 10-6-4.5-6-10z"></path>
-                  </svg>
-                  We only live on LinkedIn <span class="text-blue-600">👀</span>
-              </p>
+    <!-- Hero Section -->
+    <section
+      class="relative overflow-hidden"
+      style="
+        background-image: url('https://plus.unsplash.com/premium_photo-1668104454432-69c53f7196fc?auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <!-- Overlay for contrast -->
+      <div class="absolute inset-0 bg-black/60 dark:bg-slate-900/80"></div>
+
+      <!-- Gradient overlay for brand tone -->
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-purple-500/30 via-blue-500/30 to-green-400/30"
+      ></div>
+
+      <!-- Content Wrapper -->
+      <div
+        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24 text-center"
+      >
+        <div
+          id="hero-content"
+          class="transition-all duration-1000 opacity-0 translate-y-10"
+        >
+          <!-- Main Heading -->
+          <h1
+            class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
+          >
+            SCRUMFORCE
+          </h1>
+
+          <!-- Subheading -->
+          <h2
+            class="text-2xl md:text-3xl font-semibold text-blue-100 mb-6 drop-shadow-md"
+          >
+            Agile Leadership for Startups
+          </h2>
+
+          <!-- Description -->
+          <p
+            class="text-lg text-blue-100/90 max-w-3xl mx-auto mb-12 leading-relaxed drop-shadow-md"
+          >
+            We connect experienced Scrum Masters with early-stage startups to
+            boost agility, improve delivery and mentor teams. Volunteer support
+            is reserved for startups that truly need it, while our services
+            provide advanced guidance for others.
+          </p>
+
+          <!-- Buttons -->
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <a
+              href="https://www.linkedin.com/company/scrumforce-online"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button
+                class="btn-unified px-8 py-3 text-lg rounded-md font-medium flex items-center shadow-lg hover:scale-105 transition-transform duration-300"
+              >
+                Request Volunteer Support
+              </button>
+            </a>
+
+            <a href="#paid-services">
+              <button
+                class="btn-outline px-8 py-3 text-lg rounded-md font-medium flex items-center shadow-md hover:scale-105 transition-transform duration-300"
+              >
+                Explore Services
+              </button>
+            </a>
           </div>
+
+          <!-- Footer Note -->
+          <p
+            class="mt-8 text-blue-200 flex items-center justify-center animate-float gap-2 drop-shadow-sm"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path
+                d="m2 12c0-5.5 2.5-10 6-10s6 4.5 6 10-2.5 10-6 10-6-4.5-6-10z"
+              ></path>
+            </svg>
+            We only live on LinkedIn <span class="text-green-400">👀</span>
+          </p>
+        </div>
       </div>
     </section>
-  
+
     <!-- Status Section -->
-    <section class="py-16 bg-white dark:bg-slate-800 transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">15+</div>
-                    <div class="text-slate-600 dark:text-slate-400 font-medium">Startups Helped</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">10+</div>
-                    <div class="text-slate-600 dark:text-slate-400 font-medium">Volunteer Scrum Masters</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">100%</div>
-                    <div class="text-slate-600 dark:text-slate-400 font-medium">Average Delivery Improvement</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">95%</div>
-                    <div class="text-slate-600 dark:text-slate-400 font-medium">Startup Satisfaction Rate</div>
-                </div>
+    <section
+      class="py-16 bg-white dark:bg-slate-800 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">
+              15+
             </div>
+            <div class="text-slate-600 dark:text-slate-400 font-medium">
+              Startups Helped
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">
+              10+
+            </div>
+            <div class="text-slate-600 dark:text-slate-400 font-medium">
+              Volunteer Scrum Masters
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">
+              100%
+            </div>
+            <div class="text-slate-600 dark:text-slate-400 font-medium">
+              Average Delivery Improvement
+            </div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold gradient-text mb-2">
+              95%
+            </div>
+            <div class="text-slate-600 dark:text-slate-400 font-medium">
+              Startup Satisfaction Rate
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Services Section -->
-    <section id="paid-services" class="py-16 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">Services</h2>
-                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-                    For startups seeking advanced agile guidance, our experienced Scrum Masters provide paid consulting tailored to your organization's needs.
-                </p>
-            </div>
-    
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="text-center mb-4">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Advanced Coaching</h3>
-                        <!-- <p class="text-lg font-semibold text-blue-600 dark:text-blue-400">$200 / hour</p> -->
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
-                        One-on-one or team coaching sessions to refine agile practices and implement advanced Scrum techniques effectively.
-                    </p>
-                </div>
-    
-                <!-- Service 2 -->
-                <div class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="text-center mb-4">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Agile Workshops</h3>
-                        <!-- <p class="text-lg font-semibold text-green-600 dark:text-green-400">$1,000 / session</p> -->
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
-                        Hands-on workshops for teams to master Scrum, Kanban, and scaling practices, tailored to your startup environment.
-                    </p>
-                </div>
-    
-                <!-- Service 3 -->
-                <div class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="text-center mb-4">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Process Audits</h3>
-                        <!-- <p class="text-lg font-semibold text-purple-600 dark:text-purple-400">$500 / audit</p> -->
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
-                        Comprehensive evaluation of your development process, identifying bottlenecks and opportunities for efficiency and quality improvement.
-                    </p>
-                </div>
-    
-                <!-- Service 4 -->
-                <div class="bg-gradient-light-mint rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="text-center mb-4">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Tailored Roadmaps</h3>
-                        <!-- <p class="text-lg font-semibold text-orange-600 dark:text-orange-400">$750 / roadmap</p> -->
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
-                        Custom agile transformation plans designed to meet your startup’s specific goals, challenges, and growth stage.
-                    </p>
-                </div>
-    
-                <!-- Service 5 -->
-                <div class="bg-gradient-light-pink rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="text-center mb-4">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Remote Consulting</h3>
-                        <!-- <p class="text-lg font-semibold text-teal-600 dark:text-teal-400">$150 / hour</p> -->
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
-                        Fully remote engagements for startups worldwide. Gain access to top Scrum Masters without geographical limitations.
-                    </p>
-                </div>
-    
-                <!-- Service 6 -->
-                <div class="bg-gradient-light-teal rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="text-center mb-4">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Continuous Support</h3>
-                        <!-- <p class="text-lg font-semibold text-indigo-600 dark:text-indigo-400">$300 / month</p> -->
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-center">
-                        Ongoing agile support and coaching to help your team adapt and continuously improve after the initial engagement.
-                    </p>
-                </div>
-            </div>
+    <section
+      id="paid-services"
+      class="py-16 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">
+            Services
+          </h2>
+          <p
+            class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto"
+          >
+            For startups seeking advanced agile guidance, our experienced Scrum
+            Masters provide paid consulting tailored to your organization's
+            needs.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div class="text-center mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+              >
+                Advanced Coaching
+              </h3>
+              <p class="text-lg font-semibold text-blue-600 dark:text-blue-400">
+                $200 / hour
+              </p>
+            </div>
+            <p
+              class="text-slate-600 dark:text-slate-400 leading-relaxed text-center"
+            >
+              One-on-one or team coaching sessions to refine agile practices and
+              implement advanced Scrum techniques effectively.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div class="text-center mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+              >
+                Agile Workshops
+              </h3>
+              <p
+                class="text-lg font-semibold text-green-600 dark:text-green-400"
+              >
+                $1,000 / session
+              </p>
+            </div>
+            <p
+              class="text-slate-600 dark:text-slate-400 leading-relaxed text-center"
+            >
+              Hands-on workshops for teams to master Scrum, Kanban, and scaling
+              practices, tailored to your startup environment.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div class="text-center mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+              >
+                Process Audits
+              </h3>
+              <p
+                class="text-lg font-semibold text-purple-600 dark:text-purple-400"
+              >
+                $500 / audit
+              </p>
+            </div>
+            <p
+              class="text-slate-600 dark:text-slate-400 leading-relaxed text-center"
+            >
+              Comprehensive evaluation of your development process, identifying
+              bottlenecks and opportunities for efficiency and quality
+              improvement.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="bg-gradient-light-mint rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div class="text-center mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+              >
+                Tailored Roadmaps
+              </h3>
+              <p
+                class="text-lg font-semibold text-orange-600 dark:text-orange-400"
+              >
+                $750 / roadmap
+              </p>
+            </div>
+            <p
+              class="text-slate-600 dark:text-slate-400 leading-relaxed text-center"
+            >
+              Custom agile transformation plans designed to meet your startup’s
+              specific goals, challenges, and growth stage.
+            </p>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="bg-gradient-light-pink rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div class="text-center mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+              >
+                Remote Consulting
+              </h3>
+              <p class="text-lg font-semibold text-teal-600 dark:text-teal-400">
+                $200 / hour
+              </p>
+            </div>
+            <p
+              class="text-slate-600 dark:text-slate-400 leading-relaxed text-center"
+            >
+              Fully remote engagements for startups worldwide. Gain access to
+              top Scrum Masters without geographical limitations.
+            </p>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="bg-gradient-light-teal rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div class="text-center mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 dark:text-white mb-2"
+              >
+                Continuous Support
+              </h3>
+              <p
+                class="text-lg font-semibold text-indigo-600 dark:text-indigo-400"
+              >
+                $3000 / month
+              </p>
+            </div>
+            <p
+              class="text-slate-600 dark:text-slate-400 leading-relaxed text-center"
+            >
+              Ongoing agile support and coaching to help your team adapt and
+              continuously improve after the initial engagement.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-                    
+
     <!-- Why-Us (why choose ScrumForce) Section -->
-    <section id="why-us" class="py-10 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">Why Choose ScrumForce?</h2>
-                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-                    We're more than just agile consultants - we're passionate volunteers committed to startup success.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                        </svg>
-                    </div>
-                    <div class="mb-4">
-                      <h3 class="text-2xl font-bold text-slate-900 text-center">Complete Confidentiality</h3>
-                    </div>
-                    <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-3"></h3>
-                    <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed">Every volunteer commits to strict confidentiality agreements. Your intellectual property, processes, and sensitive information remain 100% secure.</p>
-                </div>
-                
-                <div class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
-                    </div>
-                    <div class="mb-4">
-                      <h3 class="text-2xl font-bold text-slate-900 text-center">Expert Mentorship</h3>
-                    </div>
-                    <p class="text-slate-600 dark:text-white leading-relaxed">Our network includes certified Scrum Masters with years of real-world experience across various industries and organizational sizes.</p>
-                </div>
-                
-                <div class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <div class="mb-4">
-                      <h3 class="text-2xl font-bold text-slate-900 text-center">Global Community</h3>
-                    </div>
-                    <p class="text-slate-600 dark:text-white leading-relaxed">Access talent from around the world, bringing diverse perspectives and proven methodologies to your agile transformation journey.</p>
-                </div>
-                
-                <div class="bg-gradient-light-mint rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                    <div class="mb-4">
-                      <h3 class="text-2xl font-bold text-slate-900 text-center">Tailored Solutions</h3>
-                    </div>
-                    <p class="text-slate-600 dark:text-white leading-relaxed">No one-size-fits-all approaches. We customize our methodology to fit your organization's unique culture, challenges, and goals.</p>
-                </div>
-                
-                <div class="bg-gradient-light-pink rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
-                    </div>
-                    <div class="mb-4">
-                      <h3 class="text-2xl font-bold text-slate-900 text-center">Knowledge Transfer</h3>
-                    </div>
-                    <p class="text-slate-600 dark:text-white leading-relaxed">Our volunteers don't just implement - they teach. Your team gains lasting skills and knowledge to continue improving independently.</p>
-                </div>
-                
-                <div class="bg-gradient-light-teal rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700">
-                    <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
-                    </div>
-                    <div class="mb-4">
-                      <h3 class="text-2xl font-bold text-slate-900 text-center">Mutual Growth</h3>
-                    </div>
-                    <p class="text-slate-600 dark:text-white leading-relaxed">While you benefit from expert guidance, our volunteers stay sharp by solving real challenges and contributing to meaningful causes.</p>
-                </div>
-            </div>
+    <section
+      id="why-us"
+      class="py-10 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">
+            Why Choose ScrumForce?
+          </h2>
+          <p
+            class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto"
+          >
+            We're more than just agile consultants - we're passionate volunteers
+            committed to startup success.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                ></path>
+              </svg>
+            </div>
+            <div class="mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 text-center dark:text-white"
+              >
+                Complete Confidentiality
+              </h3>
+            </div>
+            <h3
+              class="text-xl font-semibold text-slate-900 dark:text-white mb-3"
+            ></h3>
+            <p
+              class="text-slate-600 dark:text-white text-slate-400 leading-relaxed"
+            >
+              Every volunteer commits to strict confidentiality agreements. Your
+              intellectual property, processes, and sensitive information remain
+              100% secure.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                ></path>
+              </svg>
+            </div>
+            <div class="mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 text-center dark:text-white"
+              >
+                Expert Mentorship
+              </h3>
+            </div>
+            <p class="text-slate-600 dark:text-white leading-relaxed">
+              Our network includes certified Scrum Masters with years of
+              real-world experience across various industries and organizational
+              sizes.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <div class="mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 text-center dark:text-white"
+              >
+                Global Community
+              </h3>
+            </div>
+            <p class="text-slate-600 dark:text-white leading-relaxed">
+              Access talent from around the world, bringing diverse perspectives
+              and proven methodologies to your agile transformation journey.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-light-mint rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+            <div class="mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 text-center dark:text-white"
+              >
+                Tailored Solutions
+              </h3>
+            </div>
+            <p class="text-slate-600 dark:text-white leading-relaxed">
+              No one-size-fits-all approaches. We customize our methodology to
+              fit your organization's unique culture, challenges, and goals.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-light-pink rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                ></path>
+              </svg>
+            </div>
+            <div class="mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 text-center dark:text-white"
+              >
+                Knowledge Transfer
+              </h3>
+            </div>
+            <p class="text-slate-600 dark:text-white leading-relaxed">
+              Our volunteers don't just implement - they teach. Your team gains
+              lasting skills and knowledge to continue improving independently.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-light-teal rounded-lg shadow-lg card-hover p-8 h-full border dark:border-slate-700"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </div>
+            <div class="mb-4">
+              <h3
+                class="text-2xl font-bold text-slate-900 text-center dark:text-white"
+              >
+                Mutual Growth
+              </h3>
+            </div>
+            <p class="text-slate-600 dark:text-white leading-relaxed">
+              While you benefit from expert guidance, our volunteers stay sharp
+              by solving real challenges and contributing to meaningful causes.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Process Section (How it Works) -->
-    <section id="process" class="py-10 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">How It Works</h2>
-                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-                    A simple, structured process to get your startup on the agile fast track.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="relative">
-                    <div class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full">
-                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white transition-opacity duration-300 group-hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6.39 1.56C17.01 12.2 14.66 11 12 11s-5.01 1.2-6.39 2.56C4.54 14.6 4 15.76 4 17v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-1.24-.54-2.4-1.61-3.44z"/>
-                            </svg>
-                        </div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</span>
-                            <h3 class="text-2xl font-bold text-slate-900">Connect</h3>
-                        </div>
-                        <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed">Submit your startup's needs and get matched with experienced Scrum Masters who understand your industry and challenges.</p>
-                    </div>
-                    <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
-                        <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </div>
-                </div>
-                
-                <div class="relative">
-                    <div class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full">
-                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <circle cx="12" cy="12" r="6"></circle>
-                                <circle cx="12" cy="12" r="2"></circle>
-                            </svg>
-                        </div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</span>
-                            <h3 class="text-2xl font-bold text-slate-900">Onboarding</h3>
-                        </div>
-                        <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed">Complete a structured onboarding process where our volunteers assess your current processes and create a tailored agile roadmap.</p>
-                    </div>
-                    <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
-                        <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </div>
-                </div>
-                
-                <div class="relative">
-                    <div class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <span class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</span>
-                            <h3 class="text-2xl font-bold text-slate-900">Collaboration</h3>
-                        </div>
-                        <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed">Work closely with your dedicated Scrum Master to implement agile practices, conduct ceremonies, and mentor your team.</p>
-                    </div>
-                </div>
-            </div>
+    <section
+      id="process"
+      class="py-10 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">
+            How It Works
+          </h2>
+          <p
+            class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto"
+          >
+            A simple, structured process to get your startup on the agile fast
+            track.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="relative">
+            <div
+              class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-8 h-8 text-white transition-opacity duration-300 group-hover:opacity-80"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6.39 1.56C17.01 12.2 14.66 11 12 11s-5.01 1.2-6.39 2.56C4.54 14.6 4 15.76 4 17v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-1.24-.54-2.4-1.61-3.44z"
+                  />
+                </svg>
+              </div>
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm"
+                  >1</span
+                >
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Connect
+                </h3>
+              </div>
+              <p
+                class="text-slate-600 dark:text-white text-slate-400 leading-relaxed"
+              >
+                Submit your startup's needs and get matched with experienced
+                Scrum Masters who understand your industry and challenges.
+              </p>
+            </div>
+            <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
+              <svg
+                class="w-6 h-6 text-slate-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div
+              class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm"
+                  >2</span
+                >
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Onboarding
+                </h3>
+              </div>
+              <p
+                class="text-slate-600 dark:text-white text-slate-400 leading-relaxed"
+              >
+                Complete a structured onboarding process where our volunteers
+                assess your current processes and create a tailored agile
+                roadmap.
+              </p>
+            </div>
+            <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
+              <svg
+                class="w-6 h-6 text-slate-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div
+              class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm"
+                  >3</span
+                >
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Collaboration
+                </h3>
+              </div>
+              <p
+                class="text-slate-600 dark:text-white text-slate-400 leading-relaxed"
+              >
+                Work closely with your dedicated Scrum Master to implement agile
+                practices, conduct ceremonies, and mentor your team.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Scrum Stages (Scrum Master Involvement Across Stages)-->
-    <section id="scrum-stages" class="py-5 bg-white dark:bg-slate-900 transition-colors duration-300">
-        <div class="text-center mb-10">
-            <h2  class="text-4xl font-bold gradient-text dark:text-white mb-4">
-                Scrum Master Involvement Across Stages
-            </h2>
-            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-              How the Scrum Master's role evolves as teams grow in maturity—from hands-on facilitation to autonomous agility.
-            </p>
+    <section
+      id="scrum-stages"
+      class="py-5 bg-white dark:bg-slate-900 transition-colors duration-300"
+    >
+      <div class="text-center mb-10">
+        <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">
+          Scrum Master Involvement Across Stages
+        </h2>
+        <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+          How the Scrum Master's role evolves as teams grow in maturity—from
+          hands-on facilitation to autonomous agility.
+        </p>
+      </div>
+
+      <!-- Chart Section -->
+      <div
+        class="py-8 bg-white dark:bg-slate-900 transition-colors duration-300"
+      >
+        <div class="text-center">
+          <h2 class="text-2xl font-bold gradient-text dark:text-white mb-2">
+            Scrum Master vs Team Involvement
+          </h2>
+          <p
+            class="text-sm text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-6"
+          >
+            Visualizing the shift in responsibilities across the development
+            lifecycle.
+          </p>
+          <div
+            class="w-full max-w-xl mx-auto px-8 flex justify-center mt-6"
+            style="
+              padding: 20px;
+              border-radius: 20px;
+              box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
+            "
+          >
+            <canvas
+              id="scrumChart"
+              width="800"
+              height="400"
+              class="w-full"
+              style="height: 400px"
+            ></canvas>
           </div>
+        </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               
-            <!-- Stage Cards -->
-            <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up">
-              <!-- Stage 1 -->
-              <div class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700">
-                  <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                      <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M424.5 16a56 56 0 1 1 0 112 56 56 0 1 1 0-112zM166.4 45.5c10.2-14.4 30.2-17.9 44.6-7.7l272 192c14.4 10.2 17.9 30.2 7.7 44.6s-30.2 17.9-44.6 7.7l-92.2-65.1-62.2 53.3 32.1 26.7c18.2 15.2 28.8 37.7 28.8 61.5l0 87.8 77.5 15.2c6.2 1.2 12.6 .9 18.7-.8l41.2-11.8c12.7-3.6 26 3.7 29.7 16.5s-3.7 26-16.5 29.7l-41.2 11.8c-13.4 3.8-27.4 4.4-41.1 1.8L87.1 443.3c-17.2-3.4-33-11.8-45.3-24.1L15.5 393c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l26.2 26.2c5.6 5.6 12.8 9.4 20.6 11l64.2 12.6 0-123.7c0-27.7 12-54 32.8-72.2l69-60.4-88.2-62.3C159.6 80 156.2 60 166.4 45.5zm58.1 375.7l64 12.5 0-75.3c0-4.7-2.1-9.3-5.8-12.3l-58.2-48.5 0 123.6z"/></svg>
-                  </div>
-                <h3 class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4">Stage 1: Onboarding</h3>
-                <p class="text-slate-600 dark:text-slate-300 mb-4">Scrum Master is deeply involved—setting up ceremonies, educating the team, and resolving blockers.
-                </p>
-                  <ul class="list-disc ml-5 text-slate-600 dark:text-slate-400">
-                      <li>Facilitates stand-ups, planning, retrospectives</li>
-                      <li>Introduces agile tools and rituals</li>
-                      <li>Builds trust and psychological safety</li>
-                  </ul>
+          <!-- Stage Cards -->
+          <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up">
+            <!-- Stage 1 -->
+            <div
+              class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 576 512"
+                >
+                  <path
+                    d="M424.5 16a56 56 0 1 1 0 112 56 56 0 1 1 0-112zM166.4 45.5c10.2-14.4 30.2-17.9 44.6-7.7l272 192c14.4 10.2 17.9 30.2 7.7 44.6s-30.2 17.9-44.6 7.7l-92.2-65.1-62.2 53.3 32.1 26.7c18.2 15.2 28.8 37.7 28.8 61.5l0 87.8 77.5 15.2c6.2 1.2 12.6 .9 18.7-.8l41.2-11.8c12.7-3.6 26 3.7 29.7 16.5s-3.7 26-16.5 29.7l-41.2 11.8c-13.4 3.8-27.4 4.4-41.1 1.8L87.1 443.3c-17.2-3.4-33-11.8-45.3-24.1L15.5 393c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l26.2 26.2c5.6 5.6 12.8 9.4 20.6 11l64.2 12.6 0-123.7c0-27.7 12-54 32.8-72.2l69-60.4-88.2-62.3C159.6 80 156.2 60 166.4 45.5zm58.1 375.7l64 12.5 0-75.3c0-4.7-2.1-9.3-5.8-12.3l-58.2-48.5 0 123.6z"
+                  />
+                </svg>
               </div>
-      
-              <!-- Stage 2 -->
-              <div class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700">
-                  <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M256 64a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM152.9 169.3c-23.7-8.4-44.5-24.3-58.8-45.8L74.6 94.2C64.8 79.5 45 75.6 30.3 85.4S11.6 115 21.4 129.8L40.9 159c18.1 27.1 42.8 48.4 71.1 62.4L112 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96 32 0 0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-258.4c29.1-14.2 54.4-36.2 72.7-64.2l18.2-27.9c9.6-14.8 5.4-34.6-9.4-44.3s-34.6-5.5-44.3 9.4L291 122.4c-21.8 33.4-58.9 53.6-98.8 53.6-12.6 0-24.9-2-36.6-5.8-.9-.3-1.8-.7-2.7-.9z"/></svg>
-      
-                  </div>
-                <h3 class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4">Stage 2: Coaching</h3>
-                <p class="text-slate-600 dark:text-slate-300 mb-4">Scrum Master shifts to mentoring—encouraging ownership and guiding from the sidelines.</p>
-                  <ul class="list-disc ml-5 text-slate-600 dark:text-slate-400">
-                      <li>Team leads ceremonies with light guidance</li>
-                      <li>Focus on agile maturity and velocity</li>
-                      <li>Scrum Master coaches and supports</li>
-                  </ul>
+              <h3
+                class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4"
+              >
+                Stage 1: Onboarding
+              </h3>
+
+              <p class="text-slate-600 dark:text-slate-300 mb-4">
+                Scrum Master is present <strong>daily</strong>, actively
+                facilitating stand-ups, planning, retrospectives, and
+                introducing agile tools. The focus is on building trust and
+                psychological safety.<br /><br />
+
+                Scrum Master is deeply involved—setting up ceremonies, educating
+                the team, and resolving blockers.
+              </p>
+              <ul class="list-disc ml-5 text-slate-600 dark:text-slate-400">
+                <li>Facilitates stand-ups, planning, retrospectives</li>
+                <li>Introduces agile tools and rituals</li>
+                <li>Builds trust and psychological safety</li>
+              </ul>
+            </div>
+
+            <!-- Stage 2 -->
+            <div
+              class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                >
+                  <path
+                    d="M256 64a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM152.9 169.3c-23.7-8.4-44.5-24.3-58.8-45.8L74.6 94.2C64.8 79.5 45 75.6 30.3 85.4S11.6 115 21.4 129.8L40.9 159c18.1 27.1 42.8 48.4 71.1 62.4L112 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96 32 0 0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-258.4c29.1-14.2 54.4-36.2 72.7-64.2l18.2-27.9c9.6-14.8 5.4-34.6-9.4-44.3s-34.6-5.5-44.3 9.4L291 122.4c-21.8 33.4-58.9 53.6-98.8 53.6-12.6 0-24.9-2-36.6-5.8-.9-.3-1.8-.7-2.7-.9z"
+                  />
+                </svg>
               </div>
-      
-              <!-- Stage 3 -->
-              <div class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700">
-                  <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M192 96L224 96C241.7 96 256 110.3 256 128L256 160L160 160L160 128C160 110.3 174.3 96 192 96zM256 192L256 512C256 529.7 241.7 544 224 544L96 544C78.3 544 64 529.7 64 512L64 452.9C64 418.3 73.4 384.3 91.2 354.6C104.9 331.8 113.7 306.4 117 280L124.5 220C126.5 204 140.1 192 156.3 192L256.1 192zM483.8 192C499.9 192 513.6 204 515.6 220L523 280C526.3 306.4 535.1 331.8 548.8 354.6C566.6 384.3 576 418.3 576 452.9L576 512C576 529.7 561.7 544 544 544L416 544C398.3 544 384 529.7 384 512L384 192L483.8 192zM384 128C384 110.3 398.3 96 416 96L448 96C465.7 96 480 110.3 480 128L480 160L384 160L384 128zM352 192L352 352L288 352L288 192L352 192z"/></svg>
-                  </div>
-                <h3 class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4">Stage 3: Autonomy</h3>
-                <p class="text-slate-600 dark:text-slate-300 mb-4">Team is self-organizing. Scrum Master steps back, focusing on strategic alignment.</p>
-                  <ul class="list-disc ml-5 text-slate-600 dark:text-slate-400">
-                      <li>Team runs all ceremonies independently</li>
-                      <li>Scrum Master supports cross-team initiatives</li>
-                      <li>Focus on scaling and continuous improvement</li>
-                  </ul>
-              </div>                                        
+              <h3
+                class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4"
+              >
+                Stage 2: Coaching
+              </h3>
+              <p class="text-slate-600 dark:text-slate-300 mb-4">
+                Scrum Master reduces presence to
+                <strong>3 times a week</strong>, mentoring the team while
+                encouraging ownership. Ceremonies are team-led with light
+                guidance.<br /><br />Scrum Master shifts to
+                mentoring—encouraging ownership and guiding from the sidelines.
+              </p>
+              <ul class="list-disc ml-5 text-slate-600 dark:text-slate-400">
+                <li>Team leads ceremonies with light guidance</li>
+                <li>Focus on agile maturity and velocity</li>
+                <li>Scrum Master coaches and supports</li>
+              </ul>
+            </div>
+
+            <!-- Stage 3 -->
+            <div
+              class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 640"
+                >
+                  <path
+                    d="M192 96L224 96C241.7 96 256 110.3 256 128L256 160L160 160L160 128C160 110.3 174.3 96 192 96zM256 192L256 512C256 529.7 241.7 544 224 544L96 544C78.3 544 64 529.7 64 512L64 452.9C64 418.3 73.4 384.3 91.2 354.6C104.9 331.8 113.7 306.4 117 280L124.5 220C126.5 204 140.1 192 156.3 192L256.1 192zM483.8 192C499.9 192 513.6 204 515.6 220L523 280C526.3 306.4 535.1 331.8 548.8 354.6C566.6 384.3 576 418.3 576 452.9L576 512C576 529.7 561.7 544 544 544L416 544C398.3 544 384 529.7 384 512L384 192L483.8 192zM384 128C384 110.3 398.3 96 416 96L448 96C465.7 96 480 110.3 480 128L480 160L384 160L384 128zM352 192L352 352L288 352L288 192L352 192z"
+                  />
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4"
+              >
+                Stage 3: Autonomy
+              </h3>
+              <p class="text-slate-600 dark:text-slate-300 mb-4">
+                Scrum Master steps back to <strong>1-2 times a week</strong>,
+                supporting strategic alignment and cross-team initiatives. The
+                team runs all ceremonies independently.<br /><br />Team is
+                self-organizing. Scrum Master steps back, focusing on strategic
+                alignment.
+              </p>
+              <ul class="list-disc ml-5 text-slate-600 dark:text-slate-400">
+                <li>Team runs all ceremonies independently</li>
+                <li>Scrum Master supports cross-team initiatives</li>
+                <li>Focus on scaling and continuous improvement</li>
+              </ul>
             </div>
           </div>
-          <!-- chart  -->
-          <!-- Chart Section -->
-          <div class="py-8 bg-white dark:bg-slate-900 transition-colors duration-300">
-            <div class="text-center">
-              <h2 class="text-2xl font-bold gradient-text dark:text-white mb-2">
-                Scrum Master vs Team Involvement
-              </h2>
-              <p class="text-sm text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-6">
-                Visualizing the shift in responsibilities across the development lifecycle.
-              </p>
-              <div class="w-full max-w-xl mx-auto px-8 flex justify-center mt-6"
-                  style="
-                    padding: 20px;
-                    border-radius: 20px;
-                    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
-                    ">
-                <canvas
-                  id="scrumChart" width="800" height="400"class="w-full"
-                  style="height: 400px;" 
-                ></canvas>
-              </div>
-            </div>
-            <!-- Scrum Master Presence Summary -->
-          <div class="max-w-4xl mx-auto mt-10 px-6 py-6 rounded-xl bg-gradient-to-r from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-900 shadow-lg transition-colors duration-300">
+        </div>
+
+        <!-- Scrum Master Presence Summary -->
+        <!-- <div class="max-w-4xl mx-auto mt-10 px-6 py-6 rounded-xl bg-gradient-to-r from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-900 shadow-lg transition-colors duration-300">
             <div class="flex flex-col gap-4">
-              <!-- Onboarding -->
               <div>
                 <h3 class="text-center text-lg font-semibold text-blue-700 dark:text-blue-300 underline mb-2">Onboarding</h3>
                 <p class="text-slate-700 dark:text-slate-300 text-sm">
                   Scrum Master is present <strong>daily</strong>, actively facilitating stand-ups, planning, retrospectives, and introducing agile tools. The focus is on building trust and psychological safety.
                 </p>
               </div>
-          
-              <!-- Coaching -->
               <div>
                 <h3 class="text-center text-lg font-semibold text-teal-700 dark:text-cyan-300 underline mb-2">Coaching</h3>
                 <p class="text-slate-700 dark:text-slate-300 text-sm">
                   Scrum Master reduces presence to <strong>3 times a week</strong>, mentoring the team while encouraging ownership. Ceremonies are team-led with light guidance.
                 </p>
               </div>
-          
-              <!-- Autonomy -->
               <div>
                 <h3 class="text-center text-lg font-semibold text-indigo-700 dark:text-indigo-300 underline mb-2">Autonomy</h3>
                 <p class="text-slate-700 dark:text-slate-300 text-sm">
@@ -525,600 +1053,1194 @@
                 </p>
               </div>
             </div>
-          </div>  
-          </div>
-          
-      </section>      
-  
-    <!-- Agile has changed -->  
-    <section id="agile-changed" class="py-5 bg-white dark:bg-slate-900 transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12" data-aos="fade-up">
-            <h2 class="text-4xl font-bold gradient-text dark:text-white">Agile Has Changed</h2>
-            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto py-5">
-                Agile has adapted to remote work—embracing digital tools, async updates, and flexible workflows.
-            </p>
-          </div>
-      
-          <!-- Feature Cards -->
-          <div class="grid md:grid-cols-3 gap-8 mb-16" data-aos="fade-up">
-            <!-- Online Stand-ups -->
-            <div class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700">
-                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M415.9 344L225 344C227.9 408.5 242.2 467.9 262.5 511.4C273.9 535.9 286.2 553.2 297.6 563.8C308.8 574.3 316.5 576 320.5 576C324.5 576 332.2 574.3 343.4 563.8C354.8 553.2 367.1 535.8 378.5 511.4C398.8 467.9 413.1 408.5 416 344zM224.9 296L415.8 296C413 231.5 398.7 172.1 378.4 128.6C367 104.2 354.7 86.8 343.3 76.2C332.1 65.7 324.4 64 320.4 64C316.4 64 308.7 65.7 297.5 76.2C286.1 86.8 273.8 104.2 262.4 128.6C242.1 172.1 227.8 231.5 224.9 296zM176.9 296C180.4 210.4 202.5 130.9 234.8 78.7C142.7 111.3 74.9 195.2 65.5 296L176.9 296zM65.5 344C74.9 444.8 142.7 528.7 234.8 561.3C202.5 509.1 180.4 429.6 176.9 344L65.5 344zM463.9 344C460.4 429.6 438.3 509.1 406 561.3C498.1 528.6 565.9 444.8 575.3 344L463.9 344zM575.3 296C565.9 195.2 498.1 111.3 406 78.7C438.3 130.9 460.4 210.4 463.9 296L575.3 296z"/></svg>
-                </div>
-              <h3 class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4">Remote Check-ins</h3>
-              <p class="text-slate-600 dark:text-white mb-4">
-                Quick daily check-ins keep remote teams aligned, focused, and emotionally connected.
-              </p>
-              <ul class="list-disc ml-5 text-slate-600 dark:text-white">
-                <li>Held via Zoom, Teams, or Slack</li>
-                <li>Time-boxed and structured for clarity</li>
-                <li>Async options for global teams</li>
-              </ul>
-            </div>
-      
-            <!-- Digital Kanban Boards -->
-            <div class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700">
-                <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" role="img">
-                        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                          <rect x="1.2" y="3.2" width="21.6" height="17.6" rx="1.6"/>
-                          <rect x="3.2" y="6" width="4.8" height="10" rx="0.8" fill="currentColor" />
-                          <rect x="10.2" y="6" width="4.8" height="10" rx="0.8" fill="currentColor" />
-                          <rect x="17.2" y="6" width="2.6" height="10" rx="0.8" fill="currentColor" />
-                        </g>
-                      </svg>
-                      
-
-                </div>
-                
-              <h3 class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4">Digital Kanban Boards</h3>
-              <p class="text-slate-600 dark:text-white mb-4">
-                Cloud-based boards offer real-time updates, integrations, and seamless task tracking.
-            </p>
-              <ul class="list-disc ml-5 text-slate-600 dark:text-white">
-                <li>Visual task flow with drag-and-drop ease</li>
-                <li>Real-time updates for shared awareness</li>
-                <li>Integrated with Git, CI/CD, and team chat</li>
-              </ul>
-            </div>
-      
-            <!-- Remote Collaboration -->
-            <div class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700">
-                <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" role="img">
-                        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                          <rect x="3.5" y="5" width="13" height="11" rx="1.2"/>
-                          <path d="M19 9.5v4.5l2.5 1.5V8l-2.5 1.5z"/>
-                          <circle cx="7" cy="9.5" r="0.9" fill="currentColor"/>
-                          <line x1="7" y1="12" x2="7" y2="14"/>
-                        </g>
-                      </svg>
-                      
-                </div>
-              <h3 class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4">Remote Collaboration</h3>
-              <p class="text-slate-600 dark:text-white mb-4">
-                Teams collaborate across time zones using shared docs, async videos, and virtual retros.
-              </p>
-              <ul class="list-disc ml-5 text-slate-600 dark:text-white">
-                <li>Slack, Notion, Google Workspace</li>
-                <li>Shared docs and async video updates</li>
-                <li>Virtual retros and clear written comms</li>
-              </ul>
-            </div>
-          </div>
-      
-          <!-- Before vs After Comparison -->
-          <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up">
-            <div class="bg-gradient-light-blue rounded-lg shadow-lg p-6 border dark:border-slate-700">
-              <h3 class="text-xl font-bold text-red-500 mb-2">Before COVID</h3>
-              <ul class="list-disc ml-6 text-slate-600 dark:text-slate-300">
-                <li>In-person stand-ups and retrospectives</li>
-                <li>Physical whiteboards and sticky notes</li>
-                <li>Office-based collaboration</li>
-                <li>Limited async communication</li>
-              </ul>
-            </div>
-            <div class="bg-gradient-light-green rounded-lg shadow-lg p-6 border dark:border-slate-700">
-              <h3 class="text-xl font-bold text-green-500 mb-2">After COVID</h3>
-              <ul class="list-disc ml-6 text-slate-600 dark:text-slate-300">
-                <li>Remote stand-ups via Zoom/Teams</li>
-                <li>Digital boards (Jira, Trello, Miro)</li>
-                <li>Hybrid and async collaboration</li>
-                <li>Global teams with flexible schedules</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+          </div>  -->
+      </div>
     </section>
 
-    <!-- Evolution of Collaboration Styles -->
-    <section id="agile-changed" class="py-16 bg-white dark:bg-slate-900 transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid md:grid-cols-1 gap-8" data-aos="fade-up">
-            <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-purple-100 via-sky-100 to-yellow-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600">
-              <div class="absolute inset-0 pointer-events-none bg-gradient-radial from-white/40 via-transparent to-transparent dark:from-slate-300/10"></div>
-              <div class="relative p-8 sm:p-10 lg:p-12">
-                <h2 class="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-sky-500 to-yellow-500 dark:from-purple-300 dark:via-sky-300 dark:to-yellow-300">
-                  Evolution of Collaboration Styles
-                </h2>
-      
-                <p class="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto mt-6 text-center leading-relaxed">
-                  Agile collaboration has transformed from spontaneous in-person rituals to intentional, tech-enabled workflows. As remote and hybrid models take center stage, the way teams connect, create, and thrive has evolved.
-                </p>
-
-                
-                <ul class="mt-8 space-y-4 text-left max-w-3xl mx-auto">
-                  <li class="flex items-start space-x-3">
-                    <span class="text-purple-400 dark:text-purple-300 text-xl">💬</span>
-                    <span class="text-slate-700 dark:text-slate-300 text-lg"><strong>Less Spontaneity:</strong> Hallway chats and casual desk visits have faded. Teams now rely on async messaging and digital presence cues.</span>
-                  </li>
-                  <li class="flex items-start space-x-3">
-                    <span class="text-pink-400 dark:text-pink-300 text-xl">🏢</span>
-                    <span class="text-slate-700 dark:text-slate-300 text-lg"><strong>Decline of Office Rituals:</strong> Whiteboard sessions and in-person standups are now occasional, not daily.</span>
-                  </li>
-                  <li class="flex items-start space-x-3">
-                    <span class="text-yellow-400 dark:text-yellow-300 text-xl">🌐</span>
-                    <span class="text-slate-700 dark:text-slate-300 text-lg"><strong>Rise of Hybrid Workflows:</strong> Teams blend tools like Miro, Slack, and Zoom with periodic face-to-face moments.</span>
-                  </li>
-                </ul>
-      
-                <div class="mt-12 border-t border-slate-300 dark:border-slate-700 pt-8">
-                  <p class="text-lg text-slate-800 dark:text-slate-200 text-center leading-relaxed max-w-4xl mx-auto">
-                    <strong>Scrum Masters</strong> remain the emotional and strategic anchors of Agile teams. Whether remote or part-time, they guide progress, foster trust, and remove blockers—proving that leadership isn’t about location, it’s about connection.
-                  </p>
-      
-                  <ul class="mt-8 space-y-4 text-left max-w-3xl mx-auto">
-                    <li class="flex items-start space-x-3">
-                      <span class="text-purple-400 dark:text-purple-300 text-xl">🧭</span>
-                      <span class="text-slate-700 dark:text-slate-300 text-lg"><strong>Remote Facilitation:</strong> Leading ceremonies with clarity and warmth across time zones.</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <span class="text-pink-400 dark:text-pink-300 text-xl">💖</span>
-                      <span class="text-slate-700 dark:text-slate-300 text-lg"><strong>Emotional Stewardship:</strong> Building psychological safety in virtual spaces.</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                      <span class="text-yellow-400 dark:text-yellow-300 text-xl">🔄</span>
-                      <span class="text-slate-700 dark:text-slate-300 text-lg"><strong>Adaptive Leadership:</strong> Supporting asynchronous workflows and evolving team norms.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <!-- Agile has changed -->
+    <section
+      id="agile-changed"
+      class="py-5 bg-white dark:bg-slate-900 transition-colors duration-300"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-sky-500 to-yellow-500 dark:from-purple-300 dark:via-sky-300 dark:to-yellow-300">
-            Meet Our Team
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-4xl font-bold gradient-text dark:text-white">
+            Agile Has Changed
           </h2>
-          <p class="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto mt-4 leading-relaxed">
-            The people behind ScrumForce, guiding teams to their highest potential with experience, passion, and vision.
+          <p
+            class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto py-5"
+          >
+            Agile has adapted to remote work—embracing digital tools, async
+            updates, and flexible workflows.
           </p>
         </div>
-    
-        <div class="grid md:grid-cols-3 gap-12">
-    
-          <!-- Claudio -->
-          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-purple-100 via-sky-100 to-yellow-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="relative text-center">
-              <img src="/images/Claudio_Rispler.webp" alt="Claudio Rispler" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Claudio Rispler</h3>
-                <a href="https://www.linkedin.com/in/claudio-rispler/" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
-                   aria-label="Claudio Rispler on LinkedIn">
-                  <!-- LinkedIn SVG (fill uses currentColor) -->
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-purple-500 font-semibold mb-4">Co-founder, Lead SCRUM Coach</p>
-              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                Experienced Project Manager and Scrum Master with a passion for guiding teams through complex challenges. Combining technical expertise with a people-first approach.
-              </p>
+
+        <!-- Feature Cards -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16" data-aos="fade-up">
+          <!-- Online Stand-ups -->
+          <div
+            class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+              >
+                <path
+                  d="M415.9 344L225 344C227.9 408.5 242.2 467.9 262.5 511.4C273.9 535.9 286.2 553.2 297.6 563.8C308.8 574.3 316.5 576 320.5 576C324.5 576 332.2 574.3 343.4 563.8C354.8 553.2 367.1 535.8 378.5 511.4C398.8 467.9 413.1 408.5 416 344zM224.9 296L415.8 296C413 231.5 398.7 172.1 378.4 128.6C367 104.2 354.7 86.8 343.3 76.2C332.1 65.7 324.4 64 320.4 64C316.4 64 308.7 65.7 297.5 76.2C286.1 86.8 273.8 104.2 262.4 128.6C242.1 172.1 227.8 231.5 224.9 296zM176.9 296C180.4 210.4 202.5 130.9 234.8 78.7C142.7 111.3 74.9 195.2 65.5 296L176.9 296zM65.5 344C74.9 444.8 142.7 528.7 234.8 561.3C202.5 509.1 180.4 429.6 176.9 344L65.5 344zM463.9 344C460.4 429.6 438.3 509.1 406 561.3C498.1 528.6 565.9 444.8 575.3 344L463.9 344zM575.3 296C565.9 195.2 498.1 111.3 406 78.7C438.3 130.9 460.4 210.4 463.9 296L575.3 296z"
+                />
+              </svg>
             </div>
+            <h3
+              class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4"
+            >
+              Remote Check-ins
+            </h3>
+            <p class="text-slate-600 dark:text-white mb-4">
+              Quick daily check-ins keep remote teams aligned, focused, and
+              emotionally connected.
+            </p>
+            <ul class="list-disc ml-5 text-slate-600 dark:text-white">
+              <li>Held via Zoom, Teams, or Slack</li>
+              <li>Time-boxed and structured for clarity</li>
+              <li>Async options for global teams</li>
+            </ul>
           </div>
-    
-          <!-- Serge -->
-          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-pink-100 via-purple-100 to-sky-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="relative text-center">
-              <img src="images/Serge_Ivo.webp" alt="Serge Ivo" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Serge Ivo</h3>
-                <a href="https://www.linkedin.com/in/sergeivo/" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
-                   aria-label="Serge Ivo on LinkedIn">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-purple-500 font-semibold mb-4">Co-founder, Lead SCRUM Coach</p>
-              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                Serial entrepreneur, start-up and Agile coach. Serge builds teams and loves seeing them grow and perform.
-              </p>
+
+          <!-- Digital Kanban Boards -->
+          <div
+            class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-black"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                aria-hidden="true"
+                role="img"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="1.2" y="3.2" width="21.6" height="17.6" rx="1.6" />
+                  <rect
+                    x="3.2"
+                    y="6"
+                    width="4.8"
+                    height="10"
+                    rx="0.8"
+                    fill="currentColor"
+                  />
+                  <rect
+                    x="10.2"
+                    y="6"
+                    width="4.8"
+                    height="10"
+                    rx="0.8"
+                    fill="currentColor"
+                  />
+                  <rect
+                    x="17.2"
+                    y="6"
+                    width="2.6"
+                    height="10"
+                    rx="0.8"
+                    fill="currentColor"
+                  />
+                </g>
+              </svg>
             </div>
+
+            <h3
+              class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4"
+            >
+              Digital Kanban Boards
+            </h3>
+            <p class="text-slate-600 dark:text-white mb-4">
+              Cloud-based boards offer real-time updates, integrations, and
+              seamless task tracking.
+            </p>
+            <ul class="list-disc ml-5 text-slate-600 dark:text-white">
+              <li>Visual task flow with drag-and-drop ease</li>
+              <li>Real-time updates for shared awareness</li>
+              <li>Integrated with Git, CI/CD, and team chat</li>
+            </ul>
           </div>
-    
-          <!-- Stefanie -->
-          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-yellow-100 via-sky-100 to-purple-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="relative text-center">
-              <img src="images/Stefanie_Meier.webp" alt="Stefanie Meier" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Stefanie Meier</h3>
-                <a href="https://www.linkedin.com/in/stefanie-meier-5b523561/" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
-                   aria-label="Stefanie Meier on LinkedIn">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-purple-500 font-semibold mb-4">Scrum Master Team Lead</p>
-              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                5 years of experience leading agile teams across start-ups, SaaS, and enterprise projects.Digital Delivery lead with international experience, passionate about empowering teams and shipping products.
-              </p>
+
+          <!-- Remote Collaboration -->
+          <div
+            class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-6 border dark:border-slate-700"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-black"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                aria-hidden="true"
+                role="img"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3.5" y="5" width="13" height="11" rx="1.2" />
+                  <path d="M19 9.5v4.5l2.5 1.5V8l-2.5 1.5z" />
+                  <circle cx="7" cy="9.5" r="0.9" fill="currentColor" />
+                  <line x1="7" y1="12" x2="7" y2="14" />
+                </g>
+              </svg>
             </div>
+            <h3
+              class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-4"
+            >
+              Remote Collaboration
+            </h3>
+            <p class="text-slate-600 dark:text-white mb-4">
+              Teams collaborate across time zones using shared docs, async
+              videos, and virtual retros.
+            </p>
+            <ul class="list-disc ml-5 text-slate-600 dark:text-white">
+              <li>Slack, Notion, Google Workspace</li>
+              <li>Shared docs and async video updates</li>
+              <li>Virtual retros and clear written comms</li>
+            </ul>
           </div>
-    
-          <!-- Nikita -->
-          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-sky-100 via-purple-100 to-pink-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="relative text-center">
-              <img src="images/nikita-sakhare.webp" alt="Nikita Sakhare" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Nikita Sakhare</h3>
-                <a href="https://www.linkedin.com/in/nikita-sakhare-747034105" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
-                   aria-label="Nikita Sakhare on LinkedIn">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
-              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                Based in Adelaide; transitioned from software development to Scrum Master since 2020.
-              </p>
-            </div>
+        </div>
+
+        <!-- Before vs After Comparison -->
+        <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up">
+          <div
+            class="bg-gradient-light-blue rounded-lg shadow-lg p-6 border dark:border-slate-700"
+          >
+            <h3 class="text-xl font-bold text-red-500 mb-2">Before COVID</h3>
+            <ul class="list-disc ml-6 text-slate-600 dark:text-slate-300">
+              <li>In-person stand-ups and retrospectives</li>
+              <li>Physical whiteboards and sticky notes</li>
+              <li>Office-based collaboration</li>
+              <li>Limited async communication</li>
+            </ul>
           </div>
-    
-          <!-- Nandini -->
-          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-purple-100 via-sky-100 to-yellow-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="relative text-center">
-              <img src="images/Nandini_Gopalakrishnan.webp" alt="Nandini Gopalakrishnan" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Nandini Gopalakrishnan</h3>
-                <a href="https://www.linkedin.com/in/nandini-gopalakrishnan" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
-                   aria-label="Nandini Gopalakrishnan on LinkedIn">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
-              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                Based in Sydney with 8 years experience in embedded systems and delivery leadership.
-              </p>
-            </div>
+          <div
+            class="bg-gradient-light-green rounded-lg shadow-lg p-6 border dark:border-slate-700"
+          >
+            <h3 class="text-xl font-bold text-green-500 mb-2">After COVID</h3>
+            <ul class="list-disc ml-6 text-slate-600 dark:text-slate-300">
+              <li>Remote stand-ups via Zoom/Teams</li>
+              <li>Digital boards (Jira, Trello, Miro)</li>
+              <li>Hybrid and async collaboration</li>
+              <li>Global teams with flexible schedules</li>
+            </ul>
           </div>
-    
-          <!-- Emma -->
-          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-pink-100 via-yellow-100 to-sky-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="relative text-center">
-              <img src="images/Emma_S.webp" alt="Emma Sung" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Emma Sung</h3>
-                <a href="https://www.linkedin.com/in/emma-s-9aa199aa/" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
-                   aria-label="Emma Sung on LinkedIn">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
-              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                Sydney-based strategist blending agile uplift with creativity, storytelling and compassion.
-              </p>
-            </div>
-          </div>
-    
-          <!-- Danyella -->
-          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-yellow-100 via-sky-100 to-pink-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="relative text-center">
-              <img src="images/Danyella_Moreira.webp" alt="Danyella Moreira" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Danyella Moreira</h3>
-                <a href="https://www.linkedin.com/in/danyellamoreira" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
-                   aria-label="Danyella Moreira on LinkedIn">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
-              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                Originally from Brazil, 7 years experience leading projects and 4 years focused on Agile/coaching.
-              </p>
-            </div>
-          </div>
-    
-          <!-- Ria -->
-          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-sky-100 via-yellow-100 to-purple-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="relative text-center">
-              <img src="images/Ria_James.webp" alt="Ria James" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Ria James</h3>
-                <a href="https://www.linkedin.com/in/ria-james-19175691/" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
-                   aria-label="Ria James on LinkedIn">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
-              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                PMP-certified with experience in digital transformation and agile consulting. Recently relocated to Brisbane.
-              </p>
-            </div>
-          </div>
-    
-          <!-- Kshitija -->
-          <div class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-pink-100 via-sky-100 to-yellow-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12">
-            <div class="relative text-center">
-              <img src="images/Kshitija_Sonawane.webp" alt="Kshitija S" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Kshitija S (KJ)</h3>
-                <a href="https://www.linkedin.com/in/kshitija-sonawane" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
-                   aria-label="Kshitija Sonawane on LinkedIn">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
-              <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto">
-                6+ years’ experience as BA/PO in BFSI & HR domains. Recently relocated to Perth.
-              </p>
-            </div>
-          </div>
-    
         </div>
       </div>
     </section>
-        
-    <!-- Confidentiality & IP Protection Section -->
-    <section id="Confidentiality" class="py-20 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300">
+
+    <!-- Evolution of Collaboration Styles -->
+
+    <section
+      id="agile-changed"
+      class="py-16 bg-white dark:bg-slate-900 transition-colors duration-300"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-16">
-              <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">Confidentiality & IP Protection</h2>
-              <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-                Your innovation is safe with us. We’re committed to protecting your intellectual property and startup secrets.
+        <div class="grid md:grid-cols-1 gap-8" data-aos="fade-up">
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-purple-100 via-sky-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600"
+          >
+            <div
+              class="absolute inset-0 pointer-events-none bg-gradient-radial from-white/40 via-transparent to-transparent dark:from-slate-300/10"
+            ></div>
+            <div class="relative p-8 sm:p-10 lg:p-12">
+              <h2
+                class="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-sky-500 to-yellow-500 dark:from-purple-300 dark:via-sky-300 dark:to-yellow-300"
+              >
+                Evolution of Collaboration Styles
+              </h2>
+
+              <p
+                class="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto mt-6 text-center leading-relaxed"
+              >
+                Agile collaboration has transformed from spontaneous in-person
+                rituals to intentional, tech-enabled workflows. As remote and
+                hybrid models take center stage, the way teams connect, create,
+                and thrive has evolved.
               </p>
+
+              <ul class="mt-8 space-y-4 text-left max-w-3xl mx-auto">
+                <li class="flex items-start space-x-3">
+                  <span class="text-purple-400 dark:text-purple-300 text-xl"
+                    >💬</span
+                  >
+                  <span class="text-slate-700 dark:text-slate-300 text-lg"
+                    ><strong>Less Spontaneity:</strong> Hallway chats and casual
+                    desk visits have faded. Teams now rely on async messaging
+                    and digital presence cues.</span
+                  >
+                </li>
+                <li class="flex items-start space-x-3">
+                  <span class="text-pink-400 dark:text-pink-300 text-xl"
+                    >🏢</span
+                  >
+                  <span class="text-slate-700 dark:text-slate-300 text-lg"
+                    ><strong>Decline of Office Rituals:</strong> Whiteboard
+                    sessions and in-person standups are now occasional, not
+                    daily.</span
+                  >
+                </li>
+                <li class="flex items-start space-x-3">
+                  <span class="text-yellow-400 dark:text-yellow-300 text-xl"
+                    >🌐</span
+                  >
+                  <span class="text-slate-700 dark:text-slate-300 text-lg"
+                    ><strong>Rise of Hybrid Workflows:</strong> Teams blend
+                    tools like Miro, Slack, and Zoom with periodic face-to-face
+                    moments.</span
+                  >
+                </li>
+              </ul>
+
+              <div
+                class="mt-12 border-t border-slate-300 dark:border-slate-700 pt-8"
+              >
+                <p
+                  class="text-lg text-slate-800 dark:text-slate-200 text-center leading-relaxed max-w-4xl mx-auto"
+                >
+                  <strong>Scrum Masters</strong> remain the emotional and
+                  strategic anchors of Agile teams. Whether remote or part-time,
+                  they guide progress, foster trust, and remove blockers—proving
+                  that leadership isn’t about location, it’s about connection.
+                </p>
+
+                <ul class="mt-8 space-y-4 text-left max-w-3xl mx-auto">
+                  <li class="flex items-start space-x-3">
+                    <span class="text-purple-400 dark:text-purple-300 text-xl"
+                      >🧭</span
+                    >
+                    <span class="text-slate-700 dark:text-slate-300 text-lg"
+                      ><strong>Remote Facilitation:</strong> Leading ceremonies
+                      with clarity and warmth across time zones.</span
+                    >
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <span class="text-pink-400 dark:text-pink-300 text-xl"
+                      >💖</span
+                    >
+                    <span class="text-slate-700 dark:text-slate-300 text-lg"
+                      ><strong>Emotional Stewardship:</strong> Building
+                      psychological safety in virtual spaces.</span
+                    >
+                  </li>
+                  <li class="flex items-start space-x-3">
+                    <span class="text-yellow-400 dark:text-yellow-300 text-xl"
+                      >🔄</span
+                    >
+                    <span class="text-slate-700 dark:text-slate-300 text-lg"
+                      ><strong>Adaptive Leadership:</strong> Supporting
+                      asynchronous workflows and evolving team norms.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          
-          <div class="grid md:grid-cols-3 gap-8">
-              <div class="relative">
-                  <div class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full">
-                      <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                          <!-- Shield icon for Non-Disclosure -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white align-content-center" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2l7 4v6c0 5-3.58 9.74-7 11-3.42-1.26-7-6-7-11V6l7-4z" />
-                          </svg>
-                      </div>
-                      <div class="mb-4">
-                          <h3 class="text-2xl font-bold text-slate-900 text-center">Non-Disclosure</h3>
-                      </div>
-                      <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed text">All volunteers sign NDAs before engagement begins to legally protect your confidential business information.</p>
-                  </div>
-                  <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
-                      <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      </svg>
-                  </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section
+      id="team"
+      class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-sky-500 to-yellow-500 dark:from-purple-300 dark:via-sky-300 dark:to-yellow-300"
+          >
+            Meet Our Team
+          </h2>
+          <p
+            class="text-lg text-slate-700 dark:text-slate-300 max-w-3xl mx-auto mt-4 leading-relaxed"
+          >
+            The people behind ScrumForce, guiding teams to their highest
+            potential with experience, passion, and vision.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12">
+          <!-- Claudio -->
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-purple-100 via-sky-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12"
+          >
+            <div class="relative text-center">
+              <img
+                src="/images/Claudio_Rispler.webp"
+                alt="Claudio Rispler"
+                class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md"
+              />
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Claudio Rispler
+                </h3>
+                <a
+                  href="https://www.linkedin.com/in/claudio-rispler/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                  aria-label="Claudio Rispler on LinkedIn"
+                >
+                  <!-- LinkedIn SVG (fill uses currentColor) -->
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"
+                    />
+                  </svg>
+                </a>
               </div>
-              
-              <div class="relative">
-                  <div class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full">
-                      <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6">
-                          <!-- Lock icon for Secure Communication -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <rect x="6" y="11" width="12" height="9" rx="2" ry="2" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 11V7a3 3 0 016 0v4" />
-                          </svg>
-                      </div>
-                      <div class="mb-4">
-                          <h3 class="text-2xl font-bold text-slate-900 text-center">Secure Communication</h3>
-                      </div>
-                      <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed text">All discussions and documentation are handled via secure, encrypted channels and stored with access controls.</p>
-                  </div>
-                  <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
-                      <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      </svg>
-                  </div>
-              </div>
-              
-              <div class="relative">
-                  <div class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full">
-                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6 hover:scale-105 transition-transform duration-300">
-                        <!-- Shield with checkmark icon for IP Rights Protection -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                          <path fill-rule="evenodd" d="M12 2.25c-.41 0-.82.083-1.2.25a8.25 8.25 0 00-4.8 7.5c0 2.793 1.15 5.09 2.762 6.986a13.344 13.344 0 003.238 2.792c.2.128.43.196.667.196s.467-.068.667-.196a13.344 13.344 0 003.238-2.792C17.85 15.09 19 12.793 19 10a8.25 8.25 0 00-4.8-7.5 3.24 3.24 0 00-1.2-.25zM9.53 11.47a.75.75 0 011.06 0l1.47 1.47 3.47-3.47a.75.75 0 011.06 1.06l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 010-1.06z" clip-rule="evenodd" />
-                        </svg>
-                      </div>
-                      
-                      <div class="mb-4">
-                          <h3 class="text-2xl font-bold text-slate-900 text-center">IP Rights Protection</h3>
-                      </div>
-                      <p class="text-slate-600 dark:text-white text-slate-400 leading-relaxed text">You retain full ownership of your ideas, code, and materials. We simply provide guidance with no claim on IP.</p>
-                  </div>
-              </div>
+              <p class="text-purple-500 font-semibold mb-4">
+                Co-founder, Lead SCRUM Coach
+              </p>
+              <p
+                class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto"
+              >
+                Experienced Project Manager and Scrum Master with a passion for
+                guiding teams through complex challenges. Combining technical
+                expertise with a people-first approach.
+              </p>
+            </div>
           </div>
+
+          <!-- Serge -->
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-pink-50 via-green-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12"
+          >
+            <div class="relative text-center">
+              <img
+                src="images/Serge_Ivo.webp"
+                alt="Serge Ivo"
+                class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md"
+              />
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Serge Ivo
+                </h3>
+                <a
+                  href="https://www.linkedin.com/in/sergeivo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                  aria-label="Serge Ivo on LinkedIn"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">
+                Co-founder, Lead SCRUM Coach
+              </p>
+              <p
+                class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto"
+              >
+                Serial entrepreneur, start-up and Agile coach. Serge builds
+                teams and loves seeing them grow and perform.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stefanie -->
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-purple-100 via-blue-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12"
+          >
+            <div class="relative text-center">
+              <img
+                src="images/Stefanie_Meier.webp"
+                alt="Stefanie Meier"
+                class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md"
+              />
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Stefanie Meier
+                </h3>
+                <a
+                  href="https://www.linkedin.com/in/stefanie-meier-5b523561/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                  aria-label="Stefanie Meier on LinkedIn"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">
+                Scrum Master Team Lead
+              </p>
+              <p
+                class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto"
+              >
+                5 years of experience leading agile teams across start-ups,
+                SaaS, and enterprise projects.Digital Delivery lead with
+                international experience, passionate about empowering teams and
+                shipping products.
+              </p>
+            </div>
+          </div>
+
+          <!-- Nikita -->
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-green-100 via-sky-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12"
+          >
+            <div class="relative text-center">
+              <img
+                src="images/nikita-sakhare.webp"
+                alt="Nikita Sakhare"
+                class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md"
+              />
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Nikita Sakhare
+                </h3>
+                <a
+                  href="https://www.linkedin.com/in/nikita-sakhare-747034105"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                  aria-label="Nikita Sakhare on LinkedIn"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p
+                class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto"
+              >
+                Based in Adelaide; transitioned from software development to
+                Scrum Master since 2020.
+              </p>
+            </div>
+          </div>
+
+          <!-- Nandini -->
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-green-100 via-purple-50 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12"
+          >
+            <div class="relative text-center">
+              <img
+                src="images/Nandini_Gopalakrishnan.webp"
+                alt="Nandini Gopalakrishnan"
+                class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md"
+              />
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Nandini Gopalakrishnan
+                </h3>
+                <a
+                  href="https://www.linkedin.com/in/nandini-gopalakrishnan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                  aria-label="Nandini Gopalakrishnan on LinkedIn"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p
+                class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto"
+              >
+                Based in Sydney with 8 years experience in embedded systems and
+                delivery leadership.
+              </p>
+            </div>
+          </div>
+
+          <!-- Emma -->
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-pink-100 via-green-50 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12"
+          >
+            <div class="relative text-center">
+              <img
+                src="images/Emma_S.webp"
+                alt="Emma Sung"
+                class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md"
+              />
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Emma Sung
+                </h3>
+                <a
+                  href="https://www.linkedin.com/in/emma-s-9aa199aa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                  aria-label="Emma Sung on LinkedIn"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p
+                class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto"
+              >
+                Sydney-based strategist blending agile uplift with creativity,
+                storytelling and compassion.
+              </p>
+            </div>
+          </div>
+
+          <!-- Danyella -->
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-green-50 via-sky-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12"
+          >
+            <div class="relative text-center">
+              <img
+                src="images/Danyella_Moreira.webp"
+                alt="Danyella Moreira"
+                class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md"
+              />
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Danyella Moreira
+                </h3>
+                <a
+                  href="https://www.linkedin.com/in/danyellamoreira"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                  aria-label="Danyella Moreira on LinkedIn"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p
+                class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto"
+              >
+                Originally from Brazil, 7 years experience leading projects and
+                4 years focused on Agile/coaching.
+              </p>
+            </div>
+          </div>
+
+          <!-- Ria -->
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-purple-50 via-green-50 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12"
+          >
+            <div class="relative text-center">
+              <img
+                src="images/Ria_James.webp"
+                alt="Ria James"
+                class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md"
+              />
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Ria James
+                </h3>
+                <a
+                  href="https://www.linkedin.com/in/ria-james-19175691/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                  aria-label="Ria James on LinkedIn"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p
+                class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto"
+              >
+                PMP-certified with experience in digital transformation and
+                agile consulting. Recently relocated to Brisbane.
+              </p>
+            </div>
+          </div>
+
+          <!-- Kshitija -->
+          <div
+            class="relative rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl bg-gradient-to-br from-pink-50 via-sky-100 dark:from-slate-800 dark:via-slate-700 dark:to-slate-600 p-8 sm:p-10 lg:p-12"
+          >
+            <div class="relative text-center">
+              <img
+                src="images/Kshitija_Sonawane.webp"
+                alt="Kshitija S"
+                class="w-28 h-28 rounded-full mx-auto mb-4 object-cover shadow-md"
+              />
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+                  Kshitija S (KJ)
+                </h3>
+                <a
+                  href="https://www.linkedin.com/in/kshitija-sonawane"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 transition"
+                  aria-label="Kshitija Sonawane on LinkedIn"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.038-1.852-3.038-1.854 0-2.137 1.445-2.137 2.938v5.669h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.604 0 4.27 2.373 4.27 5.459v6.284zM5.337 7.433c-1.144 0-2.07-.928-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.142-.927 2.07-2.07 2.07zM6.943 20.452H3.73V9h3.213v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.543C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <p class="text-purple-500 font-semibold mb-4">Scrum Master</p>
+              <p
+                class="text-slate-700 dark:text-slate-300 leading-relaxed text-left mt-4 max-w-xl mx-auto"
+              >
+                6+ years’ experience as BA/PO in BFSI & HR domains. Recently
+                relocated to Perth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confidentiality & IP Protection Section -->
+    <section
+      id="Confidentiality"
+      class="py-20 bg-gradient-to-r from-slate-50 to-blue-50/50 dark:from-slate-900 dark:to-slate-800/50 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">
+            Confidentiality & IP Protection
+          </h2>
+          <p
+            class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto"
+          >
+            Your innovation is safe with us. We’re committed to protecting your
+            intellectual property and startup secrets.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="relative">
+            <div
+              class="bg-gradient-light-blue rounded-lg shadow-lg card-hover p-8 h-full"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6"
+              >
+                <!-- Shield icon for Non-Disclosure -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-8 h-8 text-white align-content-center"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 2l7 4v6c0 5-3.58 9.74-7 11-3.42-1.26-7-6-7-11V6l7-4z"
+                  />
+                </svg>
+              </div>
+              <div class="mb-4">
+                <h3
+                  class="text-2xl font-bold text-slate-900 text-center dark:text-white"
+                >
+                  Non-Disclosure
+                </h3>
+              </div>
+              <p
+                class="text-slate-600 dark:text-white text-slate-400 leading-relaxed text"
+              >
+                All volunteers sign NDAs before engagement begins to legally
+                protect your confidential business information.
+              </p>
+            </div>
+            <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
+              <svg
+                class="w-6 h-6 text-slate-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              ></svg>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div
+              class="bg-gradient-light-green rounded-lg shadow-lg card-hover p-8 h-full"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6"
+              >
+                <!-- Lock icon for Secure Communication -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="6" y="11" width="12" height="9" rx="2" ry="2" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 11V7a3 3 0 016 0v4"
+                  />
+                </svg>
+              </div>
+              <div class="mb-4">
+                <h3
+                  class="text-2xl font-bold text-slate-900 text-center dark:text-white"
+                >
+                  Secure Communication
+                </h3>
+              </div>
+              <p
+                class="text-slate-600 dark:text-white text-slate-400 leading-relaxed text"
+              >
+                All discussions and documentation are handled via secure,
+                encrypted channels and stored with access controls.
+              </p>
+            </div>
+            <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-8 z-10">
+              <svg
+                class="w-6 h-6 text-slate-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              ></svg>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div
+              class="bg-gradient-light-purple rounded-lg shadow-lg card-hover p-8 h-full"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6 hover:scale-105 transition-transform duration-300"
+              >
+                <!-- Shield with checkmark icon for IP Rights Protection -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-8 h-8 text-white"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-.41 0-.82.083-1.2.25a8.25 8.25 0 00-4.8 7.5c0 2.793 1.15 5.09 2.762 6.986a13.344 13.344 0 003.238 2.792c.2.128.43.196.667.196s.467-.068.667-.196a13.344 13.344 0 003.238-2.792C17.85 15.09 19 12.793 19 10a8.25 8.25 0 00-4.8-7.5 3.24 3.24 0 00-1.2-.25zM9.53 11.47a.75.75 0 011.06 0l1.47 1.47 3.47-3.47a.75.75 0 011.06 1.06l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 010-1.06z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+
+              <div class="mb-4">
+                <h3
+                  class="text-2xl font-bold text-slate-900 text-center dark:text-white dark:text-white"
+                >
+                  IP Rights Protection
+                </h3>
+              </div>
+              <p
+                class="text-slate-600 dark:text-white text-slate-400 leading-relaxed text"
+              >
+                You retain full ownership of your ideas, code, and materials. We
+                simply provide guidance with no claim on IP.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">Success Stories</h2>
-                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-                    Hear from startup leaders who've transformed their teams with ScrumForce.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700">
-                    <svg class="w-8 h-8 text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                    </svg>
-                    <blockquote class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed">
-                        "ScrumForce helped us establish proper agile practices that scaled with our growth from 5 to 50 employees."
-                    </blockquote>
-                    <div>
-                        <div class="font-semibold text-slate-900 dark:text-white">Sarah Chen</div>
-                        <div class="text-slate-600 dark:text-slate-400">CTO, TechStart Inc.</div>
-                    </div>
-                </div>
-                
-                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700">
-                    <svg class="w-8 h-8 text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                    </svg>
-                    <blockquote class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed">
-                        "The volunteer Scrum Master we worked with was incredible - professional guidance without the consulting fees."
-                    </blockquote>
-                    <div>
-                        <div class="font-semibold text-slate-900 dark:text-white">Marcus Johnson</div>
-                        <div class="text-slate-600 dark:text-slate-400">Founder, InnovateLab</div>
-                    </div>
-                </div>
-                
-                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700">
-                    <svg class="w-8 h-8 text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                    </svg>
-                    <blockquote class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed">
-                        "Our delivery speed improved 3x after implementing their recommended agile framework."
-                    </blockquote>
-                    <div>
-                        <div class="font-semibold text-slate-900 dark:text-white">Emma Rodriguez</div>
-                        <div class="text-slate-600 dark:text-slate-400">Product Manager, Startup ArtOut</div>
-                    </div>
-                </div>
-            </div>
+    <section
+      id="testimonials"
+      class="py-20 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">
+            Success Stories
+          </h2>
+          <p
+            class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto"
+          >
+            Hear from startup leaders who've transformed their teams with
+            ScrumForce.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700"
+          >
+            <svg
+              class="w-8 h-8 text-blue-500 mb-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              ></path>
+            </svg>
+            <blockquote
+              class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed"
+            >
+              "ScrumForce helped us establish proper agile practices that scaled
+              with our growth from 5 to 50 employees."
+            </blockquote>
+            <div>
+              <div class="font-semibold text-slate-900 dark:text-white">
+                Sarah Chen
+              </div>
+              <div class="text-slate-600 dark:text-slate-400">
+                CTO, TechStart Inc.
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700"
+          >
+            <svg
+              class="w-8 h-8 text-blue-500 mb-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              ></path>
+            </svg>
+            <blockquote
+              class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed"
+            >
+              "The volunteer Scrum Master we worked with was incredible -
+              professional guidance without the consulting fees."
+            </blockquote>
+            <div>
+              <div class="font-semibold text-slate-900 dark:text-white">
+                Marcus Johnson
+              </div>
+              <div class="text-slate-600 dark:text-slate-400">
+                Founder, InnovateLab
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700"
+          >
+            <svg
+              class="w-8 h-8 text-blue-500 mb-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              ></path>
+            </svg>
+            <blockquote
+              class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed"
+            >
+              "Our delivery speed improved 3x after implementing their
+              recommended agile framework."
+            </blockquote>
+            <div>
+              <div class="font-semibold text-slate-900 dark:text-white">
+                Emma Rodriguez
+              </div>
+              <div class="text-slate-600 dark:text-slate-400">
+                Product Manager, Startup ArtOut
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-green-500 text-white text-center dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold text-white dark:text-white mb-4">
-                Ready to Transform Your Startup?
-            </h2>
-            <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                Join startups that have accelerated their agile journey with ScrumForce. 
-                Get matched with an experienced Scrum Master today.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <!-- Request Support Button -->
-              <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-6">
-              <a href="https://www.linkedin.com/company/scrumforce-online" target="_blank" rel="noopener noreferrer">
-                  <button class="btn-unified text-lg font-semibold rounded-md transition-all duration-300 flex items-center justify-center">
-                      Talk to us
-                  </button>
-              </a>
-            </div>
+    <section
+      class="relative py-20 text-white text-center transition-colors duration-300 overflow-hidden"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <!-- Dark overlay for readability -->
+      <div
+        class="absolute inset-0 bg-black/60 sm:bg-black/50 dark:bg-slate-900/80"
+      ></div>
+
+      <!-- Gradient overlay (optional subtle depth) -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-blue-600/30 via-purple-600/30 to-green-500/30"
+      ></div>
+
+      <!-- Content -->
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold mb-4 drop-shadow-lg">
+          Ready to Transform Your Startup?
+        </h2>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-8 drop-shadow-md">
+          Join startups that have accelerated their agile journey with
+          ScrumForce. Get matched with an experienced Scrum Master today.
+        </p>
+
+        <!-- Centered Button -->
+        <div class="flex justify-center">
+          <a
+            href="https://www.linkedin.com/company/scrumforce-online"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              class="btn-unified text-lg font-semibold rounded-md transition-all duration-300 flex items-center justify-center px-6 py-3 shadow-lg hover:scale-105 hover:shadow-xl"
+            >
+              Talk to us
+            </button>
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
 
-    <footer class="bg-slate-900 dark:bg-slate-950 text-white py-12 transition-colors duration-300">
+    <footer
+      class="bg-slate-900 dark:bg-slate-950 text-white py-12 transition-colors duration-300"
+    >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-4 gap-8">
-    
           <!-- Logo + About -->
           <div class="md:col-span-2">
             <div class="flex items-center space-x-2 mb-4">
-              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden flex items-center justify-center">
-                <img src="/images/logo2.webp" alt="ScrumForce Logo" class="w-full h-full object-contain"/>
+              <div
+                class="w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden flex items-center justify-center"
+              >
+                <img
+                  src="/images/logo3.webp"
+                  alt="ScrumForce Logo"
+                  class="w-full h-full object-contain"
+                />
               </div>
             </div>
             <p class="text-slate-400 max-w-md">
-              Connecting experienced Scrum Masters with startups to build better products faster. 
-              A non-profit initiative powered by passionate volunteers.
+              Connecting experienced Scrum Masters with startups to build better
+              products faster. A non-profit initiative powered by passionate
+              volunteers.
             </p>
           </div>
-    
+
           <!-- For Startups -->
           <div>
             <h3 class="font-semibold mb-4">For Startups</h3>
             <ul class="space-y-2 text-slate-400">
-              <li><a href="#" class="hover:text-white transition-colors">Request Support</a></li>
-              <li><a href="#process" class="hover:text-white transition-colors">How It Works</a></li>
-              <li><a href="#testimonials" class="hover:text-white transition-colors">Success Stories</a></li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Request Support</a
+                >
+              </li>
+              <li>
+                <a href="#process" class="hover:text-white transition-colors"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="hover:text-white transition-colors"
+                  >Success Stories</a
+                >
+              </li>
             </ul>
           </div>
-    
+
           <!-- For Volunteers -->
           <div>
             <h3 class="font-semibold mb-4">For Volunteers</h3>
             <ul class="space-y-2 text-slate-400">
-              <li><a href="#" class="hover:text-white transition-colors">Become a Volunteer</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Volunteer Guide</a></li>
-              <li><a href="#" class="hover:text-white transition-colors">Community</a></li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Become a Volunteer</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Volunteer Guide</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Community</a
+                >
+              </li>
             </ul>
           </div>
         </div>
-    
+
         <!-- Bottom Bar -->
-        <div class="border-t border-slate-800 mt-8 pt-4 flex flex-col md:flex-row items-center justify-between">
-          <p class="text-slate-400 text-center md:text-left text-sm md:text-base">
+        <div
+          class="border-t border-slate-800 mt-8 pt-4 flex flex-col md:flex-row items-center justify-between"
+        >
+          <p
+            class="text-slate-400 text-center md:text-left text-sm md:text-base"
+          >
             &copy; 2025 ScrumForce. A non-profit initiative for startup success.
           </p>
-    
+
           <div class="flex space-x-4 mt-4 md:mt-0">
-            <a href="https://www.linkedin.com/company/scrumforce"
-               class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all"
-               aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.25 8h4.5V24h-4.5V8zM8 8h4.31v2.18h.06 c.6-1.14 2.08-2.34 4.29-2.34 4.59 0 5.44 3.02 5.44 6.95V24h-4.5v-7.87c0-1.88-.03-4.3-2.63-4.3-2.64 0-3.04 2.06-3.04 4.18V24H8V8z"/>
+            <a
+              href="https://www.linkedin.com/company/scrumforce"
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all"
+              aria-label="LinkedIn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.25 8h4.5V24h-4.5V8zM8 8h4.31v2.18h.06 c.6-1.14 2.08-2.34 4.29-2.34 4.59 0 5.44 3.02 5.44 6.95V24h-4.5v-7.87c0-1.88-.03-4.3-2.63-4.3-2.64 0-3.04 2.06-3.04 4.18V24H8V8z"
+                />
               </svg>
             </a>
-    
-            <a href="https://www.facebook.com/profile.php?id=61581415867502"
-               class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all"
-               aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.494v-9.294H9.691V11.03h3.128V8.413 c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.797.143v3.24h-1.918c-1.507 0-1.8.717-1.8 1.767v2.315h3.599l-.468 3.676h-3.131V24h6.137C23.407 24 24 23.407 24 22.676V1.325C24 .593 23.407 0 22.675 0z"/>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61581415867502"
+              class="w-10 h-10 flex items-center justify-center rounded-full border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all"
+              aria-label="Facebook"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.494v-9.294H9.691V11.03h3.128V8.413 c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.797.143v3.24h-1.918c-1.507 0-1.8.717-1.8 1.767v2.315h3.599l-.468 3.676h-3.131V24h6.137C23.407 24 24 23.407 24 22.676V1.325C24 .593 23.407 0 22.675 0z"
+                />
               </svg>
             </a>
           </div>
         </div>
       </div>
     </footer>
-         
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-        
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-   
+
     <script src="script.js"></script>
-   
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   
+
     <script>
-    AOS.init();
+      AOS.init();
     </script>
-</body>
+  </body>
 </html>
