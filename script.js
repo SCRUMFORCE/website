@@ -367,15 +367,15 @@ tailwind.config = {
 const ctx = document.getElementById('scrumChart').getContext('2d');
 
 const createGradients = (ctx, isDark) => {
-const scrumGradient = ctx.createLinearGradient(0, 0, 600, 0);
-scrumGradient.addColorStop(0, isDark ? '#818cf8' : '#6366f1');
-scrumGradient.addColorStop(1, isDark ? '#4f46e5' : '#4338ca');
+  const scrumGradient = ctx.createLinearGradient(0, 0, 600, 0);
+  scrumGradient.addColorStop(0, isDark ? '#818cf8' : '#6366f1');
+  scrumGradient.addColorStop(1, isDark ? '#4f46e5' : '#4338ca');
 
-const teamGradient = ctx.createLinearGradient(0, 0, 600, 0);
-teamGradient.addColorStop(0, isDark ? '#6ee7b7' : '#34d399');
-teamGradient.addColorStop(1, isDark ? '#2dd4bf' : '#10b981');
-return { scrumGradient, teamGradient };
-}
+  const teamGradient = ctx.createLinearGradient(0, 0, 600, 0);
+  teamGradient.addColorStop(0, isDark ? '#6ee7b7' : '#34d399');
+  teamGradient.addColorStop(1, isDark ? '#2dd4bf' : '#10b981');
+  return { scrumGradient, teamGradient };
+};
 
 let isDark = document.documentElement.classList.contains('dark');
 let { scrumGradient, teamGradient } = createGradients(ctx, isDark);
@@ -384,9 +384,13 @@ const scrumChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: [
-      '','', 'Onboarding (1-2 weeks)', '',
-      'Coaching (1-2 months)', '',
-      'Autonomy (2+ months)',
+      '',
+      '',
+      'High Involvement →',
+      '',
+      'Coaching →',
+      '',
+      'Strategic Advisory'
     ],
     datasets: [
       {
@@ -425,11 +429,9 @@ const scrumChart = new Chart(ctx, {
       tooltip: {
         callbacks: {
           label: function (context) {
-            if (context.dataset.label === 'Scrum Master') {
-              return 'Guiding the team toward independence';
-            } else {
-              return 'Team growing in confidence and ownership';
-            }
+            return context.dataset.label === 'Scrum Master'
+              ? 'Guiding the team toward independence'
+              : 'Team growing in confidence and ownership';
           }
         }
       }
@@ -443,38 +445,137 @@ const scrumChart = new Chart(ctx, {
         }
       },
       y: { display: false }
-    },
-    elements: {
-      line: {
-        tension: 0.4
-      }
     }
   }
 });
 
-// Dark mode chart update logic
+// Dark mode listener
 const updateChartColors = () => {
-    const isDark = document.documentElement.classList.contains('dark');
-    const textColor = isDark ? '#ffffff' : '#1e293b';
-  
+  const isDark = document.documentElement.classList.contains('dark');
+  const textColor = isDark ? '#ffffff' : '#1e293b';
+  scrumChart.options.plugins.legend.labels.color = textColor;
+  scrumChart.options.scales.x.ticks.color = textColor;
+  scrumChart.update();
+};
 
-    scrumChart.options.plugins.legend.labels.color = textColor;
-    scrumChart.options.scales.x.ticks.color = textColor;
-  
-    scrumChart.options.plugins.tooltip.titleColor = textColor;
-    scrumChart.options.plugins.tooltip.bodyColor = textColor;
-  
-    scrumChart.update();
-  };
-  
-  new MutationObserver(updateChartColors).observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ['class']
-  });
-  
-
-const observer = new MutationObserver(updateChartColors);
-observer.observe(document.documentElement, {
+new MutationObserver(updateChartColors).observe(document.documentElement, {
   attributes: true,
   attributeFilter: ['class']
 });
+
+
+
+// const ctx = document.getElementById('scrumChart').getContext('2d');
+
+// const createGradients = (ctx, isDark) => {
+// const scrumGradient = ctx.createLinearGradient(0, 0, 600, 0);
+// scrumGradient.addColorStop(0, isDark ? '#818cf8' : '#6366f1');
+// scrumGradient.addColorStop(1, isDark ? '#4f46e5' : '#4338ca');
+
+// const teamGradient = ctx.createLinearGradient(0, 0, 600, 0);
+// teamGradient.addColorStop(0, isDark ? '#6ee7b7' : '#34d399');
+// teamGradient.addColorStop(1, isDark ? '#2dd4bf' : '#10b981');
+// return { scrumGradient, teamGradient };
+// }
+
+// let isDark = document.documentElement.classList.contains('dark');
+// let { scrumGradient, teamGradient } = createGradients(ctx, isDark);
+
+// const scrumChart = new Chart(ctx, {
+//   type: 'line',
+//   data: {
+//     labels: [
+//       '','', 'Onboarding (1-2 weeks)', '',
+//       'Coaching (1-2 months)', '',
+//       'Autonomy (2+ months)',
+//     ],
+//     datasets: [
+//       {
+//         label: 'Scrum Master',
+//         data: [0.95, 0.9, 0.7, 0.5, 0.3, 0.1, 0.05],
+//         borderColor: scrumGradient,
+//         backgroundColor: 'rgba(99,102,241,0.1)',
+//         fill: true,
+//         borderWidth: 4,
+//         pointRadius: 0,
+//         cubicInterpolationMode: 'monotone',
+//         tension: 0.5
+//       },
+//       {
+//         label: 'Team',
+//         data: [0.05, 0.1, 0.3, 0.5, 0.7, 0.9, 0.95],
+//         borderColor: teamGradient,
+//         backgroundColor: 'rgba(16,185,129,0.1)',
+//         fill: true,
+//         borderWidth: 4,
+//         pointRadius: 0,
+//         cubicInterpolationMode: 'monotone',
+//         tension: 0.5
+//       }
+//     ]
+//   },
+//   options: {
+//     responsive: true,
+//     plugins: {
+//       legend: {
+//         labels: {
+//           color: '#1e293b',
+//           font: { size: 14, weight: 'bold' }
+//         }
+//       },
+//       tooltip: {
+//         callbacks: {
+//           label: function (context) {
+//             if (context.dataset.label === 'Scrum Master') {
+//               return 'Guiding the team toward independence';
+//             } else {
+//               return 'Team growing in confidence and ownership';
+//             }
+//           }
+//         }
+//       }
+//     },
+//     scales: {
+//       x: {
+//         grid: { display: false },
+//         ticks: {
+//           color: '#64748b',
+//           font: { size: 12, weight: 'bold' }
+//         }
+//       },
+//       y: { display: false }
+//     },
+//     elements: {
+//       line: {
+//         tension: 0.4
+//       }
+//     }
+//   }
+// });
+
+// Dark mode chart update logic
+// const updateChartColors = () => {
+//     const isDark = document.documentElement.classList.contains('dark');
+//     const textColor = isDark ? '#ffffff' : '#1e293b';
+  
+
+//     scrumChart.options.plugins.legend.labels.color = textColor;
+//     scrumChart.options.scales.x.ticks.color = textColor;
+  
+//     scrumChart.options.plugins.tooltip.titleColor = textColor;
+//     scrumChart.options.plugins.tooltip.bodyColor = textColor;
+  
+//     scrumChart.update();
+//   };
+  
+//   new MutationObserver(updateChartColors).observe(document.documentElement, {
+//     attributes: true,
+//     attributeFilter: ['class']
+//   });
+  
+
+// const observer = new MutationObserver(updateChartColors);
+// observer.observe(document.documentElement, {
+//   attributes: true,
+//   attributeFilter: ['class']
+// });
