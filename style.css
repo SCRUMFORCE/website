@@ -5,6 +5,13 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+  --primary-green: #3c9d5f;
+  --primary-navy: #1b3b5a;
+  --accent-green: #2e7d4e;
+  --light-green: #e8f5e9;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
@@ -153,7 +160,7 @@ a:focus {
 /* General Connect Button Style */
 .btn-unified {
   display: inline-block;
-  background: linear-gradient(to right, #7e22ce, #0ea5e9); /* purple to sky */
+  background: linear-gradient(to right, #2e7d4e, #0ea5e9); /* purple to sky */
   color: #fff;
   font-weight: 600;
   padding: 0.5rem 1.25rem;
@@ -168,7 +175,7 @@ a:focus {
 
 /* Hover Effect */
 .btn-unified:hover {
-  background: linear-gradient(to right, #6b21a8, #0284c7);
+  background: linear-gradient(to right, #2e7d4e, #0284c7);
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(126, 34, 206, 0.4);
 }
@@ -244,9 +251,18 @@ a:focus {
     transform: translateY(-50%);
     width: 2rem;
     height: 2px;
-    background-color: theme(colors.slate[300]); /* Tailwind color */
+    background-color: #cbd5e1; /* Tailwind slate-300 */
   }
   
   .process-card:last-child::after {
     display: none; /* remove arrow after last card */
+  }
+
+  @media (max-width: 768px) {
+    footer .grid {
+      text-align: center;
+    }
+    footer .flex {
+      justify-content: center;
+    }
   }
