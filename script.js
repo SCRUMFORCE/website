@@ -485,3 +485,25 @@ new MutationObserver(updateChartColors).observe(document.documentElement, {
   attributeFilter: ['class']
 });
 
+const cards = document.querySelectorAll(".testimonial-card");
+const dots = document.querySelectorAll(".dot");
+let current = 0;
+
+function showCard(index) {
+  cards.forEach((card, i) => {
+    card.classList.toggle("hidden", i !== index);
+    dots[i].classList.toggle("bg-green-500", i === index);
+    dots[i].classList.toggle("bg-gray-300", i !== index);
+  });
+  current = index;
+}
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => showCard(i));
+});
+
+// Auto-slide every 6 seconds
+setInterval(() => {
+  const next = (current + 1) % cards.length;
+  showCard(next);
+}, 6000);

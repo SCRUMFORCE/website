@@ -2275,117 +2275,157 @@
     </section> -->
 
     <!-- Testimonials Section -->
+
     <section
       id="testimonials"
       class="py-20 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold gradient-text dark:text-white mb-4">
-            Success Stories
-          </h2>
-          <p
-            class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto"
-          >
-            Hear from organization leaders who've transformed their teams with
-            ScrumForce.
-          </p>
-        </div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold gradient-text dark:text-white mb-5">
+          Success Stories
+        </h2>
+        <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+          Hear from organization leaders who've transformed their teams with ScrumForce.
+        </p>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- <div
-            class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700"
-          >
-            <svg
-              class="w-8 h-8 text-blue-500 mb-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+        <div class="relative">
+          <div id="testimonialCards" class="overflow-hidden relative">
+            <!-- Card 1 -->
+            <div
+              class="testimonial-card transition-opacity duration-700 ease-in-out bg-white dark:bg-slate-800 shadow-lg rounded-3xl p-10 flex flex-col items-start text-left"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-              ></path>
-            </svg>
-            <blockquote
-              class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed"
-            >
-              "Working with Claudio as our Scrum Master has been a great experience. He brings structure and clarity to our meetings, keeping the team focused on priorities, and always ensure everyone has a voice in discussions. His calm approach and consistent follow-ups have really helped our team stay aligned and productive."
-            </blockquote>
-            <div>
-              <div class="font-semibold text-slate-900 dark:text-white">
-                Upasana Parmar 
-              </div>
-              <div class="text-slate-600 dark:text-slate-400">
-                Talent Hub
+              <svg
+                class="w-12 h-12 text-green-500 mb-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                ></path>
+              </svg>
+              <blockquote
+                class="text-xl text-slate-700 dark:text-slate-300 italic mb-8 leading-relaxed max-w-3xl"
+              >
+                "Working with Claudio as our Scrum Master has been a great experience. He brings structure and clarity to our meetings, keeping the team focused on priorities, and always ensure everyone has a voice in discussions. His calm approach and consistent follow-ups have really helped our team stay aligned and productive."
+              </blockquote>
+              <div class="flex items-center gap-4 mt-2">
+                <img
+                  src="/images/upasana-parmar.jpg"
+                  alt="Upasana Parmar"
+                  class="w-14 h-14 rounded-full object-cover border-4 border-green-400"
+                />
+                <div class="text-left">
+                  <div class="font-semibold text-slate-900 dark:text-white">
+                    Upasana Parmar
+                  </div>
+                  <div class="text-slate-600 dark:text-slate-400 text-sm">
+                    Talent Hub
+                  </div>
+                </div>
               </div>
             </div>
-          </div> -->
 
-          <div
-            class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700"
-          >
-            <svg
-              class="w-8 h-8 text-blue-500 mb-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+            <!-- Card 2 -->
+            <!-- <div
+              class="testimonial-card hidden transition-opacity duration-700 ease-in-out bg-white dark:bg-slate-800 shadow-lg rounded-3xl p-10 flex flex-col items-center text-center"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-              ></path>
-            </svg>
-            <blockquote
-              class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed"
+              <svg
+                class="w-12 h-12 text-green-500 mb-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h.01M15 12h.01M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"
+                />
+              </svg>
+              <blockquote
+                class="text-xl text-slate-700 dark:text-slate-300 italic mb-8 leading-relaxed max-w-3xl"
+              >
+                "ScrumForce helped us adopt agile practices seamlessly. Our team is
+                now more focused, productive, and happier. We deliver projects twice
+                as fast as before!"
+              </blockquote>
+              <div class="flex items-center gap-4 mt-2">
+                <img
+                  src="https://randomuser.me/api/portraits/men/45.jpg"
+                  alt="David Lee"
+                  class="w-14 h-14 rounded-full object-cover border-4 border-green-400"
+                />
+                <div class="text-left">
+                  <div class="font-semibold text-slate-900 dark:text-white">
+                    David Lee
+                  </div>
+                  <div class="text-slate-600 dark:text-slate-400 text-sm">
+                    Project Lead, InnovateX
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Card 3 -->
+            <!-- <div
+              class="testimonial-card hidden transition-opacity duration-700 ease-in-out bg-white dark:bg-slate-800 shadow-lg rounded-3xl p-10 flex flex-col items-center text-center"
             >
-              "Working with Claudio as our Scrum Master has been a great experience. He brings structure and clarity to our meetings, keeping the team focused on priorities, and always ensure everyone has a voice in discussions. His calm approach and consistent follow-ups have really helped our team stay aligned and productive."
-            </blockquote>
-            <div>
-              <div class="font-semibold text-slate-900 dark:text-white">
-                Upasana Parmar 
+              <svg
+                class="w-12 h-12 text-green-500 mb-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h.01M15 12h.01M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"
+                />
+              </svg>
+              <blockquote
+                class="text-xl text-slate-700 dark:text-slate-300 italic mb-8 leading-relaxed max-w-3xl"
+              >
+                "The workflow automation we built with ScrumForce saved hours of
+                manual work every week. The results speak for themselves."
+              </blockquote>
+              <div class="flex items-center gap-4 mt-2">
+                <img
+                  src="https://randomuser.me/api/portraits/women/33.jpg"
+                  alt="Priya Kapoor"
+                  class="w-14 h-14 rounded-full object-cover border-4 border-green-400"
+                />
+                <div class="text-left">
+                  <div class="font-semibold text-slate-900 dark:text-white">
+                    Priya Kapoor
+                  </div>
+                  <div class="text-slate-600 dark:text-slate-400 text-sm">
+                    CTO, CloudSync
+                  </div>
+                </div>
               </div>
-              <div class="text-slate-600 dark:text-slate-400">
-                Talent Hub
-              </div>
-            </div>
+            </div> -->
           </div>
 
-          <!-- <div
-            class="bg-white dark:bg-slate-800 rounded-lg shadow-lg card-hover p-8 border dark:border-slate-700"
-          >
-            <svg
-              class="w-8 h-8 text-blue-500 mb-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-              ></path>
-            </svg>
-            <blockquote
-              class="text-slate-700 dark:text-slate-300 mb-6 italic leading-relaxed"
-            >
-              "Our delivery speed improved 3x after implementing their
-              recommended agile framework."
-            </blockquote>
-            <div>
-              <div class="font-semibold text-slate-900 dark:text-white">
-                Emma Rodriguez
-              </div>
-              <div class="text-slate-600 dark:text-slate-400">
-                Product Manager, organization ArtOut
-              </div>
-            </div>
-          </div> -->
+          <!-- Pagination Dots -->
+          <div class="flex justify-center mt-8 space-x-3">
+            <button
+              class="dot w-3 h-3 rounded-full bg-green-500"
+              aria-label="slide 1"
+            ></button>
+            <button
+              class="dot w-3 h-3 rounded-full bg-gray-300"
+              aria-label="slide 2"
+            ></button>
+            <button
+              class="dot w-3 h-3 rounded-full bg-gray-300"
+              aria-label="slide 3"
+            ></button>
+          </div>
         </div>
       </div>
     </section>
