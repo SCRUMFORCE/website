@@ -76,7 +76,7 @@ body {
    Navbar Styles & Focus Accessibility
    ========================================================= */
 .nav-link {
-    color: inherit;
+    color: gainsboro;
     text-decoration: none;
     transition: color 0.2s ease;
 }
